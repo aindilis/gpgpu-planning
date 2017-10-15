@@ -1,0 +1,141 @@
+
+#include "openList.h"
+
+template <class T> openList<T>::openList(unsigned int elementLength_){
+	elementLength= elementLength_;
+	elements=0;
+}
+
+<<<<<<< .mine
+template <class T> bool openList<T>::insert(unsigned int layer, unsigned int cost, T element, unsigned int elementCount) {
+	if (openLists.find(layer) == openLists.end()) {
+		pthread_mutex_lock(&serialize_mutexes);
+		if (serialize_open_map.find(layer) == serialize_open_map.end()) {
+			//if (openLists.find(layer) == openLists.end()) {
+			serialize_open_map[layer] = new pthread_mutex_t();
+			*serialize_open_map[layer] = PTHREAD_MUTEX_INITIALIZER;
+			pthread_mutex_lock(serialize_open_map[layer]);
+			openElements[layer] = new map<unsigned int, unsigned int>();
+			(*openElements[layer])[cost]= 0;
+			openLists[layer] = new map<unsigned int, vector<T> *>();
+			(*openLists[layer])[cost] = new vector<T>();
+			pthread_mutex_unlock(serialize_open_map[layer]);
+		}
+		pthread_mutex_unlock(&serialize_mutexes);
+		}
+=======
+template <class T> string openList<T>::getOpenFileName(unsigned int id1, unsigned int id2) {
+	ostringstream  name;
+	name << "/media/raid/open_" << id1 << "-" << id2 << ".dat";
+	return name.str();
+}
+>>>>>>> .r250
+
+template <class T> string openList<T>::getOpenFileNamePrivate(unsigned int id1, unsigned int id2) {
+	ostringstream  name;
+	name << "/media/raid/open_private_" << id1 << "-" << id2 << ".dat";
+	return name.str();
+}
+
+template <class T> bool openList<T>::insert(unsigned int layer, unsigned int cost, T element, unsigned int elementCount) {
+	if(!openLists[layer]) openLists[layer] = new map<unsigned int, fstream *>();
+	if (!(*openLists[layer])[cost]){
+		(*openLists[layer])[cost] = new fstream();
+		(*openLists[layer])[cost]->open(getOpenFileNamePrivate(layer,cost).c_str(),fstream::out | fstream::in | fstream::trunc);
+		added[layer][cost]=0;
+		removed[layer][cost]=0;
+	}
+	fstream  *ol = (*openLists[layer])[cost];
+	assert(ol->is_open());
+	ol->write((const char*) element,elementCount*elementLength);
+	ol->flush();
+	added[layer][cost]+=elementCount;
+	elements+=elementCount;
+<<<<<<< .mine
+	pthread_mutex_unlock(&serialize_mutexes);
+	pthread_mutex_lock(serialize_open_map[layer]);
+	(*openLists[layer])[cost]->push_back(element) ;
+	(*openElements[layer])[cost]++;
+	pthread_mutex_unlock(serialize_open_map[layer]);
+=======
+	//cout << " inserted " << elementCount << " into open["<< layer << ","<< cost << "] size of ["<< layer << ","<< cost << "] " << added[layer][cost] << " , elments " << elements << endl;
+>>>>>>> .r250
+	return true;
+}
+
+template <class T> unsigned int openList<T>::get(char * dst, unsigned int layer, unsigned int cost, unsigned int bufferSize){
+	assert(dst);
+	assert(openLists[layer]);
+<<<<<<< .mine
+	assert((*openLists[layer])[cost]);
+	int c = 0;
+	myState state(model);
+	//deleting until layer
+	//typename map<unsigned int,map<unsigned int, vector<T> *>* >::iterator it1; // 2 dimensional array of vectors (depth, costs)
+	typename map<unsigned int,map<unsigned int,unsigned int> *>::iterator elementIt1;
+	typename map<unsigned int, unsigned int >::iterator elementIt2 ;
+	elementIt1 = openElements.begin();
+	while ((*elementIt1).first != layer) {
+		cout << "deleting vector " << (*elementIt1).first << " size " << (*elementIt1).second->size() << endl;
+		elementIt2 = (*elementIt1).second->begin();
+		while (elementIt2 != (*elementIt1).second->end() && (*elementIt2).first) {
+			cout << "deleting layer " << (*elementIt1).first << " cost " << (*elementIt2).first << endl;
+			assert((*elementIt2).second == 0 );
+			(*elementIt1).second->erase(elementIt2);
+			openElements.erase(elementIt1);
+//			(*openFiles[(*elementIt1).first])[(*elementIt2).first]->close();
+			delete(openLists[(*elementIt1).first]);
+			//delete list
+			elementIt2++;
+		}
+		elementIt1++;
+	}
+
+	cout << " reading from  open["<< layer << ","<< cost << "] "<< (*openElements[layer])[cost] << " elments " << endl;
+	cout << "openlistsize " << openLists.size() << " lists and "  << elements << " elements =" << elements *8 /1024/1024 << " MB openlist" << endl;
+	if ((*openElements[layer])[cost] == 0 ) return 0;
+	//do {
+	while (c < bufferSize && (*openElements[layer])[cost]) {
+		cout << " reading " << elementLength << " bytes from " << layer << ":" << cost << " starting at " << ol->tellg() << endl;
+			state = (*openLists[layer])[cost]->back();
+			if (state.cost() == layer ) {
+				memcpy(&dst[c*elementLength],state.vector,elementLength);
+				c++;
+			}
+			(*openLists[layer])[cost]->pop_back();
+	}
+=======
+	fstream * ol = (*openLists[layer])[cost];
+>>>>>>> .r250
+<<<<<<< .mine
+	//} while (c < bufferSize && layer != -1);
+	cout << "read " << c << "  left  " << (*openElements[layer])[cost] << " elments " << endl;
+	//layer = getNextCosts(layer,cost);
+	elements -= c;
+	cout << "openlistsize " << openLists.size() << " lists and "  << elements << "=" << elements *8 /1024/1024 << " MB openlist" << endl;
+=======
+	assert(ol->is_open());
+	ol->seekg(removed[layer][cost]*elementLength, ios::beg);
+	ol->read(dst,bufferSize*elementLength);
+	unsigned int c = ol->gcount() / elementLength;
+	removed[layer][cost] += c;
+	//cout << "read form open[" << layer << "," << cost << "] " << c << " elements " << endl;
+	if (ol->rdstate() & ifstream::failbit) ol->clear();
+>>>>>>> .r250
+	return c;
+}
+
+template <class T> unsigned int openList<T>::getNextCosts(unsigned int layer,unsigned int current_costs){
+	assert(openLists[layer]);
+	map<unsigned int, fstream * > * ol = openLists[layer];
+	map<unsigned int,fstream * >::iterator it = ol->find(current_costs);
+	it++;
+	if (it == ol->end()) return -1;
+	return (*it).first;
+}
+
+template <class T> bool openList<T>::clear(){
+	elements=0;
+	return true;
+}
+

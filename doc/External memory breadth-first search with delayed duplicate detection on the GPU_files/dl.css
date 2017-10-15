@@ -1,0 +1,459 @@
+BODY  {
+	background-color: #ffffff;
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+}
+
+INPUT {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	}
+
+TABLE {
+		text-align:left;
+}
+TD {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	}
+
+TH {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	font-weight: bold;
+	}
+
+DL {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	}
+
+DT {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	}
+	
+DD {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	}
+	
+UL	{ list-style-type: square;
+	  list-style-position: outside;
+	  font-family: Verdana, Arial, Helvetica, sans-serif;
+	  font-size: 100%;
+	}
+
+SUP	{ font-size: 75%;
+	}
+	
+P  { font-family: Verdana, Arial, Helvetica, sans-serif;
+	 font-size: 100%;
+   }
+
+H1  {}
+
+H2  {}
+
+H3  {}
+
+A  {}
+
+span.heading	{	font-weight: bold;
+			}
+
+span.bigheading	{	font-family: Arial, Helvetica, sans-serif;
+			font-weight: bold;	
+			font-size: 140%;
+			}
+				
+span.largeheading	{	font-family: Arial, Helvetica, sans-serif;
+				font-weight: bold;	
+				font-size: 160%;
+				}
+				
+span.pubname	{	font-family: Verdana, Arial, Helvetica, sans-serif;
+			font-size: 120%;
+			font-weight: bold;
+			color: #003366;
+			background-color: transparent;
+			}
+span.libname	{	font-family: Verdana, Arial, Helvetica, sans-serif;
+			font-size: 100%;
+			font-weight: bold;
+			color: #003366;
+			background-color: transparent;
+			}			
+span.procname	{	font-family: Verdana, Arial, Helvetica, sans-serif;
+				font-size: 90%;
+				font-weight: bold;
+				color: #003366;
+				background-color: transparent;
+				}
+span.volissue	{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 80%;
+					font-weight: bold;
+					color: #003366;
+					background-color: transparent;
+				}	
+div.volissue	{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 80%;
+					font-weight: bold;
+					color: #003366;
+					background-color: transparent;
+				}						
+TD.volume	{ font-family: Verdana, Arial, Helvetica, sans-serif;
+			  font-size: 80%;
+			  font-weight: bold;
+			}
+TD.pubdescr	{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 80%;
+					font-weight: normal;
+					margin-left: 0px;
+				}
+INPUT.pubdescr	{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 80%;
+					font-weight: normal;
+					margin-left: 0px;
+				}						
+Select.collect	{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 75%;
+					font-weight: bold;
+					margin-left: 0px;
+				}					
+TD.collect	{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 90%;
+					font-weight: normal;
+					margin-left: 0px;
+				}						
+TD.smnumbs	{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 75%;
+					font-weight: normal;
+					margin-left: 0px;
+				}						
+TD.mednumbs	{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 80%;
+					font-weight: bold;
+				}
+DIV.results 	{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 80%;
+					font-weight: bold;
+				}															
+TD.searchbox	{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 90%;
+					font-weight: normal;
+				}											
+td.pubname      { font-weight: bold;
+                }
+td.jrnl			{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 80%;
+					font-weight: normal;
+				}		
+			
+TD.bigheading	{	font-family: Verdana, Arial, Helvetica, sans-serif;
+			font-weight: bold;	
+			font-size: 140%;
+			}		
+DIV.abstract	{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 80%;
+					font-weight: normal;
+					margin-left: 0px;
+				}
+DIV.tabbody		{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 80%;
+					font-weight: normal;
+					margin-left: 0px;
+					min-height:300px;
+					height:auto !important;
+					height:300px;
+				}
+DIV.flatbody		{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 80%;
+					font-weight: normal;
+					margin-left: 0px;
+					padding-bottom: 25px;
+				}
+DIV.footerbody	{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					color:#000000; font-size: .75em; line-height: 1.3em;
+					margin-left: .75em; margin-right: .75em;
+					font-weight: normal;
+					min-height:500px;
+					height:auto !important;
+					height:500px;
+				}
+DIV.abstract2	{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 80%;
+					font-weight: normal;
+					margin-left: 20px;
+				}				
+P.abstract	{		margin-left: 10px;
+				}
+DIV.issuearticle {	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 80%;
+					color: black;
+					background-color: transparent;
+				}				
+DIV.resultsdet 	{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 100%;
+					font-weight: bold;
+				}					
+DIV.review 		{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 80%;
+					font-weight: normal;
+					margin-left: 0px;
+				}
+P.review		{	
+					margin-left: 15px;
+				}								
+DIV.indterms	{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 80%;
+					font-weight: normal;
+					margin-left: 0px;
+				}
+div.confdates	{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 80%;
+					font-weight: bold;
+					color: #003366;
+					background-color: transparent;
+				}				
+P.indterms		{	
+					margin-left: 10px;
+				}
+P.categories	{	
+					margin-left: 10px;
+				}	
+P.subjdesc		{	
+					margin-left: 20px;
+				}																									
+P.keywords		{	
+					margin-left: 10px;
+				}				
+P.genterms		{	
+					margin-left: 10px;
+				}								
+TD.error		{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 90%;
+					font-weight: bold;
+					color: red;
+					margin-left: 0px;
+				}	
+TD.warn 		{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 80%;
+					font-weight: normal;
+					color: red;
+					margin-left: 0px;
+				}					
+TD.lgtext		{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 90%;
+					font-weight: normal;
+					margin-left: 0px;
+				}									
+DIV.pubdescr	{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 80%;
+					font-weight: normal;
+					margin-left: 0px;
+				}
+UL.pubdescr	{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 80%;
+				}								
+DIV.jrnl		{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 80%;
+					font-weight: normal;
+				}	
+P.jrnl		    {	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 80%;
+					font-weight: normal;
+				}															
+DIV.bigheading	{	font-family: Arial, Helvetica, sans-serif;
+			font-weight: bold;	
+			font-size: 140%;
+			}				
+				
+DIV.copyright {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 80%;
+}
+
+CITE.publisher {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 80%;
+}
+
+DIV.note {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 80%;
+	text-align: left;
+	 }
+
+DIV.download {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 80%;
+}
+
+DIV.arttitle	{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 110%;
+					font-weight: bold;
+				}
+DIV.subtitle	{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 90%;
+					font-weight: normal;
+				}				
+DIV.artpages	{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 80%;
+					font-weight: normal;
+				}
+				
+DIV.authors 	{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 80%;
+					font-weight: normal;
+				}
+FORM.adv		{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 80%;
+					font-weight: normal;
+				}	
+TD.adv			{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 80%;
+					font-weight: normal;
+				}
+SELECT.adv			{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 80%;
+					font-weight: normal;
+				}
+INPUT.adv			{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 80%;
+					font-weight: normal;
+				}				
+UL.adv			{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 80%;
+					font-weight: normal;
+				}	
+TEXTAREA.adv	{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 80%;
+					font-weight: normal;
+				}																		
+TD.authbr		{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 80%;
+					font-weight: normal;
+				}	
+DIV.authbr		{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 90%;
+					font-weight: normal;
+				}	
+DIV.authbr2		{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 80%;
+					font-weight: normal;
+				}											
+TD.authbr2		{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 100%;
+					font-weight: normal;
+				}					
+DIV.sponsors 	{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 80%;
+					font-weight: normal;
+				}				
+DIV.publishers 	{	font-family: Arial, Helvetica, sans-serif;
+					font-size: 80%;
+					font-weight: normal;
+				}
+				
+.rfcs	 	   {	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 80%;
+					font-weight: normal;
+				}
+				
+DIV.addinfo 	{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 80%;
+					font-weight: normal;
+				}
+
+DIV.images	 	{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 80%;
+					font-weight: normal;
+				}				
+				
+DIV.reviews	{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 80%;
+					font-weight: normal;
+					margin-left: 0px;
+				}
+				
+DIV.indterms	{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 80%;
+					font-weight: normal;
+					margin-left: 0px;
+				}
+
+DIV.inclusion	{	font-family: Verdana, Arial, Helvetica, sans-serif;
+					font-size: 80%;
+					font-weight: normal;
+					margin-left: 0px;
+				}				
+
+DIV.totop	{	text-align: left;
+			float: left;
+			}
+DIV.acrobati	{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 80%;
+	}
+TD.nav	{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 90%;
+	}
+TD.nav2	{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 90%;
+	padding-left: 25px;
+	}
+DIV.bump	{
+	padding-left: 10px;
+	}		
+DIV.add1	{	font-family: Verdana, Arial, Helvetica, sans-serif;
+				font-size: 90%;
+				font-weight: normal;
+				padding-left: 10px;
+			}	
+DIV.add2	{	font-family: Verdana, Arial, Helvetica, sans-serif;
+				font-size: 90%;
+				font-weight: normal;
+				padding-left: 20px;
+			}		
+DIV.add3	{	font-family: Verdana, Arial, Helvetica, sans-serif;
+				font-size: 90%;
+				font-weight: normal;
+				padding-left: 30px;
+			}										
+A.nav	{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 90%;
+	}
+DIV.content	{ margin-left: 49px }
+
+TD.navbar	{ white-space: nowrap; }
+
+A:Link {
+	color: #006699;
+	background-color: transparent;
+}
+
+A:Visited  {
+	color: #3399CC;
+	background-color: transparent;
+}
+
+A:Active  {
+	color: #006699;
+	background-color: transparent;
+}
+
+A:Hover  {
+	color: #006699;
+	background-color: transparent;
+	}
+	
+/*A:Hover  {
+	color: #6699CC;
+	background-color: transparent;
+	}
+*/

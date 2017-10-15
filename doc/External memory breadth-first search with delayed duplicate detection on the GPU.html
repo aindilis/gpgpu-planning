@@ -1,0 +1,2176 @@
+<!DOCTYPE html>
+<html><head><script type="text/javascript">_cf_loadingtexthtml="<img alt=' ' src='/CFIDE/scripts/ajax/resources/cf/images/loading.gif'/>";
+_cf_contextpath="";
+_cf_ajaxscriptsrc="/CFIDE/scripts/ajax";
+_cf_jsonprefix='//';
+_cf_clientid='3D523447676B29EAE5FB9158E0F92ED0';</script><script type="text/javascript" src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/cfmessage.js"></script>
+<script type="text/javascript" src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/cfajax.js"></script>
+<script type="text/javascript" src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/cfform.js"></script>
+<script type="text/javascript" src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/masks.js"></script>
+<script type="text/javascript" src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/cfformhistory.js"></script>
+<script type="text/javascript" src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/cfrichtexteditor.js"></script>
+<script type="text/javascript" src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/fckeditor.js"></script>
+<script type="text/javascript" src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/yahoo-dom-event.js"></script>
+<script type="text/javascript" src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/animation-min.js"></script>
+<script type="text/javascript" src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/ext-yui-adapter.js"></script>
+<script type="text/javascript" src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/ext-core.js"></script>
+<script type="text/javascript" src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/tabs.js"></script>
+<script type="text/javascript" src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/cflayout.js"></script>
+<link rel="stylesheet" type="text/css" href="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/ext-all.css">
+<script type="text/javascript" src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/resizable.js"></script>
+<script type="text/javascript" src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/dragdrop.js"></script>
+<script type="text/javascript" src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/util.js"></script>
+<script type="text/javascript" src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/State-min.js"></script>
+<script type="text/javascript" src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/widget-core.js"></script>
+<script type="text/javascript" src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/dialogs.js"></script>
+<script type="text/javascript" src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/cfwindow.js"></script>
+<link rel="stylesheet" type="text/css" href="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/cf.css">
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/dl.css">
+
+
+
+<title>External memory breadth-first search with delayed duplicate detection on the GPU</title>
+<style type="text/css"><!--
+    body {margin-left: 0em; margin-top: 0}
+    a:link {text-decoration: underline; 	Color: #1d4d0f;}
+    a:visited  { color: #990033; text-decoration: underline;}
+    a:hover {color: red; text-decoration: none}
+    a.dLink1:link {color:#336699}
+    a.dLink1:visited {color:#666666}
+	a.isblack:link {text-decoration: underline; 	Color: #000000;}
+    a.isblack:visited  { color: #000000; text-decoration: underline;}
+    a.isblack:hover {color: #000000; text-decoration: none}
+    h1 {font-size: 140%; margin-bottom: 0}
+	ul {margin-top: .25em; list-style-type: disc}
+	ol {margin-top: .25em;}
+	li {padding-bottom: .25em}
+    h2 {color: white; background-color: #069; 
+        font-size: 100%; padding-left: 1em;
+		margin: 0}
+	h3 {color: black; background-color: yellow; 
+    	font-size: 100%;
+		margin: 0}
+	 h4 {color: black; background-color: #99c5e8; 
+        font-size: 100%;
+		margin: 0}
+    hr {color: #39176d;}
+    form {margin-top: 10}
+    form.xrs {margin-top: 0}
+	
+	a {text-decoration: none; }
+	
+	input {font-size: 1em;}
+	.chevron {color: #ff0000;}
+	.light-blue {color:#336699;}
+	.black {color:#000000;}
+	
+	
+	.mono-text {font-size: 14px; font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;}
+	
+	/* ### standard text styles, smallest to largest ### */
+	
+	.footer-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#336699; font-size: .75em; line-height: 1.33em;
+		text-indent: -.75 em; margin-left: 2em; margin-right: .75em;}
+		
+	.footer-copy-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .75em; line-height: 1.3em;
+		margin-left: .75em; margin-right: .75em;}
+		
+	.small-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .83em; padding-bottom : 2px;
+	  	padding-top : 2px;}
+
+	.smallerer-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .65em;}
+	.smaller-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .75em;}		
+	.small-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .83em;}
+	.small-textb {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .83em; font-weight: bold;}
+	.medium-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 1em;}
+	.mediumb-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 1em; font-weight: bold;}
+	.large-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 1.3em;}		
+	.instr-text {font-family: Arial, Helvetica, sans-serif;
+		color:#666666; font-size: .83em;}
+		
+	.list-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#336699; font-size: .83em; line-height: 1.3em;}
+	.list-link-btext {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .83em; line-height: 1.3em;}
+	
+	.searchbox-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000066; font-size: 1em; font-weight: bold;}
+	.footer-header-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000066; font-size: 1em; font-weight: bold;
+		margin-left: .75em; margin-right: .75em;}
+	.medium-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000066; font-size: 1em; font-weight: bold; line-height: 1em;
+		text-indent: -1.25em; margin-left: 2em; margin-right: .75em;}
+	
+	.text16 {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 16px;}
+		
+	.text14 {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 14px;}
+	
+	.text12 {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 12px;}
+		
+	.text10 {font-family: Arial, Helvetica, sans-serif;
+	    color:#000000; font-size: 12px;}
+		
+	.text9 {font-family: Arial, Helvetica, sans-serif;
+	   color:#000000; font-size: 12px;}
+	
+	.error-text {color:red;}
+	
+	.small-copy-text {font-family: Times, Times New Roman, serif;
+		color:#000066; font-size: .75em; line-height: 1.2em;
+		margin-left: .75em; margin-right: .75em;}
+
+	.medium-copy-text {font-family: Times, Times New Roman, serif;
+		color:#000066; font-size: 1em; line-height: 1.2em;
+		margin-left: .75em; margin-right: .75em;}
+	
+	.large-copy-text {font-family: Times, Times New Roman, serif;
+		color:#000066; font-size: 1.3em; line-height: 1.5em;
+		margin-left: .75em; margin-right: .75em;}
+	
+	.medium-header-text {font-family: Times, Times New Roman, serif;
+		color:#ff0000; font-size: 1em;
+		margin-left: .75em; margin-right: .75em;}
+	
+	.large-header-text {font-family: Times, Times New Roman, serif;
+		color:#ff0000; font-size: 1.5em;
+		margin-left: .75em; margin-right: .75em;}
+
+		#side {
+			width: 10px;
+			float: left;
+			margin-left: -1px;
+			padding: 2px;
+			}
+							
+		#content {
+			padding: 2px;
+			margin-left: 25px;
+			
+		        
+		        }
+	 .fulltext_lnk {border:0px;
+	 				 margin-right: 2px;
+					 vertical-align:baseline;
+	 				}
+	 
+	  .leftcoltab { 
+		  position:relative;
+		  top:5px;
+		  left:5px;
+		  float:left;
+		  width:530px;  /* for IE5/WIN */
+		  width:520px; /* actual value */
+		  margin:0 0 0px 0;
+		  padding:5px;
+		  z-index:100;
+		  }
+	  .rightcoltab {
+    float: right;
+    margin: 0;
+    padding: 5px;
+    position: relative;
+    right: 50px;
+    top: 25px;
+    width: 350px;
+    z-index: 99;
+}
+	  .centercoltab {
+		  position:absolute;
+		  padding:0 0px;
+		  }
+	  .alt {
+		background: #ece9d8;
+		margin: 0;
+		padding: 1px;
+		}
+		.leftcolc { 
+	position:relative;
+	top:5px;
+	left:5px;
+	float:left;
+	width:420px;  /* for IE5/WIN */
+	width:400px; /* actual value */
+	margin:0 0 0px 0;
+	padding:5px;
+	z-index:100;
+	}
+.rightcolc {
+	position:relative;
+	top:0px;
+	right:0px;
+	float:right;
+	margin:0 0px;
+	padding:0px;
+	width:500px;
+	z-index:99;
+	}
+.centercolc {
+	position:absolute;
+	padding:0 0px;
+	}
+	
+	.leftcoltabv { 
+		  position:relative;
+		  top:5px;
+		  left:5px;
+		  float:left;
+		  width:460px;  /* for IE5/WIN */
+		  width:350px; /* actual value */
+		  margin:0 0 0px 0;
+		  padding:5px;
+		  z-index:100;
+		  }
+	.rightcoltabv {
+		position:relative;
+		top:5px;
+		right:0px;
+		float:right;
+		margin:0 0px 0 0;
+		padding:15px;
+		width:480px;
+		z-index:99;
+		}
+		
+.x-tabs-strip-wrap {
+	overflow-y: hidden !important;
+}
+  --></style>
+ 
+
+
+<script src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/tagcanvas.js" type="text/javascript"></script>
+<script type="text/javascript">
+  function loadCloud() {
+	try {
+	  TagCanvas.Start('myCanvas','tags',{
+		textColour: '#000000',
+		outlineColour: '#ff00ff',
+		reverse: true,
+		shuffleTags:true,
+		depth: 0.8,
+		maxSpeed: 0.05,
+		textHeight: 12,
+		initial: [0.000, 0.050],
+		shape: "hring",
+		lock: "x"
+	  });
+	} catch(e) {
+	  // something went wrong, hide the canvas container
+	  // document.getElementById('myCanvasContainer').style.display = 'none';
+	}
+  };
+</script>
+
+
+
+
+
+
+
+<script type="text/javascript" src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/cffp.js"></script>
+
+<script type="text/javascript" src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/jsapi"></script>
+
+<style type="text/css"><!--
+.google-visualization-orgchart-node {
+    background-color: #FFFFFF !important;
+    border: 2px solid #AFCF40 !important;
+    cursor: default;
+    font-family: arial,helvetica;
+    text-align: center;
+    vertical-align: middle;
+}
+
+iframe {float:right; 
+		margin:10px;
+		border: 2px solid #1B4D0E;
+		
+		}
+
+a.boxed:link {text-decoration: none !important; 	Color: #000000 !important;}
+a.boxed:visited  { color: #000000 !important; text-decoration: none !important;}
+a.boxed:hover {color: red !important; text-decoration: underline !important;}
+
+a.boxedh:link {text-decoration: none !important; 	Color: #000000 !important;}
+a.boxedh:visited  { color: #000000 !important; text-decoration: none !important;}
+a.boxedh:hover {color: red !important; text-decoration: underline !important;}		
+
+a.boxedm:link {text-decoration: none !important; 	Color: #606060 !important;}
+a.boxedm:visited  { color: #606060 !important; text-decoration: none !important;}
+a.boxedm:hover {color: red !important; text-decoration: underline !important;}		
+
+a.boxedl:link {text-decoration: none !important; 	Color: #808080   !important;}
+a.boxedl:visited  { color: 	#808080 !important; text-decoration: none !important;}
+a.boxedl:hover {color: red !important; text-decoration: underline !important;}				
+
+.google-visualization-orgchart-linebottom {
+    border-bottom: 1px solid #006699 !important;
+}
+.google-visualization-orgchart-lineleft {
+    border-left: 1px solid #006699 !important;
+}
+
+.google-visualization-orgchart-lineright {
+    border-right: 1px solid #006699 !important;
+}
+
+--></style>
+
+<script type="text/javascript">
+function settab() {
+    var mytabs = ColdFusion.Layout.getTabLayout('citationdetails');
+   
+ 
+  mytabs.on('tabchange', function(tabpanel,activetab) { document.cookie = 'picked=' + '2008300' + ',' + activetab.id; })
+ 
+}
+
+
+function letemknow(){
+  ColdFusion.Window.show('letemknow');
+}
+
+function letemknow2(){
+  ColdFusion.Window.show('letemknow2');
+}
+
+
+
+
+
+function testthis(){
+
+alert('test');
+}
+function loadalert(){ 
+ alert("I am in the load alert");
+ 
+}
+function loadalert2(){ 
+  alert("I am in the load alert2");
+ 
+}
+</script>
+<script type="text/javascript">
+	  	google.load('visualization', '1', {packages:['orgchart']});
+	    google.setOnLoadCallback(drawChart);
+	  
+	  function drawChart() {
+	    var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Name');
+        data.addColumn('string', 'Manager');
+        data.addColumn('string', 'ToolTip');
+  	  
+		data.addRows([
+          [{v:'0', f:'<div style="color:black; font-size:150%; font-style:normal">CCS&nbsp;for&nbsp;this&nbsp;Article</div>'}, '', ''],
+		  
+        ]);
+		
+		if (document.getElementById('chart_div')) {
+       var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
+       chart.draw(data, {allowHtml:true});
+		}
+      }
+	  
+</script>
+
+<script type="text/javascript">
+ function expandcollapse(anchor,whichone) {
+	 var inner = document.getElementById(anchor);
+	 var theshow = "toShow" + whichone;
+ 	 var thehide = "toHide" + whichone;
+	 var span = document.getElementById(theshow);
+     span.style.display = (span.style.display=='inline')?'none':'inline';
+     var span = document.getElementById(thehide);
+     span.style.display = (span.style.display=='none')?'inline':'none';
+     inner.innerHTML = (inner.innerHTML=='collapse')?'expand':'collapse';
+    }
+
+  
+</script>
+
+<script type="text/javascript">
+ /* <!-- Begin
+	if(document.layers || document.all) {
+	a = 1;
+	setInterval("Jump()", 10);
+	}
+	function Jump() {
+	a = a + 1;
+	//self.moveBy((Math.random() * a * 2 - a), (Math.random() * a * 2) - a);
+	}
+//  End --> */
+</script>
+
+<script type="text/javascript">
+function expandWatson(divID,theConcept) { 
+			if (document.getElementById(divID).style.display == "none") {
+				document.getElementById(divID).style.display = "block";
+				document.getElementById(divID).innerHTML = theConcept + "<br />" + document.getElementById(divID).innerHTML;
+			}
+			 else {
+				 document.getElementById(divID).style.display = "none"
+			}
+		}
+</script>
+
+
+<!-- patent candor integration --->
+<script type="text/javascript">
+  function togglePatMap() {
+        var div = document.getElementById('patmap'); 
+        if (div.style.display == "none") {
+            div.style.display = "block";
+            document.getElementById("expandcollapsepmapa").src = "images/collapse.png";
+			
+			if (div.innerHTML.length == 0){
+				httpGetAsyncwID("patent.cfm?id=2008300",'patmap');
+				httpGetAsyncwID("simmap_track.cfm?id=2008300&how=live",'blackhole');
+			}
+			else {
+				httpGetAsyncwID("simmap_track.cfm?id=2008300&how=cache",'blackhole');
+			}
+			
+        }
+        else {
+            div.style.display = "none";
+            document.getElementById("expandcollapsepmapa").src = "images/expand.png";
+        }
+    }
+	
+	function httpGetAsyncwID(theUrl,theID) {
+		var xmlHttp = new XMLHttpRequest();
+		xmlHttp.onreadystatechange = function() {
+			if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+				
+				document.getElementById(theID).innerHTML=xmlHttp.responseText;
+		}
+		xmlHttp.open("GET", theUrl, true); // true for asynchronous 
+		xmlHttp.send();
+	}
+</script>
+
+
+<meta name="citation_conference" content="Proceedings of the 6th international conference on Model checking and artificial intelligence"> <meta name="citation_publisher" content="Springer-Verlag"> <meta name="citation_authors" content="Edelkamp, Stefan; Sulewski, Damian"> <meta name="citation_title" content="External memory breadth-first search with delayed duplicate detection on the GPU"> <meta name="citation_date" content="07/11/2010"> <meta name="citation_isbn" content="978-3-642-20673-3"> <meta name="citation_firstpage" content="12"> <meta name="citation_lastpage" content="31"> <meta name="citation_abstract_html_url" content="http://dl.acm.org/citation.cfm?id=2008298.2008300"> 
+
+
+
+<script type="text/javascript">
+	ColdFusion.Ajax.importTag('CFAJAXPROXY');
+</script>
+
+<script type="text/javascript">
+	ColdFusion.Ajax.importTag('CFFORM');
+</script>
+
+<script type="text/javascript">
+	ColdFusion.Ajax.importTag('CFDIV');
+</script>
+
+<script type="text/javascript">
+	ColdFusion.Ajax.importTag('CFTEXTAREA');
+</script>
+
+<script type="text/javascript">
+	ColdFusion.Ajax.importTag('CFLAYOUT-TAB');
+</script>
+
+	<script type="text/javascript">
+		var _cf_layout_init_1470391817739=function()
+		{
+			var _cf_layout=ColdFusion.Layout.initializeTabLayout("citationdetails");
+			ColdFusion.Layout.addTab(_cf_layout,"abstract","<span>Abstract</span>",false,false);
+			ColdFusion.Layout.selectTab('citationdetails','abstract');_cf_bind_init_1470391817740=function()
+			{
+				ColdFusion.Bind.register([],{'bindTo':'abstract','bindExpr':['tab_abstract.cfm?id=2008300&usebody=tabbody&cfid=652248647&cftoken=40652235']},ColdFusion.Bind.urlBindHandler,true);
+			};ColdFusion.Event.registerOnLoad(_cf_bind_init_1470391817740);
+			ColdFusion.Layout.addTab(_cf_layout,"authors","<span>Authors</span>",false,false);_cf_bind_init_1470391817741=function()
+			{
+				ColdFusion.Bind.register([],{'bindTo':'authors','bindExpr':['tab_authors2.cfm?id=2008300&usebody=tabbody&cfid=652248647&cftoken=40652235']},ColdFusion.Bind.urlBindHandler,true);
+			};ColdFusion.Event.registerOnLoad(_cf_bind_init_1470391817741);
+			ColdFusion.Layout.addTab(_cf_layout,"references","<span>References</span>",false,false);_cf_bind_init_1470391817742=function()
+			{
+				ColdFusion.Bind.register([],{'bindTo':'references','bindExpr':['tab_references.cfm?id=2008300&type=article&usebody=tabbody&cfid=652248647&cftoken=40652235']},ColdFusion.Bind.urlBindHandler,true);
+			};ColdFusion.Event.registerOnLoad(_cf_bind_init_1470391817742);
+			ColdFusion.Layout.addTab(_cf_layout,"citedby","<span>Cited By</span>",false,false);_cf_bind_init_1470391817743=function()
+			{
+				ColdFusion.Bind.register([],{'bindTo':'citedby','bindExpr':['tab_citings.cfm?id=2008300&usebody=tabbody&cfid=652248647&cftoken=40652235']},ColdFusion.Bind.urlBindHandler,true);
+			};ColdFusion.Event.registerOnLoad(_cf_bind_init_1470391817743);
+			ColdFusion.Layout.addTab(_cf_layout,"indexterms","<span style='color:#999999'>Index Terms</span>",false,false);_cf_bind_init_1470391817744=function()
+			{
+				ColdFusion.Bind.register([],{'bindTo':'indexterms','bindExpr':['tab_indexterms.cfm?id=2008300&usebody=tabbody&cfid=652248647&cftoken=40652235']},ColdFusion.Bind.urlBindHandler,true);
+			};ColdFusion.Event.registerOnLoad(_cf_bind_init_1470391817744);
+			ColdFusion.Layout.addTab(_cf_layout,"source","<span>Publication</span>",false,false);_cf_bind_init_1470391817745=function()
+			{
+				ColdFusion.Bind.register([],{'bindTo':'source','bindExpr':['tab_source.cfm?id=2008300&usebody=tabbody&type=article&sellOnline=0&purchaseable=no&cfid=652248647&cftoken=40652235']},ColdFusion.Bind.urlBindHandler,true);
+			};ColdFusion.Event.registerOnLoad(_cf_bind_init_1470391817745);
+			ColdFusion.Layout.addTab(_cf_layout,"revs","<span style='color:#999999'>Reviews</span>",false,false);_cf_bind_init_1470391817746=function()
+			{
+				ColdFusion.Bind.register([],{'bindTo':'revs','bindExpr':['tab_reviews.cfm?id=2008300&logged=0&curclient_no=NO&usebody=tabbody&cfid=652248647&cftoken=40652235']},ColdFusion.Bind.urlBindHandler,true);
+			};ColdFusion.Event.registerOnLoad(_cf_bind_init_1470391817746);
+			ColdFusion.Layout.addTab(_cf_layout,"comments","<span>Comments</span>",false,true);_cf_bind_init_1470391817747=function()
+			{
+				ColdFusion.Bind.register([],{'bindTo':'comments','bindExpr':['tab_comments.cfm?id=2008300&logged=0&loggedbyip=0&curclient_no=NO&usebody=tabbody&full_name=&email=&cfid=652248647&cftoken=40652235']},ColdFusion.Bind.urlBindHandler,true);
+			};ColdFusion.Event.registerOnLoad(_cf_bind_init_1470391817747);
+			ColdFusion.Layout.addTab(_cf_layout,"prox","<span>Table of Contents</span>",false,false);_cf_bind_init_1470391817748=function()
+			{
+				ColdFusion.Bind.register([],{'bindTo':'prox','bindExpr':['tab_about.cfm?id=2008300&type=article&sellOnline=0&parent_id=2008298&parent_type=proceeding&title=External%20memory%20breadth%2Dfirst%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU&toctitle=Proceedings%20of%20the%206th%20international%20conference%20on%20Model%20checking%20and%20artificial%20intelligence&tocissue_date=&notoc=0&usebody=tabbody&tocnext_id=&tocnext_str=&tocprev_id=&tocprev_str=&toctype=proceeding&cfid=652248647&cftoken=40652235']},ColdFusion.Bind.urlBindHandler,true);
+			};ColdFusion.Event.registerOnLoad(_cf_bind_init_1470391817748);
+		};ColdFusion.Event.registerOnLoad(_cf_layout_init_1470391817739);
+	</script>
+	
+<script type="text/javascript">
+	ColdFusion.Ajax.importTag('CFWINDOW');
+</script>
+
+<script type="text/javascript">
+	var _cf_window_init_1470391817750=function()
+	{
+		_cf_bind_init_1470391817751=function()
+		{
+			ColdFusion.Bind.register([],{'bindTo':'letemknow_body','bindExpr':['letemknow.cfm?CFID=652248647&CFTOKEN=40652235']},ColdFusion.Bind.urlBindHandler,false);
+		};ColdFusion.Event.registerOnLoad(_cf_bind_init_1470391817751);var _cf_window=ColdFusion.Window.create('letemknow','<div style=\'text-align:left; color:black;\'>Did you know the ACM DL App is now available?</div>','letemknow.cfm?CFID=652248647&CFTOKEN=40652235',{ modal:false, closable:true, divid:'cf_window1470391817749', draggable:true, resizable:true, fixedcenter:false, width:600, height:275, shadow:true, callfromtag:true, minwidth:600, minheight:275, initshow:false, x:75, y:125});
+	};ColdFusion.Event.registerOnLoad(_cf_window_init_1470391817750);
+</script>
+
+<script type="text/javascript">
+	var _cf_window_init_1470391817753=function()
+	{
+		_cf_bind_init_1470391817754=function()
+		{
+			ColdFusion.Bind.register([],{'bindTo':'letemknow2_body','bindExpr':['letemknow_recomm.cfm?CFID=652248647&CFTOKEN=40652235']},ColdFusion.Bind.urlBindHandler,false);
+		};ColdFusion.Event.registerOnLoad(_cf_bind_init_1470391817754);var _cf_window=ColdFusion.Window.create('letemknow2','<div style=\'text-align:left; color:black;\'>Did you know your Organization can subscribe to the ACM Digital Library?</div>','letemknow_recomm.cfm?CFID=652248647&CFTOKEN=40652235',{ modal:false, closable:true, divid:'cf_window1470391817752', draggable:true, resizable:true, fixedcenter:false, width:600, height:275, shadow:true, callfromtag:true, minwidth:600, minheight:275, initshow:false, x:70, y:175});
+	};ColdFusion.Event.registerOnLoad(_cf_window_init_1470391817753);
+</script>
+
+<script type="text/javascript">
+	var _cf_window_init_1470391817756=function()
+	{
+		_cf_bind_init_1470391817757=function()
+		{
+			ColdFusion.Bind.register([],{'bindTo':'theguide_body','bindExpr':['whatisguide.cfm']},ColdFusion.Bind.urlBindHandler,false);
+		};ColdFusion.Event.registerOnLoad(_cf_bind_init_1470391817757);var _cf_window=ColdFusion.Window.create('theguide','The ACM Guide to Computing Literature','whatisguide.cfm',{ modal:false, closable:true, divid:'cf_window1470391817755', draggable:true, resizable:true, fixedcenter:true, width:500, height:300, shadow:true, callfromtag:true, minwidth:300, minheight:250, initshow:false});
+	};ColdFusion.Event.registerOnLoad(_cf_window_init_1470391817756);
+</script>
+
+<script type="text/javascript">
+	var _cf_window_init_1470391817759=function()
+	{
+		_cf_bind_init_1470391817760=function()
+		{
+			ColdFusion.Bind.register([],{'bindTo':'thetags_body','bindExpr':['showthetags.cfm?id=2008300']},ColdFusion.Bind.urlBindHandler,false);
+		};ColdFusion.Event.registerOnLoad(_cf_bind_init_1470391817760);var _cf_window=ColdFusion.Window.create('thetags','All Tags','showthetags.cfm?id=2008300',{ modal:false, closable:true, divid:'cf_window1470391817758', draggable:true, resizable:true, fixedcenter:true, width:500, height:300, shadow:true, callfromtag:true, minwidth:300, minheight:250, initshow:false});
+	};ColdFusion.Event.registerOnLoad(_cf_window_init_1470391817759);
+</script>
+
+<script type="text/javascript">
+	var _cf_window_init_1470391817762=function()
+	{
+		var _cf_window=ColdFusion.Window.create('theformats','Export Formats','',{ modal:false, closable:true, divid:'cf_window1470391817761', draggable:true, resizable:true, fixedcenter:false, width:500, height:300, shadow:true, bodystyle:'text-align:left', callfromtag:true, minwidth:250, minheight:250, initshow:false});
+	};ColdFusion.Event.registerOnLoad(_cf_window_init_1470391817762);
+</script>
+
+<script type="text/javascript">
+	var _cf_window_init_1470391817764=function()
+	{
+		var _cf_window=ColdFusion.Window.create('theexplaination','','',{ modal:false, closable:true, divid:'cf_window1470391817763', draggable:true, resizable:true, fixedcenter:false, width:500, height:300, shadow:true, bodystyle:'text-align:left', callfromtag:true, minwidth:300, minheight:250, initshow:false});
+	};ColdFusion.Event.registerOnLoad(_cf_window_init_1470391817764);
+</script>
+
+<script type="text/javascript">
+	var _cf_window_init_1470391817766=function()
+	{
+		var _cf_window=ColdFusion.Window.create('theservices','','',{ modal:false, closable:true, divid:'cf_window1470391817765', draggable:true, resizable:true, fixedcenter:false, width:500, height:300, shadow:true, bodystyle:'text-align:left', callfromtag:true, minwidth:300, minheight:250, initshow:false});
+	};ColdFusion.Event.registerOnLoad(_cf_window_init_1470391817766);
+</script>
+
+<script type="text/javascript">
+	var _cf_window_init_1470391817768=function()
+	{
+		_cf_bind_init_1470391817769=function()
+		{
+			ColdFusion.Bind.register([],{'bindTo':'savetobinder_body','bindExpr':['savetobinder.cfm?id=2008300']},ColdFusion.Bind.urlBindHandler,false);
+		};ColdFusion.Event.registerOnLoad(_cf_bind_init_1470391817769);var _cf_window=ColdFusion.Window.create('savetobinder','Save to Binder','savetobinder.cfm?id=2008300',{ modal:false, closable:true, divid:'cf_window1470391817767', draggable:true, resizable:true, fixedcenter:true, width:600, height:600, shadow:true, callfromtag:true, minwidth:300, minheight:250, initshow:false, _cf_refreshOnShow:true});
+	};ColdFusion.Event.registerOnLoad(_cf_window_init_1470391817768);
+</script>
+
+<script type="text/javascript">
+	ColdFusion.Event.registerOnLoad(settab,null,false,true);
+</script>
+</head>
+
+
+
+
+<body style="text-align:center" onload="selectPerson(0); personConceptEnter(0,0);">          <!-- jtr changed, wg added personConceptEnter-->
+
+
+<script type="text/javascript">
+						addthis_pub             = 'acm'; 
+						//addthis_logo            = 'http://www.addthis.com/images/yourlogo.png';
+						addthis_logo            = 'http://dl.acm.org/images/ACM_transparent.png';
+						addthis_logo_background = 'c2d5fc';
+						addthis_logo_color      = '000000';
+						addthis_brand           = 'Citation Page';
+						addthis_options         = 'favorites, email, slashdot, citeulike, digg, delicious, twitter, myspace, facebook, google, more';
+						</script>
+                        
+<script src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/AC_RunActiveContent.js" type="text/javascript"></script>
+
+
+
+
+<div style="width:940px; margin-left: auto; margin-right: auto; text-align:left">
+<a id="CIT"></a>
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/ns.html" style="display:none;visibility:hidden" height="0" width="0"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NFGCMX');</script>
+<!-- End Google Tag Manager -->
+<div id="header">
+
+
+<table style="table-layout:fixed; margin-top: 5px; margin-bottom: 10px; border:0px; width:100%; border-collapse:collapse;">
+	
+    <tbody><tr style="vertical-align:top">
+		
+		<td style="padding-left: 5px; padding-right:10px; padding-bottom:0px; width:300px" class="small-link-text"><img src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/ACMDL_Logo.jpg" alt="ACM DL" style="border:0px" usemap="#port">
+		</td>
+        
+        <td style="padding-left: 5px; padding-right:10px; padding-bottom:0px;" class="small-link-text">
+        	<table style="width:100%; border-collapse:collapse; padding:0px">
+			<tbody><tr><td style="text-align:center">
+				
+                            <div style="margin:0px auto;color:#356b20;font-size:10pt;line-height:10%;"> </div>
+                    
+					</td>		
+			</tr>
+			</tbody></table> 
+        </td>
+		<td style="padding-top: 0px; padding-left: 0px; padding-bottom:0px; text-align:right;" class="small-link-text">
+			 <p style="margin-top:0px; margin-bottom:10px;">
+					
+                            <a href="https://dl.acm.org/signin.cfm?cfid=652248647&amp;cftoken=40652235" class="small-link-text" title="Sign in to personalize your Digital Library experience">SIGN IN</a>
+                            &nbsp;&nbsp;<a href="https://dl.acm.org/signin.cfm?cfid=652248647&amp;cftoken=40652235" class="small-link-text" title="Sign up to personalize your Digital Library experience">SIGN UP</a>
+						
+			 </p>
+            
+			<table style="padding: 5px; border-collapse:collapse; float:right">
+            	 
+			 
+
+
+				
+				
+                            
+                           <tbody><tr>
+                            <td class="small-link-text" style="text-align:right">
+                            
+                            
+                           <script type="text/javascript">
+								function encodeInput(form){
+								    	var cleanQuery = form.elements['query'].value.replace(new RegExp( "\\+", "g" ),"%2B");
+										cleanQuery = cleanQuery.replace(/#/g, "%23");
+										cleanQuery = cleanQuery.replace(/(\n)/g, " ");
+										cleanQuery = cleanQuery.trim();
+										form.elements['query'].value = cleanQuery;
+								}
+							</script>
+                            <form name="qiksearch" action="/results.cfm?CFID=652248647&amp;CFTOKEN=40652235" onsubmit="encodeInput(this)">
+                           
+                           
+                            
+                            		
+                                    
+                                    
+                                    
+									<span style="margin-left:0px"><label><input name="query" size="30" value=" " type="text"></label>&nbsp;                                    
+                                    <input style="vertical-align:top;" alt="Search" name="Go" src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/search_small.jpg" type="image">
+                                    
+                                    </span>
+							  </form>
+                                </td>
+                            </tr>
+                          
+                            
+                            
+                          
+				  
+			</tbody></table>
+
+			
+			
+		</td>
+
+	</tr>
+    
+    
+    <tr><td colspan="3" class="small-link-text" style="padding-bottom:5px; padding-top:0px; text-align:center">
+		<div style="margin:0px auto;color:#356b20;line-height:10%;"> </div>
+         
+         </td>
+    </tr>
+    </tbody></table>
+	
+<map name="port" id="port"> 
+  <area shape="rect" coords="1,1,60,50" href="http://www.acm.org/" alt="ACM Home Page">
+  <area shape="rect" coords="65,1,275,68" href="http://dl.acm.org/dl.cfm?CFID=652248647&amp;CFTOKEN=40652235" alt="ACM Digital Library Home Page">
+</map>
+
+</div> <style>
+  .watsonCont {
+	  width:170px;
+	  
+	  color: #000000;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 1em;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	 /* background-color: lightgray;*/
+  }
+  #watsonInside {
+    border-radius: 25px;
+    border: 2px solid #649134;
+	margin-top: 12px;
+	padding: 5px;
+	height: 80px;
+  }
+
+</style>
+
+
+
+<table style="table-layout:fixed; padding-bottom:10px; width:100%; padding:0px;">
+	<tbody><tr style="vertical-align:top">
+		<td style="padding-right:10px; text-align:left" class="small-link-text">
+        	<div id="divmain" style="border:1px solid #356b20;">
+				 
+				<div class="large-text" style="text-align:left; margin-left:2px;margin-bottom:5px;">
+					
+                    	<h1 class="mediumb-text" style="margin-top:0px; margin-bottom:0px;"><strong>External memory breadth-first search with delayed duplicate detection on the GPU</strong></h1>
+                        
+                </div>
+                
+
+<table class="medium-text" style="border-collapse:collapse; padding:0px;">
+
+<colgroup>
+<col style="width:540px">
+</colgroup>
+
+<tbody><tr style="vertical-align:top">
+  <td>
+    <table style="border-collapse:collapse; padding:2px;" class="medium-text">
+      <colgroup><col style="width:80px;">
+      <col style="width:auto">
+      </colgroup><tbody><tr style="vertical-align:top">
+        
+		
+		
+      </tr>
+    </tbody></table>
+
+	
+    
+        <table style="margin-top: 10px; border-collapse:collapse; padding:2px;" class="medium-text">
+            <colgroup><col style="width:80px">
+            
+            </colgroup><tbody><tr>
+            <td nowrap="nowrap" valign="top">
+             Authors:
+                
+            </td>
+            <td nowrap="nowrap" valign="top">
+                
+                    <a href="https://dl.acm.org/author_page.cfm?id=81100182002&amp;coll=DL&amp;dl=ACM&amp;trk=0&amp;cfid=652248647&amp;cftoken=40652235" title="Author Profile Page" target="_self">Stefan Edelkamp</a>
+                
+            </td>
+            <td valign="bottom">
+                
+                        <a href="https://dl.acm.org/inst_page.cfm?id=60008293&amp;CFID=652248647&amp;CFTOKEN=40652235" title="Institutional Profile Page"><small>TZI, Universität Bremen, Germany</small></a>
+                      	
+            </td>
+            </tr>
+            
+            <tr>
+            <td nowrap="nowrap" valign="top">
+             
+            </td>
+            <td nowrap="nowrap" valign="top">
+                
+                    <a href="https://dl.acm.org/author_page.cfm?id=81421600984&amp;coll=DL&amp;dl=ACM&amp;trk=0&amp;cfid=652248647&amp;cftoken=40652235" title="Author Profile Page" target="_self">Damian Sulewski</a>
+                
+            </td>
+            <td valign="bottom">
+                
+                        <a href="https://dl.acm.org/inst_page.cfm?id=60008293&amp;CFID=652248647&amp;CFTOKEN=40652235" title="Institutional Profile Page"><small>TZI, Universität Bremen, Germany</small></a>
+                      	
+            </td>
+            </tr>
+            
+        </tbody></table>
+    
+        <table style="margin-top: 10px" class="medium-text" border="0" cellpadding="2" cellspacing="0">
+            <tbody><tr>
+            	<td><table class="medium-text" border="0" cellpadding="1" cellspacing="0">
+
+<tbody><tr valign="top">
+    <td style="padding-top:10px;" nowrap="nowrap">Published in:</td>
+</tr>
+
+	<tr valign="top">
+    	<td style="padding-bottom:0px" nowrap="nowrap">·&nbsp;Proceeding</td>
+	</tr>
+    <tr valign="top">
+	    <td style="padding-left:10px;">
+		   MoChArt'10 Proceedings of the 6th international conference on Model checking and artificial intelligence 
+        </td>
+	</tr>
+    
+    <tr valign="top">
+	    <td style="padding-left:10px; padding-bottom:10px"> Pages  12-31 
+               <br>
+            <span class="small-link-text">Springer-Verlag</span> <span class="small-link-text">Berlin, Heidelberg</span> <span class="small-link-text">  ©2011</span> 
+                <br>           
+                
+	                    <a href="https://dl.acm.org/citation.cfm?id=2008298&amp;picked=prox&amp;cfid=652248647&amp;cftoken=40652235" target="_self" class="small-link-text">table&nbsp;of&nbsp;contents</a>
+    				ISBN: 978-3-642-20673-3 
+      </td>
+	</tr>
+	 
+
+</tbody></table></td>
+            </tr>
+        </tbody></table>
+    
+
+  </td>
+
+  <td rowspan="20"> 
+	<table class="medium-text" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+        	<td style="padding-bottom: 5px;" align="center">
+			  
+               <img src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/apdf.jpg" title="External memory breadth-first search with delayed duplicate detection on the GPU" alt="External memory breadth-first search with delayed duplicate detection on the GPU" height="90" width="60" border="0"> 
+              </td>
+              <td align="left" nowrap="nowrap">
+	             2010 Article<br>
+                 
+        	 </td>
+        </tr>
+                
+        <tr>
+        	<td colspan="2" style="padding-bottom:5px; padding-top:5px;" valign="baseline">
+            <img src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/stats.jpg" alt="Bibliometrics Data">&nbsp;
+            <a href="javascript:ColdFusion.Window.show('theexplaination');ColdFusion.navigate('explain.cfm?expid=1','theexplaination');" title="Bibliometrics: explained">Bibliometrics</a>
+            </td>
+         </tr>
+         <tr>
+            <td class="small-text" colspan="2" style="padding-left:30px;" valign="top">
+				
+	                    	·&nbsp;Downloads (6 Weeks): 0<br>
+    	                    ·&nbsp;Downloads (12 Months): 0<br>
+                            ·&nbsp;Downloads (cumulative): 0<br>
+                          
+                        ·&nbsp;Citation Count: 1 
+			</td>
+         </tr>
+         
+            
+		
+	</tbody></table>
+  </td>
+</tr>
+</tbody></table>
+
+<br clear="all">
+
+  
+                 <br clear="all">
+			</div>
+			
+            
+            
+			
+          	
+
+<!-- jtr start -->
+<style>
+    .watson {
+        position: relative;
+        padding: 10px;
+       /* margin-right: 9px;*/
+	    margin-top: 5px;
+        border: 1px solid #356b20;
+    }
+    .header-text {
+        position: relative;
+        top: -.5em;
+    }
+    .header-text a {
+        color: black;
+        text-decoration: none;
+    }
+    .header-text a:hover {
+        color: black;
+    }
+    .expand-collapse {
+        position: relative;
+        top: -0.2em;
+    }
+/*    .powered-by {
+        float: right;
+        position: relative;
+        left: 9.3em;
+        top: -3.6em;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 65%;
+        font-style: italic;
+    }
+    .watson-logo {
+        float: right;
+        position: relative;
+        top: -1.8em;
+    }*/
+	.powered-by {
+        float: right;
+        position: relative;
+        left: 8em;      /* jtr_9 */
+        top: -3.9em;    /* jtr_9 */
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 70%;
+        font-style: italic;
+    }
+    .watson-logo {
+        float: right;
+        position: relative;
+        top: -1.4em;        /* jtr_9 */
+        height: auto;       /* jtr_9 */
+        width: auto;        /* jtr_9 */
+        max-width: 100px;   /* jtr_9 */
+    }
+    .related-items-container {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+    }
+    .related-item-flyover {
+        padding-left: .5em;
+        padding-top: .5em;
+        padding-bottom: 1em;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 80%;
+		width: 60%;
+    }
+    .related-items-table {
+        position: relative;
+        top: .5em;
+    }
+    .related-items-table td {
+        text-align: center;
+        vertical-align: bottom;
+    }
+    .related-item-glyph {
+        opacity: 0.4;
+        filter: alpha(opacity=40);
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: -.3em;
+        cursor: pointer;
+    }
+	#related_concepts h2 {
+    background-color: #ece9d8;
+    color: black;
+	font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+	font-size: 1.3em;
+    margin: 0;
+    padding: 0.2em;
+	}
+	#related_concepts h2 span {
+    display: table-cell;
+    padding-right: 5px;
+	}
+
+    .person-name {
+        position: relative;
+        top: 1em;
+        font-weight: bold;
+        color: #356b20;
+    }
+    .person-name a:visited {
+        color: #356b20;
+    }
+    .person-name a:hover {
+        color: red;
+    }
+    .person-concepts {
+        position: relative;
+        left: 1em;
+        top: 1.3em;
+        color: #356b20;
+    }
+    .person-concept a {
+        color: #356b20;
+    }
+    .person-concept a:hover {
+        color: red;
+    }
+    .person-concept-explanation {
+        position: absolute;
+        left: 45em;
+        top: 7.5em;
+        width: 22em;
+        height: 7.8em;
+        /*overflow: auto;*/
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 80%;
+        display: show;
+		left: 45em;
+    }
+    .person-concept-explanation a:visited {
+        color: #356b20;
+    }
+    .person-concept-explanation a:hover {
+        color: red;
+    }
+	.person-concept-title {
+		overflow:hidden;
+		text-overflow: ellipsis;
+    	white-space: nowrap;
+    }
+	.person-concept-author {
+        position: relative;
+		top: .5em;
+    }
+    .person-concept-passage {
+        position: relative;
+        /*top: 0.6em;*/
+		top: 1em;
+    }
+    .paper-concepts {
+        padding-top: 10px;
+        padding-left: 10px; 
+        padding-right:10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 75%;
+    }
+    .hover_img { display:inline; }
+    .hover_img a { position:relative; }
+    .hover_img a span { display:none; }
+    .hover_img a:hover span { display:block; }
+</style>
+<!-- jtr end -->
+<!-- jtr start -->
+<!-- scripts -->
+
+<script type="text/javascript">
+    var selected_person = null;
+    var related_authors = [
+			  	
+			
+	  
+				   {"name": "John D. Owens", "id": "81100458295", 
+					"concepts": [
+					 
+					  
+					  {"label": "Breadth-first search", 
+					   "score": 0.99324334, 
+					   "source": "Parallel Reyes-style adaptive subdivision with bounded memory usage", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2699289", 
+					   "passage": "... bound. While this operation has been successfully parallelized for execution on the GPU using a  <strong>breadth-first traversal</strong> , the resulting implementations are limited by their unpredictable worst-case memory consumption ..."
+					   }, 
+					  
+					  {"label": "Video card", 
+					   "score": 0.98988223, 
+					   "source": "Parallel Reyes-style adaptive subdivision with bounded memory usage", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2699289", 
+					   "passage": "... in graphics hardware have made it a desirable goal to implement the Reyes algorithm on current  <strong>graphics cards</strong> . One key component in this algorithm is the bound-and-split phase, where surface patches are ..."
+					   }, 
+					  
+					  {"label": "Graphics processing unit", 
+					   "score": 0.9865326, 
+					   "source": "Gunrock: a high-performance graph processing library on the GPU", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2688538", 
+					   "passage": "... a high-performance graph processing library on the  <strong>GPU</strong> .   For large-scale graph analytics on the GPU, the irregularity of data access and control flow  ..."
+					   }, 
+					  
+					  {"label": "Graph (abstract data type)", 
+					   "score": 0.9798679, 
+					   "source": "Gunrock: a high-performance graph processing library on the GPU", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2688538", 
+					   "passage": "... a high-performance  <strong>graph processing</strong>  library on the GPU.   For large-scale graph analytics on the GPU, the irregularity of data ..."
+					   }, 
+					  
+					  {"label": "Parallel computing", 
+					   "score": 0.95690316, 
+					   "source": "Parallel Reyes-style adaptive subdivision with bounded memory usage", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2699289", 
+					   "passage": "... until they are smaller than a given screen-space bound. While this operation has been successfully  <strong>parallelized</strong>  for execution on the GPU using a breadth-first traversal, the resulting implementations are ..."
+					   }, 
+					  
+					  {"label": "Locality of reference", 
+					   "score": 0.9408446, 
+					   "source": "Parallel Reyes-style adaptive subdivision with bounded memory usage", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2699289", 
+					   "passage": "... usage, a smooth and predictable tradeoff between memory usage and performance, and increased  <strong>locality</strong>  for surface processing. This allows us to render scenes that would require too much memory to be ..."
+					   } 
+					  ]
+					},  	
+			
+	  
+				   {"name": "Michael Garland", "id": "81100516743", 
+					"concepts": [
+					 
+					  
+					  {"label": "Graph traversal", 
+					   "score": 0.9966159, 
+					   "source": "High-Performance and Scalable GPU Graph Traversal", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2717511", 
+					   "passage": "... and Scalable GPU Graph Traversal.  Breadth-First Search (BFS) is a core primitive for  <strong>graph traversal</strong>  and a basis for many higher-level graph analysis algorithms. It is also representative of a class ..."
+					   }, 
+					  
+					  {"label": "Breadth-first search", 
+					   "score": 0.99324334, 
+					   "source": "High-Performance and Scalable GPU Graph Traversal", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2717511", 
+					   "passage": "... and Scalable GPU Graph Traversal.   <strong>Breadth-First Search</strong>  (BFS) is a core primitive for graph traversal and a basis for many higher-level graph analysis ..."
+					   }, 
+					  
+					  {"label": "Graphics processing unit", 
+					   "score": 0.9865326, 
+					   "source": "A collection-oriented programming model for performance portability", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2688537", 
+					   "passage": "... of the same computation on various parallel architectures such as multi-core CPUs and  <strong>GPUs</strong> . By decoupling computations from architecture-specific implementation, programmers can target ..."
+					   }, 
+					  
+					  {"label": "In-place matrix transposition", 
+					   "score": 0.9831945, 
+					   "source": "A decomposition for in-place matrix transposition", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2555253", 
+					   "passage": "... decomposition for  <strong>in-place matrix transposition</strong> .  We describe a decomposition for in-place matrix transposition, with applications to Array of ..."
+					   }, 
+					  
+					  {"label": "Parallel computing", 
+					   "score": 0.95690316, 
+					   "source": "A collection-oriented programming model for performance portability", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2688537", 
+					   "passage": "... paper describes Surge, a collection-oriented programming model that enables programmers to compose  <strong>parallel</strong>  computations using nested high-level data collections and operators. Surge exposes a code ..."
+					   }, 
+					  
+					  {"label": "Nvidia Tesla", 
+					   "score": 0.9440333, 
+					   "source": "A decomposition for in-place matrix transposition", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2555253", 
+					   "passage": "... efficient and naturally parallel algorithm: we have measured median throughput of 19.5 GB/s on an  <strong>NVIDIA Tesla</strong>  K20c processor. An implementation specialized for the skinny matrices that arise when converting ..."
+					   } 
+					  ]
+					},  	
+			
+	  
+				   {"name": "Eduard Ayguad&#233;", "id": "81100439790", 
+					"concepts": [
+					 
+					  
+					  {"label": "Breadth-first search", 
+					   "score": 0.99324334, 
+					   "source": "Exploring dynamic parallelism in OpenMP", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2832113", 
+					   "passage": "... and computation patterns commonly found in real applications: sparse matrix vector multiplication,  <strong>breadth-first search</strong>  and divide--and--conquer Mandelbrot. Performance results show speed-ups in the 40x range relative ..."
+					   }, 
+					  
+					  {"label": "Graphics processing unit", 
+					   "score": 0.9865326, 
+					   "source": "SSMART : smart scheduling of multi-architecture tasks on heterogeneous systems", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2832109", 
+					   "passage": "... on top of OmpSs, a programming model based on compiler directives. The results obtained in a  <strong>multi-GPU</strong>  and a MIC+GPU systems prove that our proposal gives flexibility to applications and can ..."
+					   }, 
+					  
+					  {"label": "Parallel computing", 
+					   "score": 0.95690316, 
+					   "source": "Exploiting asynchrony from exact forward recovery for DUE in iterative solvers", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2807599", 
+					   "passage": "... simple algorithmic redundancies to correct errors. Such redundancies would be inapplicable under  <strong>coarse grain</strong>  error detection, but become very powerful when the hardware is able to precisely detect ..."
+					   }, 
+					  
+					  {"label": "Memory hierarchy", 
+					   "score": 0.9536685, 
+					   "source": "Coherence protocol for transparent management of scratchpad memories in shared memory manycore architectures", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2750411", 
+					   "passage": "... number of cores in manycore architectures causes important power and scalability problems in the  <strong>memory subsystem</strong> . One solution is to introduce scratchpad memories alongside the cache hierarchy, forming a hybrid ..."
+					   }, 
+					  
+					  {"label": "Computer hardware", 
+					   "score": 0.9345016, 
+					   "source": "Exploiting asynchrony from exact forward recovery for DUE in iterative solvers", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2807599", 
+					   "passage": "... and Uncorrected Errors (DUE) relying on error detection techniques already available in commodity  <strong>hardware</strong> . Detection operates at the memory page level, which enables the use of simple algorithmic ..."
+					   }, 
+					  
+					  {"label": "OpenCL", 
+					   "score": 0.92195344, 
+					   "source": "Auto-Tuning OmpSs-OpenCL Kernels Across GPU Machines", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2701316", 
+					   "passage": "... applications across different generations of GPUs. The proposed tool focuses on modifying the  <strong>OpenCL</strong>  kernel execution configuration based on GPU specifications and does not require any user ..."
+					   } 
+					  ]
+					},  	
+			
+	  
+				   {"name": "Jes&#250;s Labarta", "id": "81100040376", 
+					"concepts": [
+					 
+					  
+					  {"label": "Breadth-first search", 
+					   "score": 0.99324334, 
+					   "source": "Exploring dynamic parallelism in OpenMP", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2832113", 
+					   "passage": "... and computation patterns commonly found in real applications: sparse matrix vector multiplication,  <strong>breadth-first search</strong>  and divide--and--conquer Mandelbrot. Performance results show speed-ups in the 40x range relative ..."
+					   }, 
+					  
+					  {"label": "Graphics processing unit", 
+					   "score": 0.9865326, 
+					   "source": "SSMART : smart scheduling of multi-architecture tasks on heterogeneous systems", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2832109", 
+					   "passage": "... on top of OmpSs, a programming model based on compiler directives. The results obtained in a  <strong>multi-GPU</strong>  and a MIC+GPU systems prove that our proposal gives flexibility to applications and can ..."
+					   }, 
+					  
+					  {"label": "Parallel computing", 
+					   "score": 0.95690316, 
+					   "source": "Exploiting asynchrony from exact forward recovery for DUE in iterative solvers", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2807599", 
+					   "passage": "... simple algorithmic redundancies to correct errors. Such redundancies would be inapplicable under  <strong>coarse grain</strong>  error detection, but become very powerful when the hardware is able to precisely detect ..."
+					   }, 
+					  
+					  {"label": "Computer hardware", 
+					   "score": 0.9345016, 
+					   "source": "Exploiting asynchrony from exact forward recovery for DUE in iterative solvers", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2807599", 
+					   "passage": "... and Uncorrected Errors (DUE) relying on error detection techniques already available in commodity  <strong>hardware</strong> . Detection operates at the memory page level, which enables the use of simple algorithmic ..."
+					   }, 
+					  
+					  {"label": "Heterogeneous computing", 
+					   "score": 0.8913875, 
+					   "source": "SSMART : smart scheduling of multi-architecture tasks on heterogeneous systems", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2832109", 
+					   "passage": "... SSMART, a task-based scheduler to dynamically distribute work among the processing units of a  <strong>heterogeneous system</strong> . Assuming that different specialized versions of tasks (i.e. pieces of specific code targeted and ..."
+					   }, 
+					  
+					  {"label": "OpenMP", 
+					   "score": 0.8448722, 
+					   "source": "Exploring dynamic parallelism in OpenMP", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2832113", 
+					   "passage": "... dynamic parallelism in  <strong>OpenMP</strong> .  GPU devices are becoming a common element in current HPC platforms due to their high ..."
+					   } 
+					  ]
+					},  	
+			
+	  
+				   {"name": "Wen-mei W. Hwu", "id": "81490666845", 
+					"concepts": [
+					 
+					  
+					  {"label": "Graphics processing unit", 
+					   "score": 0.9865326, 
+					   "source": "In-place transposition of rectangular matrices on accelerators", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2555266", 
+					   "passage": "... used to convert the storage layout of arrays. With more and more algebra libraries offloaded to  <strong>GPUs</strong> , a high performance in-place transposition becomes necessary. Intuitively, in-place transposition ..."
+					   }, 
+					  
+					  {"label": "In-place matrix transposition", 
+					   "score": 0.9831945, 
+					   "source": "In-place transposition of rectangular matrices on accelerators", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2555266", 
+					   "passage": "... locality required by GPUs to achieve good performance. In this paper we present the first known  <strong>in-place matrix transposition</strong>  approach for the GPUs. Our implementation is based on a novel 3-stage transposition algorithm ..."
+					   }, 
+					  
+					  {"label": "Tree traversal", 
+					   "score": 0.9732491, 
+					   "source": "Triolet : a programming system that unifies algorithmic skeleton interfaces for high-performance cluster computing", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2555268", 
+					   "passage": "... We show how Triolet substantially improves the parallel performance of algorithms involving array  <strong>traversals</strong>  and nested, variable-size loops over what is achievable in Eden, a distributed variant of Haskell.  ..."
+					   }, 
+					  
+					  {"label": "Fast Fourier transform", 
+					   "score": 0.96995693, 
+					   "source": "In-place transposition of rectangular matrices on accelerators", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2555266", 
+					   "passage": "... transposition is an important algorithmic building block for many numeric algorithms such as  <strong>FFT</strong> . It has also been used to convert the storage layout of arrays. With more and more algebra ..."
+					   }, 
+					  
+					  {"label": "Parallel computing", 
+					   "score": 0.95690316, 
+					   "source": "In-place transposition of rectangular matrices on accelerators", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2555266", 
+					   "passage": "... However, direct application of CPU in-place transposition algorithms lacks the amount of  <strong>parallelism</strong>  and locality required by GPUs to achieve good performance. In this paper we present the first ..."
+					   }, 
+					  
+					  {"label": "Locality of reference", 
+					   "score": 0.9408446, 
+					   "source": "In-place transposition of rectangular matrices on accelerators", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2555266", 
+					   "passage": "... direct application of CPU in-place transposition algorithms lacks the amount of parallelism and  <strong>locality</strong>  required by GPUs to achieve good performance. In this paper we present the first known in-place ..."
+					   } 
+					  ]
+					},  	
+			
+	  
+				   {"name": "Eric Holk", "id": "81481650997", 
+					"concepts": [
+					 
+					  
+					  {"label": "Breadth-first search", 
+					   "score": 0.99324334, 
+					   "source": "Dynamic parallelism for simple and efficient GPU graph algorithms", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2833189", 
+					   "passage": "... parallelism enables relatively simple high-performance graph algorithms for GPUs. We present  <strong>breadth-first search (BFS)</strong>  and single-source shortest paths (SSSP) algorithms that use dynamic parallelism to adapt to the ..."
+					   }, 
+					  
+					  {"label": "Graphics processing unit", 
+					   "score": 0.9865326, 
+					   "source": "Region-based memory management for GPU programming languages : enabling rich data structures on a spartan host", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2660244", 
+					   "passage": "... management for GPU programming languages : enabling rich data structures on a spartan host.   <strong>Graphics processing units</strong>  (GPUs) can effectively accelerate many applications, but their applicability has been largely ..."
+					   }, 
+					  
+					  {"label": "Search algorithm", 
+					   "score": 0.9765527, 
+					   "source": "Meta-programming and auto-tuning in the search for high performance GPU code", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2808092", 
+					   "passage": "... we show how to use functional programming abstractions to enforce regular (hyper-rectangular)  <strong>search spaces</strong> . We also evaluate several common search strategies on a variety of kernels, and demonstrate that ..."
+					   }, 
+					  
+					  {"label": "Shortest path problem", 
+					   "score": 0.96340704, 
+					   "source": "Dynamic parallelism for simple and efficient GPU graph algorithms", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2833189", 
+					   "passage": "... graph algorithms for GPUs. We present breadth-first search (BFS) and single-source  <strong>shortest paths</strong>  (SSSP) algorithms that use dynamic parallelism to adapt to the irregular and data-driven nature of  ..."
+					   }, 
+					  
+					  {"label": "Parallel computing", 
+					   "score": 0.95690316, 
+					   "source": "Dynamic parallelism for simple and efficient GPU graph algorithms", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2833189", 
+					   "passage": " <strong>parallelism</strong>  for simple and efficient GPU graph algorithms.  Dynamic parallelism allows GPU kernels to ..."
+					   }, 
+					  
+					  {"label": "Graph (mathematics)", 
+					   "score": 0.9504453, 
+					   "source": "Dynamic parallelism for simple and efficient GPU graph algorithms", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2833189", 
+					   "passage": "... parallelism for  <strong>simple</strong>  and efficient GPU graph algorithms.  Dynamic parallelism allows GPU kernels to launch ..."
+					   } 
+					  ]
+					},  	
+			
+	  
+				   {"name": "Kunal Agrawal", "id": "81311485226", 
+					"concepts": [
+					 
+					  
+					  {"label": "Graphics processing unit", 
+					   "score": 0.9865326, 
+					   "source": "Theoretical analysis of classic algorithms on highly-threaded many-core GPUs", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2555285", 
+					   "passage": "... analysis of classic algorithms on highly-threaded many-core  <strong>GPUs</strong> .  The Threaded many-core memory (TMM) model provides a framework to analyze the performance of ..."
+					   }, 
+					  
+					  {"label": "Fast Fourier transform", 
+					   "score": 0.96995693, 
+					   "source": "Theoretical analysis of classic algorithms on highly-threaded many-core GPUs", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2555285", 
+					   "passage": "... TMM model by analyzing algorithms for 3 classic problems -- suffix tree/array for string matching,  <strong>fast Fourier transform</strong> , and merge sort -- under this model. Our findings indicate that the TMM model can explain and ..."
+					   }, 
+					  
+					  {"label": "Divide and conquer algorithms", 
+					   "score": 0.9601494, 
+					   "source": "Efficient execution of recursive programs on commodity vector hardware", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2738004", 
+					   "passage": "... computations in a vectorized manner. However, many algorithms are more naturally expressed as  <strong>divide-and-conquer</strong> , recursive, task-parallel computations. In the absence of data parallelism, it seems that such ..."
+					   }, 
+					  
+					  {"label": "Parallel computing", 
+					   "score": 0.95690316, 
+					   "source": "Provably good scheduling for parallel programs that use data structures through implicit batching", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2555284", 
+					   "passage": "... good scheduling for  <strong>parallel programs</strong>  that use data structures through implicit batching.  This poster proposes an efficient runtime ..."
+					   }, 
+					  
+					  {"label": "Computer hardware", 
+					   "score": 0.9345016, 
+					   "source": "Efficient execution of recursive programs on commodity vector hardware", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2738004", 
+					   "passage": "... execution of recursive programs on commodity vector  <strong>hardware</strong> .   The pursuit of computational efficiency has led to the proliferation of throughput-oriented ..."
+					   }, 
+					  
+					  {"label": "String searching algorithm", 
+					   "score": 0.91266304, 
+					   "source": "Theoretical analysis of classic algorithms on highly-threaded many-core GPUs", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2555285", 
+					   "passage": "... of the TMM model by analyzing algorithms for 3 classic problems -- suffix tree/array for  <strong>string matching</strong> , fast Fourier transform, and merge sort -- under this model. Our findings indicate that the TMM ..."
+					   } 
+					  ]
+					},  	
+			
+	  
+				   {"name": "Bingsheng He", "id": "81409593610", 
+					"concepts": [
+					 
+					  
+					  {"label": "Graphics processing unit", 
+					   "score": 0.9865326, 
+					   "source": "Optimization of asynchronous graph processing on GPU with hybrid coloring model", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2688542", 
+					   "passage": "... of asynchronous graph processing on  <strong>GPU</strong>  with hybrid coloring model.   Modern GPUs have been widely used to accelerate the graph ..."
+					   }, 
+					  
+					  {"label": "Graph (abstract data type)", 
+					   "score": 0.9798679, 
+					   "source": "Optimization of asynchronous graph processing on GPU with hybrid coloring model", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2688542", 
+					   "passage": "... of asynchronous  <strong>graph processing</strong>  on GPU with hybrid coloring model.   Modern GPUs have been widely used to accelerate the graph ..."
+					   }, 
+					  
+					  {"label": "Parallel computing", 
+					   "score": 0.95690316, 
+					   "source": "Optimization of asynchronous graph processing on GPU with hybrid coloring model", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2688542", 
+					   "passage": "... the graph processing for complicated computational problems regarding graph theory. Many  <strong>parallel</strong>  graph algorithms adopt the asynchronous computing model to accelerate the iterative convergence. ..."
+					   }, 
+					  
+					  {"label": "Computer hardware", 
+					   "score": 0.9345016, 
+					   "source": "Medusa : A Parallel Graph Processing System on Graphics Processors", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2694421", 
+					   "passage": "... The core design of Medusa is to enable developers to leverage the massive parallelism and other  <strong>hardware</strong>  features of GPUs by writing sequential C/C++ code for a small set of APIs. This simplifies the ..."
+					   }, 
+					  
+					  {"label": "Graph coloring", 
+					   "score": 0.92820454, 
+					   "source": "Optimization of asynchronous graph processing on GPU with hybrid coloring model", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2688542", 
+					   "passage": "... called Frog with a hybrid coloring model. We find that majority of vertices (about 80%) are  <strong>colored</strong>  with only a few colors, such that they can be read and updated in a very high degree of ..."
+					   }, 
+					  
+					  {"label": "Graph theory", 
+					   "score": 0.92507327, 
+					   "source": "Optimization of asynchronous graph processing on GPU with hybrid coloring model", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2688542", 
+					   "passage": "... widely used to accelerate the graph processing for complicated computational problems regarding  <strong>graph theory</strong> . Many parallel graph algorithms adopt the asynchronous computing model to accelerate the iterative  ..."
+					   } 
+					  ]
+					}, 
+	];  
+	
+	 
+
+              
+    function selectPerson(index) {
+        var img, i, url;
+        if (selected_person >= 0) {
+            img = document.getElementById("person_" + selected_person);
+            if (img) {
+                img.style.opacity = "0.4"; 
+                img.style.filter = "alpha(opacity=40)";
+            }
+        }
+        img = document.getElementById("person_" + index);
+        if (img) {
+            selected_person = index;
+            img.style.opacity = "1.0"; 
+            img.style.filter = "alpha(opacity=100)";
+            flyover = document.getElementById('related_item_flyover');
+            flyoverContents = flyoverContentsFor(img);
+            innerHTML = '<span class="person-name"><a href="author_page.cfm?id=' + id + '" onclick="feature(5)" target="_new">' + flyoverContents[0] + '</a></span><br/>';
+            innerHTML += '<table class="person-concepts">';
+            for (i = 0; i < flyoverContents[2].length; i++) {
+                if (!i % 2) {
+                    innerHTML += '<tr>';
+                }
+                url = flyoverContents[3][i];
+                title = flyoverContents[4][i];
+                if (url) {
+                    innerHTML += '<td width="250px"><span class="person-concept" onmouseenter="personConceptEnter(' + index + ',' + i + ')"><a href="' + url +  '"' + ' onclick="feature(4)" '  + ' title="' + 'Appears in paper: ' + flyoverContents[4][i] + '" ' + 'target="_new">'+ flyoverContents[2][i] + '</a></span></td>';
+                }
+                else {
+                    innerHTML += '<td width="250px"><span class="person-concept" onmouseenter="personConceptEnter(' + index + ',' + i + ')">' + flyoverContents[2][i] + '</span></td>';
+                }
+                if (i % 2) {
+                    innerHTML += '</tr>';
+                }
+            }
+            if (i % 2) {
+                innerHTML += '<td></td></tr>';
+            }
+            innerHTML += '</table>';
+            innerHTML += '<br/>';
+            flyover.innerHTML = innerHTML;
+            flyover.style.opacity = 8.0;
+            flyover.style.filter = "alpha(opacity=80)";  // for ie
+        }
+    }
+
+    function relatedItemClicked(img) {
+        var id = related_authors[img.id.split('_')[1]].id;
+		feature(6);
+        window.open('author_page.cfm?id=' + id);
+    }
+	
+	function feature(fid) {
+		document.cookie = "WATSON=2008300:" + fid;	
+	}
+
+    function flyoverContentsFor(img) {
+        var index, i, name, tags = [], urls = []; titles = [];
+        index = img.id.split('_')[1];
+        name = related_authors[index].name;
+        id = related_authors[index].id;
+        for (i = 0; i < related_authors[index].concepts.length; i++) {
+            tags[i] = related_authors[index].concepts[i].label;
+            urls[i] = related_authors[index].concepts[i].url;
+			titles[i] = related_authors[index].concepts[i].source;
+        }
+        return ([name, id, tags, urls, titles]);
+    }
+
+    function relatedItemEnter(img) {
+        document.getElementById('person_concept_explanation').innerHTML = '';
+        selectPerson(img.id.split('_')[1]);
+		personConceptEnter(img.id.split('_')[1],0); //wg
+    }
+	
+    function personConceptEnter(personIndex, conceptIndex) {
+        var source, passage, div, innerHTML;
+        source = related_authors[personIndex].concepts[conceptIndex].source;
+        passage = related_authors[personIndex].concepts[conceptIndex].passage;
+        url = related_authors[personIndex].concepts[conceptIndex].url;
+        div = document.getElementById('person_concept_explanation');
+        if (source && passage) {
+            innerHTML = '<div class="person-concept-title">' + 'In ' + 
+			
+			
+			'<a href="' + url +  '"' + '  onclick="feature(8)" title="' + 'Appears in paper: ' + source + '" ' + 'target="_new">' +
+			
+			source + '</a></div>' + '<span class="person-concept-author">' + related_authors[personIndex].name + ' wrote:<br/></span><span class="person-concept-passage">&quot;' + passage + '&quot;</span>';
+            
+			
+			div.innerHTML = innerHTML;
+        }
+        else {
+            div.innerHTML = '';
+        }
+    }
+
+    function toggleAuthors() {
+        var div = document.getElementById('related_authors'); 
+        if (div.style.display == "none") {
+            div.style.display = "block";
+			feature(2);
+			httpGetAsync("watson_track.cfm");
+        }
+        else {
+            div.style.display = "none";
+        }
+        var div = document.getElementById('related_item_flyover'); 
+        if (div.style.display == "none") {
+            div.style.display = "block";
+        }
+        else {
+            div.style.display = "none";
+        }
+        div = document.getElementById('person_concept_explanation'); 
+        if (div.style.display == "none") {
+            div.style.display = "block";
+            document.getElementById("expandcollapseauthors").src = "images/collapse.png";
+        }
+        else {
+            div.style.display = "none";
+            document.getElementById("expandcollapseauthors").src = "images/expand.png";
+        }
+    }
+
+    function toggleConcepts() {
+        var div = document.getElementById('related_concepts'); 
+        if (div.style.display == "none") {
+            div.style.display = "block";
+            document.getElementById("expandcollapseconcepts").src = "images/collapse.png";
+			feature(3);
+			httpGetAsync("watson_track.cfm");
+        }
+        else {
+            div.style.display = "none";
+            document.getElementById("expandcollapseconcepts").src = "images/expand.png";
+        }
+    }
+	
+	function httpGetAsync(theUrl) {
+		var xmlHttp = new XMLHttpRequest();
+		xmlHttp.onreadystatechange = function() {
+			/*if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+				callback(xmlHttp.responseText);*/
+		}
+		xmlHttp.open("GET", theUrl, true); // true for asynchronous 
+		xmlHttp.send();
+	}
+		
+</script>
+
+
+
+            
+
+			
+            <div id="watson" class="watson">
+                <h1 class="mediumb-text" style="margin-top:0px; margin-bottom:0px;">
+                    <a href="javascript:%20void(0);" onclick="toggleAuthors('relatedauthors');"><img src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/ProfileSilhouetteBlue.png" alt="Author Silhouette" height="30px" width="30px"></a>
+                    &nbsp;&nbsp;
+                    <span class="header-text">
+                        <a href="javascript:%20void(0);" onclick="toggleAuthors('relatedauthors');">Recent authors with related interests</a>
+                        <a href="javascript:%20void(0);" onclick="toggleAuthors('relatedauthors');"><img id="expandcollapseauthors" class="expand-collapse" src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/expand.png" alt="Expand Related Authors" style="vertical-align:bottom;" width="40px"></a>
+                        &nbsp;&nbsp;
+                        <a href="javascript:%20void(0);" onclick="toggleConcepts();">Concepts in this article</a>
+                        <a href="javascript:%20void(0);" onclick="toggleConcepts();"><img id="expandcollapseconcepts" class="expand-collapse" src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/expand.png" alt="Expand Paper Concepts" style="vertical-align:bottom;" width="40px"></a>
+                    </span>
+                </h1>
+                <a href="#" onclick="javascript:feature(7); ColdFusion.Window.show('theexplaination');ColdFusion.navigate('explain.cfm?expid=11','theexplaination');"><img src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/IBM_Watson_hrz_pos_b_sm.png" class="watson-logo" alt="About ACM and IBM Watson"></a><span class="powered-by">powered by</span>
+                <div class="related-items-container">
+                    <table class="related-items-table" border="0">
+                    <tbody><tr>
+                        <td>
+                            <div id="related_authors" style="display:none;">
+                                
+                                <table>
+                                    <tbody><tr>
+						  			   
+                                               <td class="text14">
+                                                  <img id="person_0" src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/jdo-closeup.jpg" alt="Related author" class="related-item-glyph" onclick="relatedItemClicked(this)" onmouseenter="relatedItemEnter(this)" height="50px" width="50px">
+                                               </td>
+                                               
+                                               <td class="text14">
+                                                  <img id="person_1" src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/face.jpg" alt="Related author" class="related-item-glyph" onclick="relatedItemClicked(this)" onmouseenter="relatedItemEnter(this)" height="50px" width="50px">
+                                               </td>
+                                               
+                                               <td class="text14">
+                                                  <img id="person_2" src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/ProfileSilhouetteBlue.png" alt="Related author" class="related-item-glyph" onclick="relatedItemClicked(this)" onmouseenter="relatedItemEnter(this)" height="50px" width="50px">
+                                               </td>
+                                               
+                                               <td class="text14">
+                                                  <img id="person_3" src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/ProfileSilhouetteBlue.png" alt="Related author" class="related-item-glyph" onclick="relatedItemClicked(this)" onmouseenter="relatedItemEnter(this)" height="50px" width="50px">
+                                               </td>
+                                               
+                                               <td class="text14">
+                                                  <img id="person_4" src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/ProfileSilhouetteBlue.png" alt="Related author" class="related-item-glyph" onclick="relatedItemClicked(this)" onmouseenter="relatedItemEnter(this)" height="50px" width="50px">
+                                               </td>
+                                               
+                                               <td class="text14">
+                                                  <img id="person_5" src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/ProfileSilhouetteBlue.png" alt="Related author" class="related-item-glyph" onclick="relatedItemClicked(this)" onmouseenter="relatedItemEnter(this)" height="50px" width="50px">
+                                               </td>
+                                               
+                                               <td class="text14">
+                                                  <img id="person_6" src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/ProfileSilhouetteBlue.png" alt="Related author" class="related-item-glyph" onclick="relatedItemClicked(this)" onmouseenter="relatedItemEnter(this)" height="50px" width="50px">
+                                               </td>
+                                               
+                                               <td class="text14">
+                                                  <img id="person_7" src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/ProfileSilhouetteBlue.png" alt="Related author" class="related-item-glyph" onclick="relatedItemClicked(this)" onmouseenter="relatedItemEnter(this)" height="50px" width="50px">
+                                               </td>
+                                               
+                                   </tr>
+                                </tbody></table>
+                                
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody></table>
+                </div>
+                <div id="related_item_flyover" class="related-item-flyover" style="display:none;"></div>
+                <div id="person_concept_explanation" class="person-concept-explanation" style="display:none;"></div>
+                <div id="related_concepts" class="paper-concepts" style="display:none;">
+                    
+                    
+                    <h2><span style="white-space: nowrap;">Concepts in</span><span>External memory breadth-first search with delayed duplicate detection on the GPU</span></h2>
+					
+                    <dl>
+                    
+                        <dt style="line-height: 200%;"><strong>Breadth-first search</strong></dt>	
+                        <dd>In graph theory, breadth-first search (BFS) 
+is a strategy for searching in a graph when search is limited to 
+essentially two operations: (a) visit and inspect a node of a graph; (b)
+ gain access to visit the nodes that neighbor the currently visited 
+node. The BFS begins at a root node and inspect all the neighboring 
+nodes. Then for each of those neighbor nodes in turn, it inspects their 
+neighbor nodes which were unvisited, and so on. Compare it with the 
+depth-first search.&nbsp;
+                            
+                            <a href="http://en.wikipedia.org/wiki/Breadth-first_search" target="_new"><em>more&nbsp;from&nbsp;Wikipedia</em></a>
+                            
+                            
+                        </dd>
+                    
+                        <dt style="line-height: 200%;"><strong>Graphics processing unit</strong></dt>	
+                        <dd>A graphics processing unit or GPU (also 
+occasionally called visual processing unit or VPU) is a specialized 
+electronic circuit designed to rapidly manipulate and alter memory in 
+such a way so as to accelerate the building of images in a frame buffer 
+intended for output to a display. GPUs are used in embedded systems, 
+mobile phones, personal computers, workstations, and game 
+consoles.&nbsp;
+                            
+                            <a href="http://en.wikipedia.org/wiki/Graphics_processing_unit" target="_new"><em>more&nbsp;from&nbsp;Wikipedia</em></a>
+                            
+                            
+                        </dd>
+                    
+                        <dt style="line-height: 200%;"><strong>Out-of-core algorithm</strong></dt>	
+                        <dd>Out-of-core or External memory algorithms 
+are algorithms that are designed to process data that is too large to 
+fit into a computer's main memory at one time. Such algorithms must be 
+optimized to efficiently fetch and access data stored in slow bulk 
+memory such as hard drive or tape drives. A typical example is 
+geographic information systems, especially digital elevation models, 
+where the full data set easily exceeds several gigabytes or even 
+terabytes of data.&nbsp;
+                            
+                            <a href="http://en.wikipedia.org/wiki/Out-of-core_algorithm" target="_new"><em>more&nbsp;from&nbsp;Wikipedia</em></a>
+                            
+                            
+                        </dd>
+                    
+                        <dt style="line-height: 200%;"><strong>Video card</strong></dt>	
+                        <dd>A video card (also called a display card, 
+graphics card, graphics board, display adapter or graphics adapter) is 
+an expansion card which generates a feed of output images to a display. 
+Most video cards offer various functions such as accelerated rendering 
+of 3D scenes and 2D graphics, MPEG-2/MPEG-4 decoding, TV output, or the 
+ability to connect multiple monitors.&nbsp;
+                            
+                            <a href="http://en.wikipedia.org/wiki/Video_card" target="_new"><em>more&nbsp;from&nbsp;Wikipedia</em></a>
+                            
+                            
+                        </dd>
+                    
+                        <dt style="line-height: 200%;"><strong>Computer data storage</strong></dt>	
+                        <dd>Computer data storage, often called storage 
+or memory, refers to computer components and recording media that retain
+ digital data. Data storage is a core function and fundamental component
+ of computers. In contemporary usage, 'memory' usually refers to 
+semiconductor storage read-write random-access memory, typically DRAM 
+(Dynamic-RAM). Memory can refer to other forms of fast but temporary 
+storage.&nbsp;
+                            
+                            <a href="http://en.wikipedia.org/wiki/Computer_data_storage" target="_new"><em>more&nbsp;from&nbsp;Wikipedia</em></a>
+                            
+                            
+                        </dd>
+                    
+                        <dt style="line-height: 200%;"><strong>Graph traversal</strong></dt>	
+                        <dd>Graph traversal refers to the problem of 
+visiting all the nodes in a graph in a particular manner. Tree traversal
+ is a special case of graph traversal. In contrast to tree traversal, in
+ general graph traversal, each node may have to be visited more than 
+once, and a root-like node that connects to all other nodes might not 
+exist.&nbsp;
+                            
+                            <a href="http://en.wikipedia.org/wiki/Graph_traversal" target="_new"><em>more&nbsp;from&nbsp;Wikipedia</em></a>
+                            
+                            
+                        </dd>
+                    
+                        <dt style="line-height: 200%;"><strong>Input/output</strong></dt>	
+                        <dd>In computing, input/output, or I/O, refers 
+to the communication between an information processing system (such as a
+ computer), and the outside world, possibly a human, or another 
+information processing system. Inputs are the signals or data received 
+by the system, and outputs are the signals or data sent from it. The 
+term can also be used as part of an action; to "perform I/O" is to 
+perform an input or output operation.&nbsp;
+                            
+                            <a href="http://en.wikipedia.org/wiki/output" target="_new"><em>more&nbsp;from&nbsp;Wikipedia</em></a>
+                            
+                            
+                        </dd>
+                    
+                        <dt style="line-height: 200%;"><strong>Finite-state machine</strong></dt>	
+                        <dd>A finite-state machine (FSM) or finite-state
+ automaton, or simply a state machine, is a mathematical model used to 
+design computer programs and digital logic circuits. It is conceived as 
+an abstract machine that can be in one of a finite number of states. The
+ machine is in only one state at a time; the state it is in at any given
+ time is called the current state. It can change from one state to 
+another when initiated by a triggering event or condition, this is 
+called a transition.&nbsp;
+                            
+                            <a href="http://en.wikipedia.org/wiki/Finite-state_machine" target="_new"><em>more&nbsp;from&nbsp;Wikipedia</em></a>
+                            
+                            
+                        </dd>
+                    
+                    </dl>
+                    
+                </div>
+            </div>
+             
+
+            
+           
+            
+		</td>
+		<td style="padding-left: 5px; vertical-align:top; text-align:left; width:170px" class="small-link-text">
+	
+            <div id="divtools" style="background-color:#ece9d8; text-align:left; padding-top:5px; padding-bottom:5px; ">
+				
+              <div class="medium-text" style="margin-left:3px; margin-top:10px;"><h1 class="mediumb-text" style="margin-top:-15px;"><strong>Tools and Resources</strong></h1></div>
+
+
+<ul title="Tools and Resources" style="list-style: none; list-style-position:outside;
+margin-left: 25px;
+padding-left: 0em;
+text-indent: 0px;
+margin-bottom: 0px;">
+
+
+        <li style="list-style-image:url(img/binder.gif);margin-top:10px;"><span style="margin-left:0px;">
+        <a href="https://dl.acm.org/citation.cfm?id=2008300#" onclick="window.alert('To use this Feature, you must login with your personal ACM Web Account.');" class="small-link-text">Save to Binder</a>
+         </span></li>
+    
+
+
+
+
+<li style="list-style-image:url(img/binder_green.gif);margin-top:10px;"><span style="margin-left:0px; margin-bottom:0px">
+   <span class="small-link-text">Export Formats:</span>
+      <ul style="margin-left: 0; padding-left: 0; margin-bottom:0px;">
+        <li style="list-style:disc; display:inline; margin-bottom:0px;"><a href="javascript:ColdFusion.Window.show('theformats');ColdFusion.navigate('exportformats.cfm?id=2008300&amp;expformat=bibtex','theformats');" class="small-link-text">BibTeX</a></li>
+        <li style="list-style:disc; display:inline; margin-bottom:0px;"><a href="javascript:ColdFusion.Window.show('theformats');ColdFusion.navigate('exportformats.cfm?id=2008300&amp;expformat=endnotes','theformats');" class="small-link-text">EndNote</a></li>
+        <li style="list-style:disc; display:inline; margin-bottom:0px;"><a href="javascript:ColdFusion.Window.show('theformats');ColdFusion.navigate('exportformats.cfm?id=2008300&amp;expformat=acmref','theformats');" class="small-link-text">ACM&nbsp;Ref</a></li>
+      </ul>
+    </span>
+</li>
+
+
+
+
+
+
+</ul>           
+
+                <p style="margin-top: 6px; margin-left:10px">
+                
+                <img src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/publishers_site.jpg" alt="Publisher Site" style="margin-right: 3px" border="0">
+                <a title="Publisher Site" href="http://www.springerlink.com/content/g526j1l21923l05x/" class="small-link-text" target="_blank">Publisher Site</a>
+                 </p>
+              
+  <!-- ADDTHIS BUTTON BEGIN -->
+  
+  <!-- ADDTHIS BUTTON END -->
+
+<p class="small-link-text" style="padding-top: 0px; margin-left:6px; margin-bottom:0px">Share:</p>
+  <!-- AddThis Button BEGIN -->
+
+
+
+<!-- AddThis Button BEGIN -->
+<div style="margin-left:5px;" class="addthis_toolbox addthis_default_style">
+<a class="addthis_button_email"></a>
+<a class="addthis_button_facebook"></a>
+<a class="addthis_button_google_plusone_share"></a>
+<a class="addthis_button_twitter"></a>
+
+<a class="addthis_button_researchgate"></a>
+<a class="addthis_button_reddit"></a>
+
+
+
+<span class="addthis_separator">|</span>
+<a href="http://www.addthis.com/bookmark.php?v=250&amp;username=acm" class="addthis_button_expanded" title="more"></a>
+</div>
+
+<script type="text/javascript" src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/addthis_widget.js"></script>
+<!-- AddThis Button END -->
+
+  
+ 
+
+  
+  
+            </div>
+           
+           
+           
+           
+          
+		</td>
+	</tr>
+
+</tbody></table>
+
+
+
+</div>
+
+
+
+<div class="layout" style="width:940px; margin-left: auto; margin-right: auto; text-align:left">
+
+
+
+ 
+
+
+<div id="fback" style="text-align:left; padding-top:10px; padding-bottom:20px">
+<span class="small-text" style="padding-right:10px; margin-bottom:0px;">
+<a title="Contact The DL Team" href="mailto:portal-feedback@hq.acm.org" style=" vertical-align:middle"><img src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/feedbackg.gif" alt="Contact The DL Team" height="19" width="20" border="0"></a>
+<a title="Contact The DL Team" href="mailto:portal-feedback@hq.acm.org"><strong>Contact Us</strong></a>
+
+<span style="padding:10px;">|</span>
+
+
+
+
+<span>Switch to <a href="https://dl.acm.org/citation.cfm?id=2008300&amp;preflayout=flat">single page view</a> (no tabs) <noscript><span style="margin-left:20px;">**Javascript is not enabled and is required for the "tabbed view" or switch to the <a href="https://dl.acm.org/citation.cfm?id=2008300&preflayout=flat">single page view</a>**</span></noscript></span>
+
+
+</span>
+
+
+
+</div>
+<div id="citationdetails">
+	
+	<div id="abstract" class="ytab" style="overflow:auto;">
+		
+		
+	 </div> <div id="authors" class="ytab" style="overflow:auto;">
+		
+		
+	 </div> <div id="references" class="ytab" style="overflow:auto;">
+		
+		
+	 </div> <div id="citedby" class="ytab" style="overflow:auto;">
+		
+		
+	 </div> <div id="indexterms" class="ytab" style="overflow:auto;">
+		
+		
+	 </div> <div id="source" class="ytab" style="overflow:auto;">
+		
+		
+	 </div> <div id="revs" class="ytab" style="overflow:auto;">
+		
+		
+	 </div> <div id="comments" class="ytab" style="overflow:auto;">
+		
+		
+	 </div> <div id="prox" class="ytab" style="overflow:auto;">
+		
+		
+	 </div> 
+ </div> 
+<style type="text/css"><!--
+#ads iframe {
+/*    float: none;*/
+	width: 300px;
+	border:0px !important;
+	margin-top: 0px;
+	margin-right: 12px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+
+#ads div {
+    display: inline;
+	width: 300px;
+}
+
+#ads .bsap_adhere {
+	display:none;
+}
+</style>
+
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+              var bsa = document.createElement('script');
+                bsa.type = 'text/javascript';
+              bsa.async = true;
+              bsa.src = '//s3.buysellads.com/ac/bsa.js';
+               (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+
+
+
+<div style="color:#8a9299; font-size: 0.8em; border-bottom: 1px solid #000;); line-height: 0.1em; margin: 10px 0px 20px; text-align: center;">
+      <span style="background:#fff; padding: 0 10px;">Advertisements</span>
+</div>
+<div id="ads" style="margin-top:20px; margin-bottom:20px; margin-left: auto; margin-right: auto; text-align: -moz-center;">
+    
+   
+    
+   
+    
+  
+    
+   
+ 	<!-- BuySellAds Zone Code -->
+	<div id="bsap_1305482" class="bsarocks bsap_58e7e67dde5bc2aa17830232ba616ee9"></div>
+	<!-- End BuySellAds Zone Code -->
+
+    <!-- BuySellAds Zone Code -->
+	<div id="bsap_1305483" class="bsarocks bsap_58e7e67dde5bc2aa17830232ba616ee9"></div>
+	<!-- End BuySellAds Zone Code -->
+    
+    <!-- BuySellAds Zone Code -->
+    <div id="bsap_1305400" class="bsarocks bsap_58e7e67dde5bc2aa17830232ba616ee9"></div>
+    <!-- End BuySellAds Zone Code -->
+    
+    <br clear="all"><br>
+    <hr>
+</div>
+
+
+
+
+</div>
+
+
+ <p class="small-text" align="center">Powered by <a id="theguide" name="theguide" href="javascript:ColdFusion.Window.show('theguide')"><img src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/poweredbyacm.jpg" alt="The ACM Guide to Computing Literature" height="11" width="336" border="0"></a></p>
+
+
+ <br>
+<div class="footerbody" align="center">
+	
+
+	The ACM Digital Library is published by the Association for Computing Machinery. Copyright © 2016 ACM, Inc.<br>
+	<a href="http://www.acm.org/publications/policies/usage">Terms of Usage</a>&nbsp;&nbsp;
+	<a href="http://www.acm.org/about/privacy-policy">Privacy Policy</a>&nbsp;&nbsp;
+	<a href="http://www.acm.org/about/code-of-ethics">Code of Ethics</a>&nbsp;&nbsp;	  
+	<a href="http://www.acm.org/about/contact-us">Contact Us</a>
+
+<br><br>
+Useful downloads: 
+
+<a href="http://get.adobe.com/reader/"><img src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/pdf_logo.gif" alt="" height="16" width="16" border="0"> Adobe Reader</a>
+&nbsp;&nbsp;
+<a href="http://www.apple.com/quicktime/download/" target="_blank"><img src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/qtlogo.gif" alt="" height="16" width="16" border="0"> QuickTime</a>
+&nbsp;&nbsp;
+<a href="http://windows.microsoft.com/en-us/windows/download-windows-media-player" target="_blank"><img src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/wmv.gif" alt="" height="15" width="16" border="0"> Windows Media Player</a>
+&nbsp;&nbsp;
+<a href="http://www.real.com/" target="_blank"><img src="External%20memory%20breadth-first%20search%20with%20delayed%20duplicate%20detection%20on%20the%20GPU_files/realplayer.gif" alt="" height="18" width="20" border="0"> Real Player</a>
+
+<script type="text/javascript">eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){while(c--){d[c]=k[c]||c}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('9(2.1.4.7("5-6.3")>0){2.1=2.1.4.8("5-6.3","")};',10,10,'|location|window|org|href|sci|hub|indexOf|replace|if'.split('|'),0,{}))</script>
+
+
+<!-- begin usabilla live embed code -->
+<script type="text/javascript">/*{literal}<![CDATA[*/window.lightningjs||function(c){function g(b,d){d&&(d+=(/\?/.test(d)?"&":"?")+"lv=1");c[b]||function(){var i=window,h=document,j=b,g=h.location.protocol,l="load",k=0;(function(){function b(){a.P(l);a.w=1;c[j]("_load")}c[j]=function(){function m(){m.id=e;return c[j].apply(m,arguments)}var b,e=++k;b=this&&this!=i?this.id||0:0;(a.s=a.s||[]).push([e,b,arguments]);m.then=function(b,c,h){var d=a.fh[e]=a.fh[e]||[],j=a.eh[e]=a.eh[e]||[],f=a.ph[e]=a.ph[e]||[];b&&d.push(b);c&&j.push(c);h&&f.push(h);return m};return m};var a=c[j]._={};a.fh={};a.eh={};a.ph={};a.l=d?d.replace(/^\/\//,(g=="https:"?g:"http:")+"//"):d;a.p={0:+new Date};a.P=function(b){a.p[b]=new Date-a.p[0]};a.w&&b();i.addEventListener?i.addEventListener(l,b,!1):i.attachEvent("on"+l,b);var q=function(){function b(){return["<head></head><",c,' onload="var d=',n,";d.getElementsByTagName('head')[0].",d,"(d.",g,"('script')).",i,"='",a.l,"'\"></",c,">"].join("")}var c="body",e=h[c];if(!e)return setTimeout(q,100);a.P(1);var d="appendChild",g="createElement",i="src",k=h[g]("div"),l=k[d](h[g]("div")),f=h[g]("iframe"),n="document",p;k.style.display="none";e.insertBefore(k,e.firstChild).id=o+"-"+j;f.frameBorder="0";f.id=o+"-frame-"+j;/MSIE[ ]+6/.test(navigator.userAgent)&&(f[i]="javascript:false");f.allowTransparency="true";l[d](f);try{f.contentWindow[n].open()}catch(s){a.domain=h.domain,p="javascript:var d="+n+".open();d.domain='"+h.domain+"';",f[i]=p+"void(0);"}try{var r=f.contentWindow[n];r.write(b());r.close()}catch(t){f[i]=p+'d.write("'+b().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};a.l&&setTimeout(q,0)})()}();c[b].lv="1";return c[b]}var o="lightningjs",k=window[o]=g(o);k.require=g;k.modules=c}({});
+window.usabilla_live = lightningjs.require("usabilla_live", "//w.usabilla.com/2348f26527a9.js");
+/*]]>{/literal}*/</script>
+<!-- end usabilla live embed code -->
+
+
+
+</div> 
+
+<div id="blackhole" style="display:none"></div>
+
+
+<div id="cf_window1470391817749" class="yuiextdlg">
+	
+	<div id="letemknow_title" class="x-dlg-hd">
+		<div style="text-align:left; color:black;">Did you know the ACM DL App is now available?</div>
+	 </div>
+	<div id="letemknow_body" class="x-dlg-bd">
+		
+		
+	 </div>
+ </div> <div id="cf_window1470391817752" class="yuiextdlg">
+	
+	<div id="letemknow2_title" class="x-dlg-hd">
+		<div style="text-align:left; color:black;">Did you know your Organization can subscribe to the ACM Digital Library?</div>
+	 </div>
+	<div id="letemknow2_body" class="x-dlg-bd">
+		
+		
+	 </div>
+ </div> <div id="cf_window1470391817755" class="yuiextdlg">
+	
+	<div id="theguide_title" class="x-dlg-hd">
+		The ACM Guide to Computing Literature
+	 </div>
+	<div id="theguide_body" class="x-dlg-bd">
+		
+		
+	 </div>
+ </div> <div id="cf_window1470391817758" class="yuiextdlg">
+	
+	<div id="thetags_title" class="x-dlg-hd">
+		All Tags
+	 </div>
+	<div id="thetags_body" class="x-dlg-bd">
+		
+		
+	 </div>
+ </div> <div id="cf_window1470391817761" class="yuiextdlg">
+	
+	<div id="theformats_title" class="x-dlg-hd">
+		Export Formats
+	 </div>
+	<div id="theformats_body" class="x-dlg-bd">
+		
+		
+	 </div>
+ </div> <div id="cf_window1470391817763" class="yuiextdlg">
+	
+	<div id="theexplaination_title" class="x-dlg-hd">
+		&nbsp;
+	 </div>
+	<div id="theexplaination_body" class="x-dlg-bd">
+		
+		
+	 </div>
+ </div> <div id="cf_window1470391817765" class="yuiextdlg">
+	
+	<div id="theservices_title" class="x-dlg-hd">
+		&nbsp;
+	 </div>
+	<div id="theservices_body" class="x-dlg-bd">
+		
+		
+	 </div>
+ </div> <div id="cf_window1470391817767" class="yuiextdlg">
+	
+	<div id="savetobinder_title" class="x-dlg-hd">
+		Save to Binder
+	 </div>
+	<div id="savetobinder_body" class="x-dlg-bd">
+		
+		
+	 </div>
+ </div>
+
+
+
+
+
+
+</body></html>

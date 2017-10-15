@@ -1,0 +1,49 @@
+
+<!-- saved from url=(0038)http://www.win.tue.nl/~aserebre/2IS95/ -->
+<HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Anton Wijs -- Software -- GPUexplore</TITLE>
+<style type="text/css">
+<!--
+A:link {text-decoration: underline; color: #000000;}
+A:visited {text-decoration: underline; color: #145088;}
+A:active {text-decoration: underline; color: #1466B2;}
+A:hover {background: #1466B2; text-decoration: underline; color: #FFFFFF;}
+
+td,th {
+	color: #2C7ECA;
+}
+body {
+	font-family: Century Schoolbook, Helvetica, Palatino, Georgia, Arial; color: #0C5EAA;
+}
+body {
+	background-color: #FFFFFF;
+}
+-->
+</style></HEAD><BODY>
+<H1>Instructions for installing and using GPUexplore</H1>
+
+<P>
+GPUexplore can be compiled using the included Makefile. After compiling, any of the models from the models package can be used as input, after some preprocessing has been performed.
+
+<H2>Preparing input</H2>
+
+GPUexplore accepts input files in the GPF format. These can be generated from the models included in the models package, which are in the EXP format. Included in the models package is a python script named <b>GPUnetltsgen.py</b> to perform this conversion.
+
+<H2>Running GPUexplore</H2>
+
+<p>GPUexplore supports the following commandline options:</p>
+
+<pre><code>GPUexplore &lt;model&gt; [-b &lt;num_blocks&gt;] [-t &lt;num_threads&gt;] [-k &lt;kernel_iter&gt;] [-q &lt;hash_table_size&gt;] [-v &lt;num&gt;] [--por [--cycle-proviso]] [-d|-p]
+Generate the state space of &lt;model&gt;.gpf (without extension), using the options specified:
+-b                number of blocks to use
+-t                number of threads per block
+-k                number of iterations per kernel launch
+-q                size of the hash table in number of 32 bit integers
+-v                verbosity: 0 is quiet, 1 prints the iterations, 2 prints the number of states, 3 prints state vectors
+--por             apply partial-order reduction
+--cycle-proviso   apply the cycle proviso during POR
+-d                check for deadlocks
+-p                check for safety property (should be embedded in the model)
+</code></pre>
+
+</P></BODY></HTML>

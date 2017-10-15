@@ -1,0 +1,60 @@
+/* Print CSS */
+/* author: Frank Thomsen @ Magenta ApS 2011 */
+/* New revised print styles for printed content from www.ku.dk */
+
+body, 
+th, 
+td {font: 10pt/1.5 Verdana,Arial,Helvetica,sans-serif !important; color: #000 !important; background-color: #fff;}
+
+/* h1 {font-size: 15pt !important;}
+h2 {font-size: 13pt !important;}
+h3 {font-size: 11pt !important;}
+h4, h5, h6 {font-size: 10pt !important;}
+h1, h2, h3, h4, h5, h6 {font-weight: bold !important;}*/
+
+
+#nav,
+#nav-global,
+#nav-sub,
+#search,
+#skip-to,
+#style-switcher,
+#wrapper-crumb-trail,
+.nav,
+#branding-decoration {display: none;}
+
+#wrapper,
+#content-wrapper,
+#content, 
+#footer,
+#nav-wrapper {border: none !important; width: 100% !important; float: none !important; margin: 0 !important; padding: 0 !important;}
+
+#nav-wrapper {border-top: solid 0 #666 !important;}
+
+/*
+ #branding-global, 
+ #branding-unit,
+ #branding-logo {position: static;}
+*/
+#branding-global,
+#branding-unit, 
+#nav-wrapper {float: left;}
+#branding-unit {clear: left;}
+#branding-logo {float: right; padding-right: 27px; padding-top: 2px;}
+
+#footer {border-top: solid 1px #ccc !important; padding-top: 1em !important; margin-top: 1em !important;}
+#content {border-top: solid 1px #901A1E !important; margin-top: 93px !important; padding-top: 3em !important;}
+div#footer-col-right {padding: 0;}
+#content div#col-left, #content div#col-right, #content div#col-mid {float:none; width:100%;}
+div#sidebar {float: none; width: auto; height: auto; margin: 0; padding: 0;}
+.rightbox-normal, .rightBox {display: block; }
+.print-me {display: block; margin: 0; padding: 0; height: auto;}
+.print-me h1 {font-size: 1.1em !important; padding: 0.5em 0 0 !important; margin: 0 0 1.5em !important; color: #4A4949 !important;} 
+
+div#perm_cookie_box, div#sidr-main, div#sidr-right, a#responsive-globalmenu-button, div#mobile-header,
+div.slider-wrapper {display:none;}
+
+div#content-wrapper {border:1px solid #fff !important;}
+div#branding-logo img {margin-top:7px;}
+
+

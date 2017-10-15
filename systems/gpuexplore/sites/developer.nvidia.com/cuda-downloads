@@ -1,0 +1,1344 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+  "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html lang="en" dir="ltr"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:article="http://ogp.me/ns/article#"
+  xmlns:book="http://ogp.me/ns/book#"
+  xmlns:profile="http://ogp.me/ns/profile#"
+  xmlns:video="http://ogp.me/ns/video#"
+  xmlns:product="http://ogp.me/ns/product#">
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQYOUF9SCxAJVFRQAAcF"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(s){try{i("ierr",[s,(new Date).getTime(),!0])}catch(c){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,(new Date).getTime()])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=window.onerror,u=!1,d=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),u=!0)}s.on("fn-start",function(t,e,n){u&&(d+=1)}),s.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),s.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),s.on("internal-error",function(t){i("ierr",[t,(new Date).getTime(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState";t("loader").features.stn=!0,t(6);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=Date.now())}),o.on(w,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,Date.now()])}),a.on(m,function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),a.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),this.bstType])}),s.on(m,function(){this.bstStart=Date.now()}),s.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=Date.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,!1),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t(17)(a),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){if(t[1]){var n=t[1];if("function"==typeof n){var r=c(n,"nr@wrapped",function(){return s(n,"fn-",null,n.name||"anonymous")});this.wrapped=t[1]=r}else"function"==typeof n.handleEvent&&s.inPlace(n,["handleEvent"],"fn-")}}),a.on(d+"-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{}],6:[function(t,e,n){var r=t("ee").get("history"),o=t(17)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,e,n){var r=t("ee").get("raf"),o=t(17)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(17)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,w,"fn-",s)}function i(t){v.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<v.length;t++)r([],v[t]);v.length&&(v=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t(17)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",w=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],v=[];e.exports=u;var y=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(m,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var a=t.getResponseHeader("X-NewRelic-App-Data");a&&(e.cat=a.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=c(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var a=0;a<d;a++)e.addEventListener(u[a],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{}],11:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],12:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(s(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var u=["setPageViewName","setCustomAttribute","finished","addToTrace","inlineHit"],d="api-",l=d+"ixn-";a(u,function(t,e){f[e]=o(d+e,!0,"api")}),f.addPageAction=o(d+"addPageAction",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var p=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){p[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],13:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],14:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],15:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],16:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],17:[function(t,e,n){function r(t){return!(t&&"function"==typeof t&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;e.exports=function(t){function e(t,e,n,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof n?n(r,a):n||{}}catch(u){d([u,"",[r,a,o],s])}f(e+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(l){throw f(e+"err",[r,a,l],s),l}finally{f(e+"end",[r,a,c],s)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,u(t,nrWrapper),nrWrapper)}function n(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function f(e,n,r){if(!c){c=!0;try{t.emit(e,n,r)}catch(o){d([o,e,n,r])}c=!1}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){d([r])}for(var o in t)s.call(t,o)&&(e[o]=t[o]);return e}function d(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),e.inPlace=n,e.flag=a,e}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),s=a.length,c=0;c<s;c++)a[c].apply(i,r);var u=f[w[n]];return u&&u.push([v,n,r,i]),i}function d(t,e){m[t]=l(t).concat(e)}function l(t){return m[t]||[]}function p(t){return u[t]=u[t]||o(n)}function h(t,e){c(t,function(t,n){e=e||"feature",w[n]=e,e in f||(f[e]=[])})}var m={},w={},v={on:d,emit:n,get:p,listeners:l,context:e,buffer:h};return v}function i(){return new r}var a="nr@context",s=t("gos"),c=t(15),f={},u={},d=e.exports=o();d.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!g++){var t=y.info=NREUM.info,e=u.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(w,function(e,n){t[e]||(t[e]=n)});var n="https"===m.split(":")[0]||t.sslForHttp;y.proto=n?"https://":"http://",s("mark",["onload",a()],null,"api");var r=u.createElement("script");r.src=y.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===u.readyState&&i()}function i(){s("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var s=t("handle"),c=t(15),f=window,u=f.document,d="addEventListener",l="attachEvent",p=f.XMLHttpRequest,h=p&&p.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:p,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(12);var m=""+location,w={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-963.min.js"},v=p&&h&&h[d]&&!/CriOS/.test(navigator.userAgent),y=e.exports={offset:a(),origin:m,features:{},xhrWrappable:v};u[d]?(u[d]("DOMContentLoaded",i,!1),f[d]("load",r,!1)):(u[l]("onreadystatechange",o),f[l]("onload",r)),s("mark",["firstbyte",a()],null,"api");var g=0},{}]},{},["loader",2,10,4,3]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="https://developer.nvidia.com/sites/all/themes/cuda/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="description" content="*/" />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="https://developer.nvidia.com/cuda-downloads" />
+<link rel="shortlink" href="https://developer.nvidia.com/node/873302" />
+<meta property="og:site_name" content="NVIDIA Developer" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://developer.nvidia.com/cuda-downloads" />
+<meta property="og:title" content="CUDA 7.5 Downloads" />
+<meta property="og:description" content="*/" />
+<meta property="og:updated_time" content="2016-07-13T16:31:25-07:00" />
+<meta property="article:published_time" content="2015-10-06T23:03:48-07:00" />
+<meta property="article:modified_time" content="2016-07-13T16:31:25-07:00" />
+  <title>CUDA 7.5 Downloads | NVIDIA Developer</title>
+  <link type="text/css" rel="stylesheet" href="https://developer.nvidia.com/sites/default/files/css/css_lQaZfjVpwP_oGNqdtWCSpJT1EMqXdMiU84ekLLxQnc4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://developer.nvidia.com/sites/default/files/css/css_hTLrwzbU9bZhjvzx-j5entbJFEHkjJyd6RgHEla8FhA.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://developer.nvidia.com/sites/default/files/css/css_VWGhZkkR4B4tMJA7PC_wov8dAxaI-MS03BCM3K8jjJA.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="https://developer.nvidia.com/sites/default/files/css/css_IwkZpyQN-v7ZZ7XAmISxsA-_ZAbxWp5FcQwxfrlpXLM.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://developer.nvidia.com/sites/default/files/css/css_lJwfAimLgsd5NLQNd98wvqN8jCNhLSm9I2VtNDZrQK8.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://developer.nvidia.com/sites/default/files/css/css_gxhWjplZxODvnoYM_tXMMD1ov8d_MVtvBlJrQoJM4gk.css" media="all" />
+  <!-- HTML5 element support for IE6-8 -->
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="https://developer.nvidia.com/sites/default/files/js/js_MpKfe1sTh5JIVGCZ17DsAuT1rqAC38MLLlkjqjQ1X_k.js"></script>
+<script src="https://developer.nvidia.com/sites/default/files/js/js_oZD9-WvfiElJ5KPavqu9ZAQiZcfWlzNCzxFHpedR9dI.js"></script>
+<script src="//assets.adobedtm.com/b92787824f2e0e9b68dc2e993f9bd995339fe417/satelliteLib-83ef9349726ac41eb29937f097a1adb4802f148d.js"></script>
+<script src="https://developer.nvidia.com/sites/default/files/js/js_JP3TlCqKqiqPuAoTWfdvYhA4HjA1QSa33gLy1Yy6iPA.js"></script>
+<script src="https://developer.nvidia.com/sites/default/files/js/js_6_OfEbS0JnIVeoriS3YfoOEteaJlf08J1-LdDHe5YA4.js"></script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+<script src="https://developer.nvidia.com/sites/default/files/js/js_kfUVo9862BFyaL94dX_i46wDZFv1h_awoYX4A5_zgL4.js"></script>
+<script src="https://developer.nvidia.com/sites/default/files/js/js_aZpd7gl35BfK_NbZqvy1JuQWj4XjxF4FFcNadHeX__w.js"></script>
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-1273456-46', 'auto');ga('send', 'pageview');</script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"cuda","theme_token":"5jiCFbjokY5f96U1wRf6AT2Qo4TTa0fMJ_Db9uR8acc","js":{"0":1,"sites\/all\/themes\/bootstrap\/js\/bootstrap.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.core.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.widget.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.position.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.menu.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.autocomplete.min.js":1,"\/\/assets.adobedtm.com\/b92787824f2e0e9b68dc2e993f9bd995339fe417\/satelliteLib-83ef9349726ac41eb29937f097a1adb4802f148d.js":1,"sites\/all\/modules\/contrib\/codefilter\/codefilter.js":1,"sites\/all\/modules\/contrib\/gss\/scripts\/autocomplete.js":1,"sites\/all\/libraries\/colorbox\/jquery.colorbox-min.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/contrib\/hint\/hint.js":1,"https:\/\/cdn.rawgit.com\/google\/code-prettify\/master\/loader\/run_prettify.js":1,"sites\/all\/modules\/contrib\/logintoboggan\/logintoboggan.js":1,"sites\/all\/themes\/devzone_base\/js\/jquery.migrate.min.js":1,"sites\/all\/themes\/devzone_base\/js\/jquery.isotope.js":1,"sites\/all\/themes\/devzone_base\/js\/jquery.sidr.js":1,"sites\/all\/themes\/devzone_base\/js\/application.js":1,"sites\/all\/themes\/devzone_base\/js\/scripts.js":1,"sites\/all\/themes\/devzone_base\/js\/adroll.js":1,"sites\/all\/themes\/devzone_base\/js\/bootstrap.min.js":1,"1":1},"css":{"modules\/system\/system.base.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.menu.css":1,"misc\/ui\/jquery.ui.autocomplete.css":1,"sites\/all\/modules\/contrib\/codefilter\/codefilter.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"sites\/all\/modules\/contrib\/date\/date_repeat_field\/date_repeat_field.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/contrib\/logintoboggan\/logintoboggan.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/addtoany\/addtoany.css":1,"sites\/all\/themes\/bootstrap\/css\/overrides.css":1,"sites\/all\/themes\/devzone_base\/css\/application.css":1,"sites\/all\/themes\/cuda\/css\/cuda.css":1}},"colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"98%","maxHeight":"98%","fixed":true,"mobiledetect":true,"mobiledevicewidth":"480px"},"gss":{"key":"000841979776854404513:41w2zzjvamy"},"urlIsAjaxTrusted":{"\/cuda-downloads":true,"\/cuda-downloads?destination=node\/873302":true},"ogContext":{"groupType":"node","gid":"873374"},"bootstrap":{"anchorsFix":1,"anchorsSmoothScrolling":1,"popoverEnabled":1,"popoverOptions":{"animation":1,"html":0,"placement":"right","selector":"","trigger":"click","title":"","content":"","delay":0,"container":"body"},"tooltipEnabled":1,"tooltipOptions":{"animation":1,"html":0,"placement":"auto left","selector":"","trigger":"hover focus","delay":0,"container":"body"}}});</script>
+</head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-873302 node-type-page og-context og-context-node og-context-node-873374 published" >
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+    
+
+<!--Navbar-->
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation" id="nvidia-dropdown">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+      <div class="logo-header">
+        <a class="navbar-brand first-logo" href="/" title="Home">
+          <img alt="Home" src="/sites/all/themes/devzone_base/images/nvidia.png"/>
+        </a>
+        <a class="navbar-brand second-logo" href="/accelerated-computing" title="Accelerated Computing">
+          <img alt="Accelerated Computing" src="https://developer.nvidia.com/sites/default/files/AcceleratedComputing.png"/>
+        </a>
+      </div>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+
+              <ul class="menu nav navbar-nav"><li class="first leaf"><a href="/accelerated-computing-toolkit" title="">Downloads</a></li>
+<li class="leaf"><a href="/accelerated-computing-training" title="">Training</a></li>
+<li class="leaf"><a href="/tools-ecosystem">Ecosystem</a></li>
+<li class="last leaf"><a href="https://devtalk.nvidia.com/">Forums</a></li>
+</ul>            <ul class="nav navbar-nav navbar-margin navbar-right navbar-margin-media login-nav">
+                  <li class="search" id="search-top">
+            <div class="search-form" id="search-top-form">
+              <form class="gss form-search content-search" action="/cuda-downloads" method="post" id="search-block-form" accept-charset="UTF-8"><div><div>
+      <h2 class="element-invisible">Search form</h2>
+    <div class="input-group"><input title="Enter the terms you wish to search for." placeholder="Search..." class="form-control form-text" type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" /><span class="input-group-btn"><button type="submit" class="btn btn-default"><i class="icon glyphicon glyphicon-search" aria-hidden="true"></i></button></span></div><button class="element-invisible btn btn-primary form-submit" id="edit-submit" name="op" value="Search" type="submit">Search</button>
+<input type="hidden" name="form_build_id" value="form-WohMiA9F_zvzdXqinn53FzmGhcgpLTGYGPlO-1UsfVg" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form>            </div>
+          </li>
+        
+                  <li class="member-area-link">
+            <a href="/accelerated-computing-developer" class="member-area-link-locked link-theme-cuda"><i class="fa fa-lock fa-fw"></i>Register Now</a>          </li>
+        
+          
+                      <li class="dropdown">
+              <form action="/cuda-downloads?destination=node/873302" method="post" id="user-login-form" accept-charset="UTF-8"><div><div id="toboggan-container" class="toboggan-container"><div id="toboggan-login-link-container" class="toboggan-login-link-container"><a href="/user/login?destination=node/873302" id="toboggan-login-link" class="toboggan-login-link">Log in</a></div><div id="toboggan-login" class="user-login-block"><div class="form-type-textfield form-item-name form-item form-group">
+ <input placeholder="Email" class="form-control form-text required" type="text" id="edit-name" name="name" value="" size="15" maxlength="60" />
+</div>
+<div class="form-type-password form-item-pass form-item form-group">
+ <input placeholder="Password" class="form-control form-text required" type="password" id="edit-pass" name="pass" size="15" maxlength="128" />
+</div>
+<input type="hidden" name="form_build_id" value="form-6-5t6kKMvhtv3T7gCPcEF902UfP4-bD1oFbSXXqERHo" />
+<input type="hidden" name="form_id" value="user_login_block" />
+<button class="btn btn-default form-submit" id="edit-submit--2" name="op" value="Log in" type="submit">Log in</button>
+<a href="/user/password" title="Request new password via e-mail.">Forgot password?</a></div></div></div></form>            </li>
+          
+      </ul>
+  </div>
+</div>
+</nav>
+
+<div id="wrapper">
+          <div class="region region-banner">
+     <div class="masthead field field-name-field-slides field-type-entityreference field-label-hidden" >
+  <div class="container">
+    <div class="row">
+      <div id="slideshow-field-slides"  class="carousel slide" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+              <img src="https://developer.nvidia.com/sites/default/files/akamai/cuda/images/banners/NVIDIA-Developer-Full-width-sldier-DGX1.png" width="1145" height="220" alt="" /><div class="carousel-caption">
+  <div class="slide-wrapper">
+    <h2>NVIDIA DGX-1</h2>
+    <div class="field field-name-field-slide-content field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><h2>THE WORLD'S FIRST DEEP LEARNING<br>
+SUPERCOMPUTER IN A BOX</h2>
+
+<p><a class="btn btn-primary" href="http://www.nvidia.com/object/deep-learning-system.html">LEARN MORE</a></p>
+</div></div></div>  </div>
+</div>
+          </div>
+                    <div class="item ">
+              <img src="https://developer.nvidia.com/sites/default/files/akamai/cuda/images/banners/NVIDIA-Developer-Full-width-sldier-Pascal.jpg" width="1145" height="220" alt="" /><div class="carousel-caption">
+  <div class="slide-wrapper">
+    <h2>GET TO KNOW NVIDIA PASCAL</h2>
+    <div class="field field-name-field-slide-content field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even">
+
+<p><a class="btn btn-primary"href="/pascal">LEARN MORE</a></p>
+</div></div></div>  </div>
+</div>
+          </div>
+                  </div>
+          <!-- Controls -->
+          <a class="left carousel-control" href="#slideshow-field-slides" role="button" data-slide="prev">
+            <span class="fa fa-angle-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#slideshow-field-slides" role="button" data-slide="next">
+            <span class="fa fa-angle-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+                          <li data-target="#slideshow-field-slides" data-slide-to="0" class="active"></li>
+                          <li data-target="#slideshow-field-slides" data-slide-to="1" ></li>
+                      </ol>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+  
+  <div id="content-background" class="white-background">
+        <div id='console'>
+      <div class="container">
+                      </div>
+    </div>
+    
+    <div class="separator"></div>
+    <div class="container">
+              <ol class="breadcrumb hidden-xs"><li><a href="/">Home</a></li><li><a href="/accelerated-computing">ComputeWorks</a></li><li><a href="/cuda-zone">CUDA ZONE</a></li><li><a href="/tools-ecosystem">Tools & Ecosystem</a></li><li><a href="/cuda-toolkit">CUDA Toolkit</a></li><li class="active">CUDA 7.5 Downloads</li></ol>      
+                      <div class="separator"></div>
+      
+      
+      <div class="row">
+
+        
+        <section  class="col-sm-12">
+                    <div class="page-header element-hidden">
+            <h1 class='title'>
+              CUDA 7.5 Downloads            </h1>
+          </div>
+          
+                    <a id="main-content"></a>
+
+            <div class="region region-content">
+    <section id="block-system-main" class="block block-system clearfix">
+
+      
+  <div  class="ds-1col node node-page view-mode-full clearfix">
+
+  
+  <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><style> 
+.cdButton 
+{
+   margin-right: 18px;
+   margin-top: 4px;
+   margin-bottom: 4px;
+}
+
+.cuda-btn-success 
+{
+   background-color: DarkGreen;
+   color: white
+}
+
+.cuda-btn-success:hover 
+{
+   background-color: DarkGreen;
+   color: white
+}
+
+.cuda-btn-success:focus 
+{
+   background-color: DarkGreen;
+   color: white
+}
+
+.cudaNoWrap 
+{
+   white-space: nowrap;
+   display: inline-block;
+}
+
+th, td 
+{
+    padding-left: 8px;
+    padding-right: 8px;
+/*     border: 1px solid lightgreen; */
+}
+
+.downloadButton
+{
+    padding-top: 16px;
+    padding-left: 48px;
+    padding-bottom: 16px;
+}
+
+.centerTable 
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#crossPrompt
+{
+    padding-top: 0px;
+    padding-bottom: 94px;
+}
+</style> 
+
+<div class="alert alert-success">
+	Learn more about CUDA Toolkit 7.5, check out:
+	<ul>
+
+<li>An In-depth Parallel Forall Blog Post: <a href="http://devblogs.nvidia.com/parallelforall/power-cpp11-cuda-7/">The Power of C++11 in CUDA 7</a></li>
+
+<li>An In-depth Parallel Forall Blog Post: <a href="http://devblogs.nvidia.com/parallelforall/cuda-7-5-pinpoint-performance-problems-instruction-level-profiling">CUDA 7.5: Pinpoint Performance Problems with Instruction-Level Profiling</a></li>
+	</ul>
+	<p>If you find any issues please <a href="/nvbugs/cuda/add">file a bug</a> (requires membership of the <a href="/cuda-registered-developer-program">Accelerated Computing Developer Program</a>).</p>
+</div>
+
+<div class="alert alert-info">
+    <p>CUDA Toolkit 8 RC with support for Pascal based GeForce GTX 1080 now available: <a href="/cuda-toolkit">Learn More</a>.
+    </p>
+</div>
+<!--<div class="alert alert-info">
+    <p><b>Please note:</b> There is a known issue when installing the Linux driver bundled with the .run and local .rpm and .deb installers on an Amazon Web Services (AWS) instance. This issue has been fixed in driver version 352.63, which is now included in the network .rpm and .deb  installers and in the Tesla driver installer available on the main <a href="http://www.nvidia.com/drivers">NVIDIA driver downloads page</a>.
+    </p>
+</div>
+-->
+<p> </p>
+    <div class='col-md-12' style='height: 1550px'>
+    
+        <div class='col-md-12' id='announcementBar'>
+        </div>
+        
+        <div class='col-md-12' style='display: inline-block'>
+            <div class='col-md-9'>
+                        <div id='selectTargetPlatformPanel' class='panel panel-success'>
+                            <div class='panel-heading'>
+                                <h3 class='panel-title'>Select Target Platform <i id='tooltipSelectTargetPlatform' class='fa fa-info-circle' data-toggle='tooltip' data-placement='right'></i></h3>
+                            </div>
+                            <div class='panel-body'>
+                            
+
+   Click on the green buttons that describe your target platform.  Only supported platforms will be shown.<br/><br/>
+
+                                    <div class='col-md-12' id='targetOsRow'>
+                                        <div class='col-md-3'>
+                                            <h5 style='vertical-align: middle;'>Operating System</h5>
+                                        </div>
+                                        <div id='targetOsSelections' class='col-md-9'></div>
+                                    </div>
+    
+                                      <div class='col-md-12' id='targetArchRow' style='display: none'>
+                                          <div class='col-md-3'>
+                                              <h5 style='vertical-align: middle;'>Architecture <i id='tooltipTargetArchitecture' class='fa fa-info-circle' data-toggle='tooltip' data-placement='right'></i></h5>
+                                          </div>
+                                          <div id='targetArchSelections' class='col-md-9'></div>
+                                      </div>
+                                    
+                                    <div class='col-md-12' id='targetDistroRow' style='display: none'>
+                                        <div class='col-md-3'>
+                                            <h5 style='vertical-align: middle;'>Distribution</h5>
+                                        </div>
+                                        <div id='targetDistroSelections' class='col-md-9'></div>
+                                    </div>
+    
+                                    <div class='col-md-12' id='targetVersionRow' style='display: none'>
+                                        <div class='col-md-3'>
+                                            <h5 style='vertical-align: middle;'>Version</h5>
+                                        </div>
+                                        <div id='targetVersionSelections' class='col-md-9'></div>
+                                    </div>
+    
+                                    <div class='col-md-12' id='targetPackageRow' style='display: none'>
+                                        <div class='col-md-3'>
+                                            <h5 style='vertical-align: middle;'>Installer Type <i id='tooltipTargetInstallerType' class='fa fa-info-circle' data-toggle='tooltip' data-placement='right'></i></h5>
+                                        </div>
+                                        <div id='targetPackageSelections' class='col-md-9'></div>
+                                    </div>
+    
+                            </div>      <!-- body -->
+                        </div>      <!--  selectTargetPlatformPanel -->
+    
+    
+    
+                    <div id='crossPrompt' style='display: none'>
+                       <div class='col-md-12 alert alert-success' style='display: inline-block'>
+                           <div  style='display: inline-block'>
+                               Do you want to cross-compile? <i id='tooltipCrossPrompt' class='fa fa-info-circle' data-toggle='tooltip' data-placement='right'></i>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                               <button id='crossYes' class='btn btn-success btn-sm crossButton cdButton'>Yes</button>
+                               <button id='crossNo' class='btn btn-success btn-sm crossButton cdButton'>No</button>
+                           </div>
+                       </div>
+                    </div>
+                        
+                        <div id='selectHostPlatformPanel' class='panel panel-success' style='display: none'>
+                            
+                            <div class='panel-heading'>
+                                <h3 class='panel-title'>Select Host Platform <i id='tooltipSelectHostPlatform' class='fa fa-info-circle' data-toggle='tooltip' data-placement='right'></i></h3>
+                            </div>
+                            <div class='panel-body'>
+                            
+
+   Click on the green buttons that describe your host platform.  Only supported platforms will be shown.<br/><br/>
+
+                                    <div class='col-md-12' id='hostOsRow'>
+                                        <div class='col-md-3'>
+                                            <h5 style='vertical-align: middle;'>Operating System</h5>
+                                        </div>
+                                        <div id='hostOsSelections' class='col-md-9'></div>
+                                    </div>
+    
+                                      <div class='col-md-12' id='hostArchRow'>
+                                          <div class='col-md-3'>
+                                              <h5 style='vertical-align: middle;'>Architecture <i id='tooltipHostArchitecture' class='fa fa-info-circle' data-toggle='tooltip' data-placement='right'></i></h5>
+                                          </div>
+                                          <div id='hostArchSelections' class='col-md-9'></div>
+                                      </div>
+                                    
+                                    <div class='col-md-12' id='hostDistroRow'>
+                                        <div class='col-md-3'>
+                                            <h5 style='vertical-align: middle;'>Distribution</h5>
+                                        </div>
+                                        <div id='hostDistroSelections' class='col-md-9'></div>
+                                    </div>
+    
+                                    <div class='col-md-12' id='hostVersionRow'>
+                                        <div class='col-md-3'>
+                                            <h5 style='vertical-align: middle;'>Version</h5>
+                                        </div>
+                                        <div id='hostVersionSelections' class='col-md-9'></div>
+                                    </div>
+    
+                                    <div class='col-md-12' id='hostPackageRow'>
+                                        <div class='col-md-3'>
+                                            <h5 style='vertical-align: middle;'>Installer Type <i id='tooltipHostInstallerType' class='fa fa-info-circle' data-toggle='tooltip' data-placement='right'></i></h5>
+                                        </div>
+                                        <div id='hostPackageSelections' class='col-md-9'></div>
+                                    </div>
+    
+                            </div>      <!-- body -->
+                        </div>      <!--  selectHostPlatformPanel -->
+
+                        <div id='downloadPanel'>
+                            <div id='panelTargetInstaller' class='panel panel-success' style='display: none'>
+                                <div class='panel-heading'>
+                                    <h3 id='titleTargetInstaller' class='panel-title'>Download Installer for </h3>
+                                </div>
+                                <div class='panel-body'>
+                                    <span id='targetInstallerFile'></span> (md5sum: <span id='targetMd5Checksum'></span>)
+                                    <br/><br/>
+                                    <span class='downloadButton'><a id='targetDownloadButtonHref' href=''><button id='targetDownloadButtonText' class='btn btn-success'>Download</button></a></span>                                  
+                                    <br/><br/>
+                                    Installation Instructions:<br/>
+                                    <span id='targetInstructions'></span>
+                                    <br/>
+                                    <span id='targetGpuDevKitText'></span>
+                                    For further information, see the <a id='targetGSG' href=''>Getting Started Guide</a> and the <a id='targetQSG' href=''>Quick Start Guide</a>.<br/>
+                                </div>
+                            </div>
+                            
+                            <div id='panelHostInstaller' class='panel panel-success' style='display: none'>
+                                <div class='panel-heading'>
+                                    <h3 id='titleHostInstaller' class='panel-title'>Download Installer for </h3>
+                                </div>
+                                <div class='panel-body'>
+                                  <span id='hostInstallerFile'></span> (md5sum: <span id='hostMd5Checksum'></span>)
+                                  <br/><br/>
+                                  <span class='downloadButton'><a id='hostDownloadButtonHref' href=''><button id='hostDownloadButtonText' class='btn btn-success'>Download</button></a></span>                                  
+                                    <br/><br/>
+                                    Installation Instructions:<br/>
+                                    <span id='hostInstructions'></span>
+                                    <br/>
+                                    <span id='hostGpuDevKitText'></span>
+                                    For further information, see the <a id='hostGSG' href=''>Getting Started Guide</a> and the <a id='hostQSG' href=''>Quick Start Guide</a>.<br/>
+                                </div>
+                            </div>
+                        </div>
+
+    
+            </div>   <!-- md9 -->
+
+            <div class='col-md-3'>
+                        <div id='docPanel' class='panel panel-success'>
+                            <div class='panel-heading'>
+                                <h3 class='panel-title'>Documentation</h3>
+                            </div>
+                            <div class='panel-body'>
+                    <span class='cudaNoWrap' id='quickStartGuideLink'></span><br/>
+                    <span class='cudaNoWrap' id='releaseNotesLink'></span><br/>
+                    <span class='cudaNoWrap' id='eulaLink'></span><br/>
+                    <span class='cudaNoWrap' id='documentationLink'></span><br/>
+                    <span class='cudaNoWrap' ><a href='/cuda-toolkit'>CUDA Toolkit Overview</a></span><br/>
+                    <span class='cudaNoWrap' id='checksumLink'></span><br/>
+					<span class='cudaNoWrap' ><a href='/cuda-toolkit-archive'>Legacy Toolkits</a></span><br/>
+                            </div>  <!-- panel-body -->
+                            </div>  <!-- docPanel -->
+           </div>       <!--  md-3 -->
+        
+        </div>          <!--  md-12 (which has md-9 and md-3 -->
+    </div>
+
+<script>
+jQuery(function($)
+{
+var targetOS = '';
+var hostOS = '';
+var targetArch = '';
+var hostArch = '';
+var targetDistro = '';
+var hostDistro = '';
+var targetVersion = '';
+var hostVersion = '';
+var targetPackage = '';
+var hostPackage = '';
+var INDEX_SIZE = 0;
+var INDEX_MD5 = 1;
+var INDEX_INSTALLER_URL = 2;
+var INDEX_GPU_DEV_KIT_NAME = 3;
+var INDEX_GPU_DEV_KIT_URL = 4;
+var INDEX_GSG_NAME = 5;
+var INDEX_GSG_URL = 6;
+var INDEX_QSG_NAME = 7;
+var INDEX_QSG_URL = 8;
+var INDEX_INSTRUCTIONS = 9;
+
+var announcement='';
+var faq='<a href="http://developer.nvidia.com/cuda-downloads/faq">Frequently Asked Questions</a>';
+var documentation='<a href="http://docs.nvidia.com/cuda/index.html">Online Documentation</a>';
+var quickStartGuide='<a href="http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf">CUDA Quick Start Guide</a>';
+var releaseNotes='<a href="http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Toolkit_Release_Notes.pdf">Release Notes</a>';
+var eula='<a href="http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/EULA.pdf">EULA</a>';
+var checksum='<a href="http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/md5sum.txt">Download Checksums</a>'
+
+var targetOses = ['Windows','Linux','Mac OSX'];
+var targetArchMap = {};
+targetArchMap['Linux'] = ['x86_64','ppc64le'];
+targetArchMap['Mac OSX'] = ['x86_64'];
+targetArchMap['Windows'] = ['x86_64'];
+
+var osArchVersionMap = {};
+osArchVersionMap['Mac OSX/x86_64'] = ['10.11','10.10','10.9'];
+osArchVersionMap['Windows/x86_64'] = ['10','8.1','7','Server 2012 R2','Server 2008 R2'];
+
+var targetLinuxArchToDistroMap = {};
+targetLinuxArchToDistroMap['ppc64le'] = ['RHEL','Ubuntu'];
+targetLinuxArchToDistroMap['x86_64'] = ['Fedora','OpenSUSE','RHEL','CentOS','SLES','SteamOS','Ubuntu'];
+
+var targetLinuxDistroToVersionMap = {};
+targetLinuxDistroToVersionMap['ppc64le/RHEL'] = ['7'];
+targetLinuxDistroToVersionMap['ppc64le/Ubuntu'] = ['14.04'];
+targetLinuxDistroToVersionMap['x86_64/CentOS'] = ['7','6'];
+targetLinuxDistroToVersionMap['x86_64/Fedora'] = ['21'];
+targetLinuxDistroToVersionMap['x86_64/OpenSUSE'] = ['13.2'];
+targetLinuxDistroToVersionMap['x86_64/RHEL'] = ['7','6'];
+targetLinuxDistroToVersionMap['x86_64/SLES'] = ['12','11 (SP3)'];
+targetLinuxDistroToVersionMap['x86_64/SteamOS'] = ['1.0-beta'];
+targetLinuxDistroToVersionMap['x86_64/Ubuntu'] = ['15.04','14.04'];
+
+var targetVersionToPackageMap = {};
+targetVersionToPackageMap['Linux/ppc64le/RHEL/7'] = ['rpm (local)','rpm (network)'];
+targetVersionToPackageMap['Linux/ppc64le/Ubuntu/14.04'] = ['deb (local)','deb (network)'];
+targetVersionToPackageMap['Linux/x86_64/CentOS/6'] = ['runfile (local)','rpm (local)','rpm (network)'];
+targetVersionToPackageMap['Linux/x86_64/CentOS/7'] = ['runfile (local)','rpm (local)','rpm (network)'];
+targetVersionToPackageMap['Linux/x86_64/Fedora/21'] = ['runfile (local)','rpm (local)','rpm (network)'];
+targetVersionToPackageMap['Linux/x86_64/OpenSUSE/13.2'] = ['runfile (local)','rpm (local)','rpm (network)'];
+targetVersionToPackageMap['Linux/x86_64/RHEL/6'] = ['runfile (local)','rpm (local)','rpm (network)'];
+targetVersionToPackageMap['Linux/x86_64/RHEL/7'] = ['runfile (local)','rpm (local)','rpm (network)'];
+targetVersionToPackageMap['Linux/x86_64/SLES/11 (SP3)'] = ['runfile (local)','rpm (local)','rpm (network)'];
+targetVersionToPackageMap['Linux/x86_64/SLES/12'] = ['runfile (local)','rpm (local)','rpm (network)'];
+targetVersionToPackageMap['Linux/x86_64/SteamOS/1.0-beta'] = ['runfile (local)'];
+targetVersionToPackageMap['Linux/x86_64/Ubuntu/14.04'] = ['runfile (local)','deb (local)','deb (network)'];
+targetVersionToPackageMap['Linux/x86_64/Ubuntu/15.04'] = ['runfile (local)','deb (local)','deb (network)'];
+targetVersionToPackageMap['Mac OSX/x86_64//10.10'] = ['dmg (network)','dmg (local)'];
+targetVersionToPackageMap['Mac OSX/x86_64//10.11'] = ['dmg (network)','dmg (local)'];
+targetVersionToPackageMap['Mac OSX/x86_64//10.9'] = ['dmg (network)','dmg (local)'];
+targetVersionToPackageMap['Windows/x86_64//10'] = ['exe (network)','exe (local)'];
+targetVersionToPackageMap['Windows/x86_64//7'] = ['exe (network)','exe (local)'];
+targetVersionToPackageMap['Windows/x86_64//8.1'] = ['exe (network)','exe (local)'];
+targetVersionToPackageMap['Windows/x86_64//Server 2008 R2'] = ['exe (network)','exe (local)'];
+targetVersionToPackageMap['Windows/x86_64//Server 2012 R2'] = ['exe (network)','exe (local)'];
+
+var versionToHostsMap = {};
+
+var hostOses = [''];
+var hostArchMap = {};
+
+var hostOsArchVersionMap = {};
+
+var hostLinuxArchToDistroMap = {};
+
+var hostLinuxDistroToVersionMap = {};
+
+var hostVersionToPackageMap = {};
+
+
+var versionMap = {};
+versionMap['Windows/x86_64//10/exe (network)'] = ['8.4 MB','f8073aaebdb38d6b46568f39ed8ef1ac','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/network_installers/cuda_7.5.18_win10_network.exe','','','Installation Guide for Microsoft Windows','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Windows.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>Double click&nbsp;cuda_7.5.18_win10_network.exe</li>                    <li>Follow on-screen prompts</li>                </ol>']
+versionMap['Windows/x86_64//8.1/exe (network)'] = ['8.5 MB','bd166ba460e7507e2ddab3e324653263','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/network_installers/cuda_7.5.18_windows_network.exe','','','Installation Guide for Microsoft Windows','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Windows.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>Double click&nbsp;cuda_7.5.18_windows_network.exe</li>                    <li>Follow on-screen prompts</li>                </ol>']
+versionMap['Windows/x86_64//7/exe (network)'] = ['8.5 MB','bd166ba460e7507e2ddab3e324653263','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/network_installers/cuda_7.5.18_windows_network.exe','','','Installation Guide for Microsoft Windows','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Windows.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>Double click&nbsp;cuda_7.5.18_windows_network.exe</li>                    <li>Follow on-screen prompts</li>                </ol>']
+versionMap['Windows/x86_64//Server 2012 R2/exe (network)'] = ['8.5 MB','bd166ba460e7507e2ddab3e324653263','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/network_installers/cuda_7.5.18_windows_network.exe','','','Installation Guide for Microsoft Windows','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Windows.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>Double click&nbsp;cuda_7.5.18_windows_network.exe</li>                    <li>Follow on-screen prompts</li>                </ol>']
+versionMap['Windows/x86_64//Server 2008 R2/exe (network)'] = ['8.5 MB','bd166ba460e7507e2ddab3e324653263','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/network_installers/cuda_7.5.18_windows_network.exe','','','Installation Guide for Microsoft Windows','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Windows.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>Double click&nbsp;cuda_7.5.18_windows_network.exe</li>                    <li>Follow on-screen prompts</li>                </ol>']
+versionMap['Windows/x86_64//10/exe (local)'] = ['964.0 MB','b4040dd025dbada67530ef7fe3b684f7','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda_7.5.18_win10.exe','','','Installation Guide for Microsoft Windows','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Windows.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>Double click&nbsp;cuda_7.5.18_win10.exe</li>                    <li>Follow on-screen prompts</li>                </ol>']
+versionMap['Windows/x86_64//8.1/exe (local)'] = ['962.4 MB','d2a3eaf65c3459d5015c7a37021c72c7','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda_7.5.18_windows.exe','','','Installation Guide for Microsoft Windows','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Windows.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>Double click&nbsp;cuda_7.5.18_windows.exe</li>                    <li>Follow on-screen prompts</li>                </ol>']
+versionMap['Windows/x86_64//7/exe (local)'] = ['962.4 MB','d2a3eaf65c3459d5015c7a37021c72c7','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda_7.5.18_windows.exe','','','Installation Guide for Microsoft Windows','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Windows.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>Double click&nbsp;cuda_7.5.18_windows.exe</li>                    <li>Follow on-screen prompts</li>                </ol>']
+versionMap['Windows/x86_64//Server 2012 R2/exe (local)'] = ['962.4 MB','d2a3eaf65c3459d5015c7a37021c72c7','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda_7.5.18_windows.exe','','','Installation Guide for Microsoft Windows','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Windows.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>Double click&nbsp;cuda_7.5.18_windows.exe</li>                    <li>Follow on-screen prompts</li>                </ol>']
+versionMap['Windows/x86_64//Server 2008 R2/exe (local)'] = ['962.4 MB','d2a3eaf65c3459d5015c7a37021c72c7','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda_7.5.18_windows.exe','','','Installation Guide for Microsoft Windows','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Windows.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>Double click&nbsp;cuda_7.5.18_windows.exe</li>                    <li>Follow on-screen prompts</li>                </ol>']
+versionMap['Linux/x86_64/Fedora/21/runfile (local)'] = ['1.1 GB','4b3bcecf0dfc35928a0898793cf3e4c6','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda_7.5.18_linux.run','GPU Deployment Kit','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda_352_79_gdk_linux.run','Installation Guide for Linux','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>Run `sudo sh&nbsp;cuda_7.5.18_linux.run`</li>                    <li>Follow the command-line prompts</li>                </ol>']
+versionMap['Linux/x86_64/OpenSUSE/13.2/runfile (local)'] = ['1.1 GB','4b3bcecf0dfc35928a0898793cf3e4c6','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda_7.5.18_linux.run','GPU Deployment Kit','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda_352_79_gdk_linux.run','Installation Guide for Linux','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>Run `sudo sh&nbsp;cuda_7.5.18_linux.run`</li>                    <li>Follow the command-line prompts</li>                </ol>']
+versionMap['Linux/x86_64/RHEL/7/runfile (local)'] = ['1.1 GB','4b3bcecf0dfc35928a0898793cf3e4c6','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda_7.5.18_linux.run','GPU Deployment Kit','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda_352_79_gdk_linux.run','Installation Guide for Linux','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>Run `sudo sh&nbsp;cuda_7.5.18_linux.run`</li>                    <li>Follow the command-line prompts</li>                </ol>']
+versionMap['Linux/x86_64/CentOS/7/runfile (local)'] = ['1.1 GB','4b3bcecf0dfc35928a0898793cf3e4c6','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda_7.5.18_linux.run','GPU Deployment Kit','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda_352_79_gdk_linux.run','Installation Guide for Linux','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>Run `sudo sh&nbsp;cuda_7.5.18_linux.run`</li>                    <li>Follow the command-line prompts</li>                </ol>']
+versionMap['Linux/x86_64/RHEL/6/runfile (local)'] = ['1.1 GB','4b3bcecf0dfc35928a0898793cf3e4c6','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda_7.5.18_linux.run','GPU Deployment Kit','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda_352_79_gdk_linux.run','Installation Guide for Linux','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>Run `sudo sh&nbsp;cuda_7.5.18_linux.run`</li>                    <li>Follow the command-line prompts</li>                </ol>']
+versionMap['Linux/x86_64/CentOS/6/runfile (local)'] = ['1.1 GB','4b3bcecf0dfc35928a0898793cf3e4c6','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda_7.5.18_linux.run','GPU Deployment Kit','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda_352_79_gdk_linux.run','Installation Guide for Linux','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>Run `sudo sh&nbsp;cuda_7.5.18_linux.run`</li>                    <li>Follow the command-line prompts</li>                </ol>']
+versionMap['Linux/x86_64/SLES/12/runfile (local)'] = ['1.1 GB','4b3bcecf0dfc35928a0898793cf3e4c6','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda_7.5.18_linux.run','GPU Deployment Kit','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda_352_79_gdk_linux.run','Installation Guide for Linux','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>Run `sudo sh&nbsp;cuda_7.5.18_linux.run`</li>                    <li>Follow the command-line prompts</li>                </ol>']
+versionMap['Linux/x86_64/SLES/11 (SP3)/runfile (local)'] = ['1.1 GB','4b3bcecf0dfc35928a0898793cf3e4c6','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda_7.5.18_linux.run','GPU Deployment Kit','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda_352_79_gdk_linux.run','Installation Guide for Linux','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>Run `sudo sh&nbsp;cuda_7.5.18_linux.run`</li>                    <li>Follow the command-line prompts</li>                </ol>']
+versionMap['Linux/x86_64/SteamOS/1.0-beta/runfile (local)'] = ['1.1 GB','4b3bcecf0dfc35928a0898793cf3e4c6','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda_7.5.18_linux.run','GPU Deployment Kit','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda_352_79_gdk_linux.run','Installation Guide for Linux','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>Run `sudo sh&nbsp;cuda_7.5.18_linux.run`</li>                    <li>Follow the command-line prompts</li>                </ol>']
+versionMap['Linux/x86_64/Ubuntu/15.04/runfile (local)'] = ['1.1 GB','4b3bcecf0dfc35928a0898793cf3e4c6','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda_7.5.18_linux.run','GPU Deployment Kit','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda_352_79_gdk_linux.run','Installation Guide for Linux','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>Run `sudo sh&nbsp;cuda_7.5.18_linux.run`</li>                    <li>Follow the command-line prompts</li>                </ol>']
+versionMap['Linux/x86_64/Ubuntu/14.04/runfile (local)'] = ['1.1 GB','4b3bcecf0dfc35928a0898793cf3e4c6','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda_7.5.18_linux.run','GPU Deployment Kit','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda_352_79_gdk_linux.run','Installation Guide for Linux','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>Run `sudo sh&nbsp;cuda_7.5.18_linux.run`</li>                    <li>Follow the command-line prompts</li>                </ol>']
+versionMap['Linux/x86_64/Fedora/21/rpm (local)'] = ['1.1 GB','cc3d9147ffad4ac43356fce26c18463d','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda-repo-fedora21-7-5-local-7.5-18.x86_64.rpm','','','Installation Guide for Linux','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>`sudo rpm -i&nbsp;cuda-repo-fedora21-7-5-local-7.5-18.x86_64.rpm`</li>                    <li>`sudo yum clean all`</li>                    <li>`sudo yum install cuda`</li>                </ol>']
+versionMap['Linux/x86_64/OpenSUSE/13.2/rpm (local)'] = ['1.1 GB','e6708f4b38cc9ed546d3a04f7c731698','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda-repo-opensuse132-7-5-local-7.5-18.x86_64.rpm','','','Installation Guide for Linux','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>`sudo rpm -i&nbsp;cuda-repo-opensuse132-7-5-local-7.5-18.x86_64.rpm`</li>                    <li>`sudo zypper refresh`</li>                    <li>`sudo zypper install cuda`</li>                </ol>']
+versionMap['Linux/x86_64/RHEL/7/rpm (local)'] = ['1.1 GB','250102e5dcff88d8540ceb16dea2ad17','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda-repo-rhel7-7-5-local-7.5-18.x86_64.rpm','','','Installation Guide for Linux','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>`sudo rpm -i&nbsp;cuda-repo-rhel7-7-5-local-7.5-18.x86_64.rpm`</li>                    <li>`sudo yum clean all`</li>                    <li>`sudo yum install cuda`</li>                </ol>']
+versionMap['Linux/ppc64le/RHEL/7/rpm (local)'] = ['993.8 MB','b75f6391711010ac8ef04a08d44dd1b3','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda-repo-rhel7-7-5-local-7.5-23.ppc64le.rpm','','','Installation Guide for Linux','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>`sudo rpm -i&nbsp;cuda-repo-rhel7-7-5-local-7.5-23.ppc64le.rpm`</li>                    <li>`sudo yum clean all`</li>                    <li>`sudo yum install cuda`</li>                </ol>']
+versionMap['Linux/x86_64/CentOS/7/rpm (local)'] = ['1.1 GB','250102e5dcff88d8540ceb16dea2ad17','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda-repo-rhel7-7-5-local-7.5-18.x86_64.rpm','','','Installation Guide for Linux','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>`sudo rpm -i&nbsp;cuda-repo-rhel7-7-5-local-7.5-18.x86_64.rpm`</li>                    <li>`sudo yum clean all`</li>                    <li>`sudo yum install cuda`</li>                </ol>']
+versionMap['Linux/x86_64/RHEL/6/rpm (local)'] = ['1.1 GB','e9794f96911158a553167aca9770a88b','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda-repo-rhel6-7-5-local-7.5-18.x86_64.rpm','','','Installation Guide for Linux','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>`sudo rpm -i&nbsp;cuda-repo-rhel6-7-5-local-7.5-18.x86_64.rpm`</li>                    <li>`sudo yum clean all`</li>                    <li>`sudo yum install cuda`</li>                </ol>']
+versionMap['Linux/x86_64/CentOS/6/rpm (local)'] = ['1.1 GB','e9794f96911158a553167aca9770a88b','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda-repo-rhel6-7-5-local-7.5-18.x86_64.rpm','','','Installation Guide for Linux','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>`sudo rpm -i&nbsp;cuda-repo-rhel6-7-5-local-7.5-18.x86_64.rpm`</li>                    <li>`sudo yum clean all`</li>                    <li>`sudo yum install cuda`</li>                </ol>']
+versionMap['Linux/x86_64/SLES/12/rpm (local)'] = ['1.1 GB','ac9c830900b1597b56259987224c8eb3','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda-repo-sles12-7-5-local-7.5-18.x86_64.rpm','','','Installation Guide for Linux','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>`sudo rpm -i&nbsp;cuda-repo-sles12-7-5-local-7.5-18.x86_64.rpm`</li>                    <li>`sudo zypper refresh`</li>                    <li>`sudo zypper install cuda`</li>                </ol>']
+versionMap['Linux/x86_64/SLES/11 (SP3)/rpm (local)'] = ['1.1 GB','2452a7b7f51bfc0ed0351506f51a6035','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda-repo-sles113-7-5-local-7.5-18.x86_64.rpm','','','Installation Guide for Linux','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>`sudo rpm -i&nbsp;cuda-repo-sles113-7-5-local-7.5-18.x86_64.rpm`</li>                    <li>`sudo zypper refresh`</li>                    <li>`sudo zypper install cuda`</li>                </ol>']
+versionMap['Linux/x86_64/Ubuntu/15.04/deb (local)'] = ['1.9 GB','0a02f6efe0ba2b8dea3e7654ee0951d7','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda-repo-ubuntu1504-7-5-local_7.5-18_amd64.deb','','','Installation Guide for Linux','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>`sudo dpkg -i&nbsp;cuda-repo-ubuntu1504-7-5-local_7.5-18_amd64.deb`</li>                    <li>`sudo apt-get update`</li>                    <li>`sudo apt-get install cuda`</li>                </ol>']
+versionMap['Linux/x86_64/Ubuntu/14.04/deb (local)'] = ['1.9 GB','5cf65b8139d70270d9234d5ff4d697c7','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda-repo-ubuntu1404-7-5-local_7.5-18_amd64.deb','','','Installation Guide for Linux','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>`sudo dpkg -i&nbsp;cuda-repo-ubuntu1404-7-5-local_7.5-18_amd64.deb`</li>                    <li>`sudo apt-get update`</li>                    <li>`sudo apt-get install cuda`</li>                </ol>']
+versionMap['Linux/ppc64le/Ubuntu/14.04/deb (local)'] = ['985.5 MB','af735cee83d5c80f0b7b1f84146b4614','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda-repo-ubuntu1404-7-5-local_7.5-18_ppc64el.deb','','','Installation Guide for Linux','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>`sudo dpkg -i&nbsp;cuda-repo-ubuntu1404-7-5-local_7.5-18_ppc64el.deb`</li>                    <li>`sudo apt-get update`</li>                    <li>`sudo apt-get install cuda`</li>                </ol>']
+versionMap['Linux/x86_64/Fedora/21/rpm (network)'] = ['6.2 KB','b448ea716da166f39a5b923601002dd5','http://developer.download.nvidia.com/compute/cuda/repos/fedora21/x86_64/cuda-repo-fedora21-7.5-18.x86_64.rpm','','','Installation Guide for Linux','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>`sudo rpm -i&nbsp;cuda-repo-fedora21-7.5-18.x86_64.rpm`</li>                    <li>`sudo yum clean all`</li>                    <li>`sudo yum install cuda`</li>                </ol>']
+versionMap['Linux/x86_64/OpenSUSE/13.2/rpm (network)'] = ['6.2 KB','4a746dd4e1a0f619e559f44b366928d4','http://developer.download.nvidia.com/compute/cuda/repos/opensuse132/x86_64/cuda-repo-opensuse132-7.5-18.x86_64.rpm','','','Installation Guide for Linux','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>`sudo rpm -i&nbsp;cuda-repo-opensuse132-7.5-18.x86_64.rpm`</li>                    <li>`sudo zypper refresh`</li>                    <li>`sudo zypper install cuda`</li>                </ol>']
+versionMap['Linux/x86_64/RHEL/7/rpm (network)'] = ['6.2 KB','24f3b987afb088bb1bcbfda8f2f7debc','http://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/cuda-repo-rhel7-7.5-18.x86_64.rpm','','','Installation Guide for Linux','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>`sudo rpm -i&nbsp;cuda-repo-rhel7-7.5-18.x86_64.rpm`</li>                    <li>`sudo yum clean all`</li>                    <li>`sudo yum install cuda`</li>                </ol>']
+versionMap['Linux/ppc64le/RHEL/7/rpm (network)'] = ['6.2 KB','ae01a469a63fe95adf58291f57dc3e0e','http://developer.download.nvidia.com/compute/cuda/repos/rhel7/ppc64le/cuda-repo-rhel7-7.5-23.ppc64le.rpm','','','Installation Guide for Linux','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>`sudo rpm -i&nbsp;cuda-repo-rhel7-7.5-23.ppc64le.rpm`</li>                    <li>`sudo yum clean all`</li>                    <li>`sudo yum install cuda`</li>                </ol>']
+versionMap['Linux/x86_64/CentOS/7/rpm (network)'] = ['6.2 KB','24f3b987afb088bb1bcbfda8f2f7debc','http://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/cuda-repo-rhel7-7.5-18.x86_64.rpm','','','Installation Guide for Linux','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>`sudo rpm -i&nbsp;cuda-repo-rhel7-7.5-18.x86_64.rpm`</li>                    <li>`sudo yum clean all`</li>                    <li>`sudo yum install cuda`</li>                </ol>']
+versionMap['Linux/x86_64/RHEL/6/rpm (network)'] = ['6.2 KB','01fd3415b197f9ddc4e58f5a4f2a9af0','http://developer.download.nvidia.com/compute/cuda/repos/rhel6/x86_64/cuda-repo-rhel6-7.5-18.x86_64.rpm','','','Installation Guide for Linux','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>`sudo rpm -i&nbsp;cuda-repo-rhel6-7.5-18.x86_64.rpm`</li>                    <li>`sudo yum clean all`</li>                    <li>`sudo yum install cuda`</li>                </ol>']
+versionMap['Linux/x86_64/CentOS/6/rpm (network)'] = ['6.2 KB','01fd3415b197f9ddc4e58f5a4f2a9af0','http://developer.download.nvidia.com/compute/cuda/repos/rhel6/x86_64/cuda-repo-rhel6-7.5-18.x86_64.rpm','','','Installation Guide for Linux','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>`sudo rpm -i&nbsp;cuda-repo-rhel6-7.5-18.x86_64.rpm`</li>                    <li>`sudo yum clean all`</li>                    <li>`sudo yum install cuda`</li>                </ol>']
+versionMap['Linux/x86_64/SLES/12/rpm (network)'] = ['6.2 KB','931cd8c7ed6a71675c3a3e5dc48844f8','http://developer.download.nvidia.com/compute/cuda/repos/sles12/x86_64/cuda-repo-sles12-7.5-18.x86_64.rpm','','','Installation Guide for Linux','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>`sudo rpm -i&nbsp;cuda-repo-sles12-7.5-18.x86_64.rpm`</li>                    <li>`sudo zypper refresh`</li>                    <li>`sudo zypper install cuda`</li>                </ol>']
+versionMap['Linux/x86_64/SLES/11 (SP3)/rpm (network)'] = ['6.2 KB','9de31fb5a44829c078ab06200aa5795a','http://developer.download.nvidia.com/compute/cuda/repos/sles113/x86_64/cuda-repo-sles113-7.5-18.x86_64.rpm','','','Installation Guide for Linux','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>`sudo rpm -i&nbsp;cuda-repo-sles113-7.5-18.x86_64.rpm`</li>                    <li>`sudo zypper refresh`</li>                    <li>`sudo zypper install cuda`</li>                </ol>']
+versionMap['Linux/x86_64/Ubuntu/15.04/deb (network)'] = ['2.1 KB','abc6d13ad2c5423c0dc6dd3c71ba8a63','http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1504/x86_64/cuda-repo-ubuntu1504_7.5-18_amd64.deb','','','Installation Guide for Linux','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>`sudo dpkg -i&nbsp;cuda-repo-ubuntu1504_7.5-18_amd64.deb`</li>                    <li>`sudo apt-get update`</li>                    <li>`sudo apt-get install cuda`</li>                </ol>']
+versionMap['Linux/x86_64/Ubuntu/14.04/deb (network)'] = ['2.1 KB','e810ded23efe35e3db63d2a92288f922','http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1404/x86_64/cuda-repo-ubuntu1404_7.5-18_amd64.deb','','','Installation Guide for Linux','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>`sudo dpkg -i&nbsp;cuda-repo-ubuntu1404_7.5-18_amd64.deb`</li>                    <li>`sudo apt-get update`</li>                    <li>`sudo apt-get install cuda`</li>                </ol>']
+versionMap['Linux/ppc64le/Ubuntu/14.04/deb (network)'] = ['2.1 KB','c3d5d96fda78c982e46bdb661da6c627','http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1404/ppc64el/cuda-repo-ubuntu1404_7.5-18_ppc64el.deb','','','Installation Guide for Linux','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Linux.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>`sudo dpkg -i&nbsp;cuda-repo-ubuntu1404_7.5-18_ppc64el.deb`</li>                    <li>`sudo apt-get update`</li>                    <li>`sudo apt-get install cuda`</li>                </ol>']
+versionMap['Mac OSX/x86_64//10.11/dmg (network)'] = ['373.2 KB','cec3649999691883de3d708aac1ae93f','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/network_installers/cuda_7.5.27_mac_network.dmg','','','Installation Guide for Mac OSX','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Mac.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>Open&nbsp;cuda_7.5.27_mac_network.dmg</li>                    <li>Launch the installer</li>                    <li>Follow the on-screen prompts</li>                </ol>']
+versionMap['Mac OSX/x86_64//10.10/dmg (network)'] = ['373.2 KB','cec3649999691883de3d708aac1ae93f','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/network_installers/cuda_7.5.27_mac_network.dmg','','','Installation Guide for Mac OSX','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Mac.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>Open&nbsp;cuda_7.5.27_mac_network.dmg</li>                    <li>Launch the installer</li>                    <li>Follow the on-screen prompts</li>                </ol>']
+versionMap['Mac OSX/x86_64//10.9/dmg (network)'] = ['373.2 KB','cec3649999691883de3d708aac1ae93f','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/network_installers/cuda_7.5.27_mac_network.dmg','','','Installation Guide for Mac OSX','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Mac.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>Open&nbsp;cuda_7.5.27_mac_network.dmg</li>                    <li>Launch the installer</li>                    <li>Follow the on-screen prompts</li>                </ol>']
+versionMap['Mac OSX/x86_64//10.11/dmg (local)'] = ['1.0 GB','cfdcbbef8941764e764ecd40dd7a49a8','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda_7.5.27_mac.dmg','','','Installation Guide for Mac OSX','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Mac.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>Open&nbsp;cuda_7.5.27_mac.dmg</li>                    <li>Launch the installer</li>                    <li>Follow the on-screen prompts</li>                </ol>']
+versionMap['Mac OSX/x86_64//10.10/dmg (local)'] = ['1.0 GB','cfdcbbef8941764e764ecd40dd7a49a8','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda_7.5.27_mac.dmg','','','Installation Guide for Mac OSX','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Mac.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>Open&nbsp;cuda_7.5.27_mac.dmg</li>                    <li>Launch the installer</li>                    <li>Follow the on-screen prompts</li>                </ol>']
+versionMap['Mac OSX/x86_64//10.9/dmg (local)'] = ['1.0 GB','cfdcbbef8941764e764ecd40dd7a49a8','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda_7.5.27_mac.dmg','','','Installation Guide for Mac OSX','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Installation_Guide_Mac.pdf','CUDA Quick Start Guide','http://developer.download.nvidia.com/compute/cuda/7.5/Prod/docs/sidebar/CUDA_Quick_Start_Guide.pdf','<ol>                    <li>Open&nbsp;cuda_7.5.27_mac.dmg</li>                    <li>Launch the installer</li>                    <li>Follow the on-screen prompts</li>                </ol>']
+
+    $(document).ready(function()
+    {
+        fillHeaders();
+        fillTargetOsBar();
+
+        $('#targetOsRow').show();
+        clearTargetArch();
+    });
+    
+    function fillHeaders()
+    {
+        if (announcement.length > 0)
+        {
+            $('#announcementBar').html(announcement);
+            $('#announcementBar').show();
+        }
+        
+        $('#documentationLink').html(documentation);
+        $('#releaseNotesLink').html(releaseNotes);
+        $('#eulaLink').html(eula);
+        $('#checksumLink').html(checksum);
+        $('#quickStartGuideLink').html(quickStartGuide);
+        $('#quickStartGuideLink').html(quickStartGuide);
+        $('#tooltipTargetArchitecture').attr('title', 'The architecture is the CPU type of the platform.\n     "x86_64" is for 64-bit Intel x86 (also referred as "amd64").\n     "x86" is for 32-bit Intel x86 architectures (also referred as "i386" or "i686").\n     "armv7" is the 32-bit ARMv7 architecture.\n     "aarch64" is for the 64-bit ARMv8 architecture.\n     "ppc64le" is for the IBM P8 Little Endian architecture.');
+        $('#tooltipSelectTargetPlatform').attr('title', 'The target is the platform on which you execute the application.\nIt may be different from the host platform, which is the platform that you will be using to edit and build an application.\nFor instance, if you edit, build, and run the application on the same Linux x86_64 machine, your host platform and your target platform are the same.\nIf you edit and build on a Linux x86_64 machine and execute the application on a Linux armv7 board, your host platform is Linux x86_64 and your target platform is Linux armv7.');
+        $('#tooltipTargetInstallerType').attr('title', 'The same installer may be offered in 2 versions: local and network.\nThe local installer is self-contained and includes every component. It is a large file that only needs to be downloaded from the internet once and can be installed on multiple systems. It is the recommended type of installer with low-bandwidth internet connections.\nThe network installer is a small installer client that will only download the required components during the installation. It is faster to download but requires re-downloading each component with each new installation.'); 
+        $('#tooltipCrossPrompt').attr('title', 'For some platforms (the target platform), it is possible to develop and build from a different platform (the host platform).\nThe target platform is the platform where your application will run.\nIf your host platform and target platform are not the same, answer yes to this question.'); 
+        $('#tooltipSelectHostPlatform').attr('title', 'The host platform is the platform that you will be using to edit and build an application.\nIt may be different from the target platform, which is the platform on which you execute the application.\nFor instance, if you edit, build, and run the application on the same Linux x86_64 machine, your host platform and your target platform are the same.\nIf you edit and build on a Linux x86_64 machine and execute the application on a Linux armv7 board, your host platform is Linux x86_64 and your target platform is Linux armv7.'); 
+        $('#tooltipHostArchitecture').attr('title', 'The architecture is the CPU type of the platform.\n     "x86_64" is for 64-bit Intel x86 (also referred as "amd64").\n     "x86" is for 32-bit Intel x86 architectures (also referred as "i386" or "i686").\n     "armv7" is the 32-bit ARMv7 architecture.\n     "aarch64" is for the 64-bit ARMv8 architecture.\n     "ppc64le" is for the IBM P8 Little Endian architecture.'); 
+        $('#tooltipHostInstallerType').attr('title', 'The same installer may be offered in 2 versions: local and network.\nThe local installer is self-contained and includes every component. It is a large file that only needs to be downloaded from the internet once and can be installed on multiple systems. It is the recommended type of installer with low-bandwidth internet connections.\nThe network installer is a small installer client that will only download the required components during the installation. It is faster to download but requires re-downloading each component with each new installation.'); 
+    }
+
+    function fillTargetOsBar()
+    {
+        var html = '';
+        for (var ii = 0; ii < targetOses.length; ii++)
+        {
+            var os = targetOses[ii];
+            html += '<button id="target_' + os + '" class="btn btn-success btn-sm targetOsButton cdButton">' + os + '</button>';
+        }
+
+        $('#targetOsSelections').html(html);
+
+        setupButtonHighlighting('.targetOsButton');
+
+        $('.targetOsButton').click(function()
+        {
+            clearTargetArch();
+            var button = $(this);
+            targetOS = button.attr('id').replace(/target_/g, '');
+            fillTargetArchBar();
+        });
+    }
+
+    function fillHostOsBar()
+    {
+        var html = '';
+        for (var ii = 0; ii < hostOses.length; ii++)
+        {
+            var os = hostOses[ii];
+            html += '<button id="host_' + os + '" class="btn btn-success btn-sm hostOsButton cdButton">' + os + '</button>';
+        }
+
+        $('#hostOsSelections').html(html);
+
+        setupButtonHighlighting('.hostOsButton');
+
+        $('.hostOsButton').click(function()
+        {
+            clearHostArch();
+            var button = $(this);
+            hostOS = button.attr('id').replace(/host_/g, '');;
+            fillHostArchBar();
+        });
+
+        if (hostOses.length == 1)
+            $('#host_' + hostOses[0]).click();
+    }
+
+    function fillTargetArchBar()
+    {
+        var arches = targetArchMap[targetOS];
+
+        var html = '';
+        for (var ii = 0; ii < arches.length; ii++)
+        {
+            var arch = arches[ii];
+            html += '<button id="target_' + arch + '" class="btn btn-success btn-sm targetArchButton cdButton">' + arch + '</button>';
+        }
+
+        $('#targetArchSelections').html(html);
+        $('#targetArchRow').show();
+
+        setupButtonHighlighting('.targetArchButton');
+
+        $('.targetArchButton').click(function()
+        {
+            clearTargetDistro();
+
+            var button = $(this);
+            targetArch = button.attr('id').replace(/target_/g, '');
+
+            if (targetOS.indexOf('Windows') >= 0)
+            {
+                var targetVersionsWindows = osArchVersionMap[targetOS + '/' + targetArch]; 
+                fillTargetVersionBar(targetVersionsWindows);
+            }
+            else if (targetOS.indexOf('Linux') >= 0)
+                fillTargetDistroBar();
+            else if (targetOS.indexOf('Mac OSX') >= 0)
+            {
+                var targetVersionsMac = osArchVersionMap[targetOS + '/' + targetArch]; 
+                fillTargetVersionBar(targetVersionsMac);
+            }
+        });
+
+        if (arches.length == 1)
+            $('#target_' + arches[0]).click();
+    }
+
+    function fillHostArchBar()
+    {
+        var arches = hostArchMap[hostOS];
+
+        var html = '';
+        for (var ii = 0; ii < arches.length; ii++)
+        {
+            var arch = arches[ii];
+            html += '<button id="host_' + arch + '" class="btn btn-success btn-sm hostArchButton cdButton">' + arch + '</button>';
+        }
+
+        $('#hostArchSelections').html(html);
+        $('#hostArchRow').show();
+
+        setupButtonHighlighting('.hostArchButton');
+
+        $('.hostArchButton').click(function()
+        {
+            clearHostDistro();
+
+            var button = $(this);
+            hostArch = button.attr('id').replace(/host_/g, '');
+
+            if (hostOS.indexOf('Windows') >= 0)
+                fillHostVersionBar(hostVersionsWindows);
+            else if (hostOS.indexOf('Linux') >= 0)
+                fillHostDistroBar();
+            else if (hostOS.indexOf('Mac OSX') >= 0)
+                fillHostVersionBar(hostVersionsMacOSX);
+        });
+
+        if (arches.length == 1)
+            $('#host_' + arches[0]).click();
+    }
+
+    function fillTargetDistroBar()
+    {
+        var linuxDistros = targetLinuxArchToDistroMap[targetArch];
+        var html = '';
+        for (var ii = 0; ii < linuxDistros.length; ii++)
+        {
+            var distro = linuxDistros[ii];
+            html += '<button id="target_' + distro + '" class="btn btn-success btn-sm targetDistroButton cdButton">' + distro + '</button>';
+        }
+
+        $('#targetDistroSelections').html(html);
+        $('#targetDistroRow').show();
+
+        setupButtonHighlighting('.targetDistroButton');
+
+        $('.targetDistroButton').click(function()
+        {
+            clearTargetVersion();
+            var button = $(this);
+            targetOS = 'Linux';
+            targetDistro = button.attr('id').replace(/target_/g, '');
+            var key = targetArch + '/' + targetDistro;
+            var versions = targetLinuxDistroToVersionMap[key];
+            fillTargetVersionBar(versions);
+            $('#targetVersionRow').show();
+        });
+
+        if (linuxDistros.length == 1)
+            $('#target_' + linuxDistros[0]).click();
+    }
+
+    function fillHostDistroBar()
+    {
+        var linuxDistros = hostLinuxArchToDistroMap[hostArch];
+        var html = '';
+        for (var ii = 0; ii < linuxDistros.length; ii++)
+        {
+            var distro = linuxDistros[ii];
+            html += '<button id="host_' + distro + '" class="btn btn-success btn-sm hostDistroButton cdButton">' + distro + '</button>';
+        }
+
+        $('#hostDistroSelections').html(html);
+        $('#hostDistroRow').show();
+
+        setupButtonHighlighting('.hostDistroButton');
+
+        $('.hostDistroButton').click(function()
+        {
+            clearHostVersion();
+            var button = $(this);
+            hostOS = 'Linux';
+            hostDistro = button.attr('id').replace(/host_/g, '');
+            var key = hostArch + '/' + hostDistro;
+            var versions = hostLinuxDistroToVersionMap[key];
+            fillHostVersionBar(versions);
+            $('#hostVersionRow').show();
+        });
+
+        if (linuxDistros.length == 1)
+            $('#host_' + linuxDistros[0]).click();
+    }
+    
+    function fillTargetVersionBar(listOfOsVersions)
+    {
+        var jQueryWorthySelectors = [];
+        var html = '';
+        for (var ii = 0; ii < listOfOsVersions.length; ii++)
+        {
+            var osVersion = listOfOsVersions[ii];
+            var osVersionJqueryWorthy = makeSelectorJqueryWorthy(osVersion);
+            html += '<button id="target_' + osVersionJqueryWorthy + '" name="' + osVersion + '" class="btn btn-success btn-sm targetVersionButton cdButton">' + osVersion + '</button>';
+            jQueryWorthySelectors.push(osVersionJqueryWorthy);
+        }
+
+        $('#targetVersionSelections').html(html);
+        $('#targetVersionRow').show();
+
+        setupButtonHighlighting('.targetVersionButton');
+
+        $('.targetVersionButton').click(function()
+        {
+            clearTargetPackage();
+            var button = $(this);
+            targetVersion = button.attr('name');
+            var key = targetOS + '/' + targetArch + '/' + targetDistro + '/' + targetVersion;
+            var packages = targetVersionToPackageMap[key];
+            fillTargetInstallerTypeBar(packages);
+        });
+
+        if (jQueryWorthySelectors.length == 1)
+            $('#target_' + jQueryWorthySelectors[0]).click();
+    }
+
+    function fillHostVersionBar(listOfOsVersions)
+    {
+        var jQueryWorthySelectors = [];
+        var html = '';
+        for (var ii = 0; ii < listOfOsVersions.length; ii++)
+        {
+            var osVersion = listOfOsVersions[ii];
+            var osVersionJqueryWorthy = makeSelectorJqueryWorthy(osVersion);
+            html += '<button id="host_' + osVersionJqueryWorthy + '" name="' + osVersion + '" class="btn btn-success btn-sm hostVersionButton cdButton">' + osVersion + '</button>';
+            jQueryWorthySelectors.push(osVersionJqueryWorthy);
+        }
+
+        $('#hostVersionSelections').html(html);
+        $('#hostVersionRow').show();
+
+        setupButtonHighlighting('.hostVersionButton');
+
+        $('.hostVersionButton').click(function()
+        {
+            clearHostPackage();
+            var button = $(this);
+            hostVersion = button.attr('name');
+            var key = hostOS + '/' + hostArch + '/' + hostDistro + '/' + hostVersion;
+            var packages = hostVersionToPackageMap[key];
+            fillHostInstallerTypeBar(packages);
+        });
+
+        if (jQueryWorthySelectors.length == 1)
+            $('#host_' + jQueryWorthySelectors[0]).click();
+    }
+
+    function fillTargetInstallerTypeBar(packages)
+    {
+        var jQueryWorthySelectors = [];
+        var html = '';
+        for (var ii = 0; ii < packages.length; ii++)
+        {
+            var downloadPackageType = packages[ii];
+            var jQueryWorthySelector = makeSelectorJqueryWorthy(downloadPackageType);
+            html += '<button id="target_' + jQueryWorthySelector + '" name="' + downloadPackageType + '" class="btn btn-success btn-sm targetInstallerTypeButton cdButton">' + downloadPackageType + '</button>';
+            jQueryWorthySelectors.push(jQueryWorthySelector);
+        }
+
+        $('#targetPackageSelections').html(html);
+        $('#targetPackageRow').show();
+
+        setupButtonHighlighting('.targetInstallerTypeButton');
+
+        $('.targetInstallerTypeButton').click(function()
+        {
+            var button = $(this);
+            targetPackage = button.attr('name');
+            clearCrossPrompt();
+            handleCrossButtons();
+        });
+
+        if (jQueryWorthySelectors.length == 1)
+            $('#target_' + jQueryWorthySelectors[0]).click();
+    }
+
+    function fillHostInstallerTypeBar(packages)
+    {
+        var jQueryWorthySelectors = [];
+        var html = '';
+        for (var ii = 0; ii < packages.length; ii++)
+        {
+            var downloadPackageType = packages[ii];
+            var jQueryWorthySelector = makeSelectorJqueryWorthy(downloadPackageType);
+            html += '<button id="host_' + jQueryWorthySelector + '" name="' + downloadPackageType + '" class="btn btn-success btn-sm hostInstallerTypeButton cdButton">' + downloadPackageType + '</button>';
+            jQueryWorthySelectors.push(jQueryWorthySelector);
+        }
+
+        $('#hostPackageSelections').html(html);
+        $('#hostPackageRow').show();
+
+        setupButtonHighlighting('.hostInstallerTypeButton');
+
+        $('.hostInstallerTypeButton').click(function()
+        {
+            var button = $(this);
+            hostPackage = button.attr('name');
+            showDownloadPanels();
+        });
+
+        if (jQueryWorthySelectors.length == 1)
+            $('#host_' + jQueryWorthySelectors[0]).click();
+    }
+
+    function shouldShowPrompt()
+    {
+        var key = targetOS + '/' + targetArch + '/' + targetDistro + '/' + targetVersion + '/' + targetPackage;
+        var shouldShowPrompt = versionToHostsMap[key] != null ? true : false;
+
+        return shouldShowPrompt;
+    }
+
+    function handleCrossButtons()
+    {
+        var bShowPrompt = shouldShowPrompt();
+        setupButtonHighlighting('.crossButton');
+
+        if (bShowPrompt)
+        {
+            $('#crossPrompt').show();
+            setupButtonHighlighting('.crossButton');
+
+            $('.crossButton').click(function()
+            {
+                clearHostPanel();
+                
+                var crossCompileButton = $(this);
+                var crossAnswer = crossCompileButton.attr('id');
+
+                if (crossAnswer.indexOf('crossYes') >= 0)
+                    showHostPanel();
+                else if (crossAnswer.indexOf('crossNo') >= 0)
+                    showDownloadPanels();
+            });
+        }
+        else
+        {
+            showDownloadPanels();
+        }
+    }
+    
+    function showHostPanel()
+    {
+        clearHostArch();
+        fillHostOsBar();
+
+        $('#selectHostPlatformPanel').show();
+    }
+    
+    function showDownloadPanels()
+    {
+        showDownloadPanel();
+        showInstructionsPanels();
+    }
+    
+    function showDownloadPanel()
+    {
+        $('#downloadPanel').show();
+        $('#panelHostInstaller').hide();
+        $('#panelTargetInstaller').hide();
+        
+        {
+            var key = targetOS + '/' + targetArch + '/' + targetDistro + '/' + targetVersion + '/' + targetPackage;
+            var targetInstallerSize = versionMap[key][INDEX_SIZE];
+            var targetMd5String = versionMap[key][INDEX_MD5];
+            var targetUrl = versionMap[key][INDEX_INSTALLER_URL];
+            var targetFileName = targetUrl.substr(targetUrl.lastIndexOf('/') + 1);
+            var targetGpuDevKitName = versionMap[key][INDEX_GPU_DEV_KIT_NAME];
+            var targetGpuDevKitURL = versionMap[key][INDEX_GPU_DEV_KIT_URL];
+            var targetGpuDevKitText = 'The ' + targetGpuDevKitName + ' is available as a separate download <a href="' + targetGpuDevKitURL + '">here</a>.<br/><br/>';
+            var targetGsgName = versionMap[key][INDEX_GSG_NAME];
+            var targetGsgURL = versionMap[key][INDEX_GSG_URL];
+            var targetQsgName = versionMap[key][INDEX_QSG_NAME];
+            var targetQsgURL = versionMap[key][INDEX_QSG_URL];
+
+            var config = targetOS + ' ' + targetArch;
+
+            if (targetDistro.length > 0)
+                config += ' ' + targetDistro;
+            
+            config += ' ' + targetVersion;
+
+            // title
+            {
+                var targetInstallerTitle = targetOS;
+
+                if (targetDistro.length > 0)
+                    targetInstallerTitle += ' ' + targetDistro;
+                    
+                targetInstallerTitle +=  ' ' + targetVersion + ' ' + targetArch;
+
+                $('#titleTargetInstaller').html('Download Target Installer for ' + targetInstallerTitle);                
+            }
+            
+            $('#targetInstallerFile').html(targetFileName);
+            $('#targetInstallerSize').html(targetInstallerSize);
+            $('#targetInstallerConfig').html(config);
+            $('#targetMd5Checksum').html(targetMd5String);
+            $('#targetDownloadButtonText').html('Download (' + targetInstallerSize + ')');
+            $('#targetDownloadButtonHref').attr('href', targetUrl);
+            $('#targetGSG').attr('href', targetGsgURL);
+            $('#targetGSG').html(targetGsgName);
+            $('#targetQSG').attr('href', targetQsgURL);
+            $('#targetQSG').html(targetQsgName);
+            $('#downloadPanelTitle').html('Download Installer');
+
+            if (targetGpuDevKitURL.length > 0)
+               $('#targetGpuDevKitText').html(targetGpuDevKitText);
+            else
+               $('#targetGpuDevKitText').empty();
+
+            $('#panelTargetInstaller').show();
+        }
+        
+        {
+            var key = hostOS + '/' + hostArch + '/' + hostDistro + '/' + hostVersion + '/' + hostPackage;
+            var entry = versionMap[key];
+            
+            if (entry != null)
+            {
+                var hostInstallerSize = versionMap[key][INDEX_SIZE];
+                var hostMd5String = versionMap[key][INDEX_MD5];
+                var hostUrl = versionMap[key][INDEX_INSTALLER_URL];
+                var hostFileName = hostUrl.substr(hostUrl.lastIndexOf('/') + 1);
+                var hostGpuDevKitName = versionMap[key][INDEX_GPU_DEV_KIT_NAME];
+                var hostGpuDevKitURL = versionMap[key][INDEX_GPU_DEV_KIT_URL];
+                var hostGpuDevKitText = 'The ' + hostGpuDevKitName + ' is available as a separate download <a href="' + hostGpuDevKitURL + '">here</a>.<br/><br/>';
+                var hostGsgName = versionMap[key][INDEX_GSG_NAME];
+                var hostGsgURL = versionMap[key][INDEX_GSG_URL];
+                var hostQsgName = versionMap[key][INDEX_QSG_NAME];
+                var hostQsgURL = versionMap[key][INDEX_QSG_URL];
+                
+                var config = hostOS + ' ' + hostArch;
+                if (hostDistro.length > 0)
+                    config += ' ' + hostDistro;
+                config += ' ' + hostVersion;
+                
+                // title
+                {
+                    var hostInstallerTitle = hostOS;
+                    
+                    if (hostDistro.length > 0)
+                        hostInstallerTitle += ' ' + hostDistro;
+                        
+                    hostInstallerTitle += ' ' + hostVersion + ' ' + hostArch;
+    
+                    $('#titleHostInstaller').html('Download Host Installer for ' + hostInstallerTitle);                
+                }
+                
+                $('#hostInstallerFile').html(hostFileName);
+                $('#hostInstallerSize').html(hostInstallerSize);
+                $('#hostInstallerConfig').html(config);
+                $('#hostMd5Checksum').html(hostMd5String);
+                $('#hostDownloadButtonText').html('Download (' + hostInstallerSize + ')');
+                $('#hostDownloadButtonHref').attr('href', hostUrl);
+                $('#hostGSG').attr('href', hostGsgURL);
+                $('#hostGSG').html(hostGsgName);
+                $('#hostQSG').attr('href', hostQsgURL);
+                $('#hostQSG').html(hostQsgName);
+                $('#downloadPanelTitle').html('Download Installers');
+
+                if (hostGpuDevKitURL.length > 0)
+                    $('#hostGpuDevKitText').html(hostGpuDevKitText);
+                else
+                    $('#hostGpuDevKitText').empty();
+
+                $('#panelHostInstaller').show();
+            }
+        }
+    }
+
+    function showInstructionsPanels()
+    {
+        showTargetInstructionsPanel();
+        showHostInstructionsPanel();
+    }
+    
+    function showTargetInstructionsPanel()
+    {
+        var key = targetOS + '/' + targetArch + '/' + targetDistro + '/' + targetVersion + '/' + targetPackage;
+        var entry = versionMap[key];
+        
+        if (entry == null)
+            return;             // don't show target panel if target entries were not set
+        
+        var targetInstructions = versionMap[key][INDEX_INSTRUCTIONS];
+        $('#targetInstructions').html(targetInstructions);
+        $('#targetInstructionsPanel').show();
+    }
+
+    function showHostInstructionsPanel()
+    {
+        var key = hostOS + '/' + hostArch + '/' + hostDistro + '/' + hostVersion + '/' + hostPackage;
+        var entry = versionMap[key];
+        
+        if (entry == null)
+            return;             // don't show host panel if host entries were not set
+        
+        var hostInstructions = versionMap[key][INDEX_INSTRUCTIONS];
+        $('#hostInstructions').html(hostInstructions);
+        $('#hostInstructionsPanel').show();
+    }
+
+    function setupButtonHighlighting(selector)
+    {
+        $(selector).click(function(e)
+        {
+            $(selector).each(function(index)
+            {
+                var $button = $(this);
+                $button.removeClass('cuda-btn-success');
+                $button.addClass('btn-success');
+            });
+
+            var $button = $(this);
+            $button.removeClass('btn-success');
+            $button.addClass('cuda-btn-success');
+        });
+    }
+
+    function clearTargetArch()
+    {
+        targetArch = '';
+        $('#targetArchRow').hide();
+        clearTargetDistro();
+    }
+    
+    function clearHostArch()
+    {
+        hostArch = '';
+        $('#hostArchRow').hide();
+        clearHostDistro();
+    }
+
+    function clearTargetDistro()
+    {
+        targetDistro = '';
+        $('#targetDistroRow').hide();
+        clearTargetVersion();
+    }
+
+    function clearHostDistro()
+    {
+        hostDistro = '';
+        $('#hostDistroRow').hide();
+        clearHostVersion();
+    }
+
+    function clearTargetVersion()
+    {
+        targetVersion = '';
+        $('#targetVersionRow').hide();
+        clearTargetPackage();
+    }
+
+    function clearHostVersion()
+    {
+        hostVersion = '';
+        $('#hostVersionRow').hide();
+        clearHostPackage();
+    }
+
+    function clearTargetPackage()
+    {
+        targetPackage = '';
+        $('#targetPackageRow').hide();
+        clearCrossPrompt();
+    }
+
+    function clearHostPackage()
+    {
+        hostPackage = '';
+        $('#hostPackageRow').hide();
+        clearDownloadPanels();
+    }
+
+    function clearCrossPrompt()
+    {
+        $('.crossButton').each(function(index)
+        {
+            var $button = $(this);
+            $button.removeClass('cuda-btn-success');
+            $button.addClass('btn-success');
+        });
+        
+        $('#crossPrompt').hide();
+        clearHostPanel();
+    }
+    
+    function clearHostPanel()
+    {
+        $('#selectHostPlatformPanel').hide();
+        clearDownloadPanels();
+        clearHostArch();
+    }
+
+    function clearDownloadPanels()
+    {
+        $('#downloadPanel').hide();
+        clearInstructionsPanels();
+    }
+
+    function clearInstructionsPanels()
+    {
+        $('#targetInstructionsPanel').hide();
+        $('#hostInstructionsPanel').hide();
+    }
+
+    function makeSelectorJqueryWorthy(selector)
+    {
+        selector = selector.replace(/\./g, '');      // remove dot
+        selector = selector.replace(/\(/g, '');      // remove open paren
+        selector = selector.replace(/\)/g, '');      // remove close paren
+        selector = selector.replace(/\-/g, '');      // remove dash
+        selector = selector.replace(/ /g, '');        // remove space
+        return selector; 
+    }
+}
+);
+</script>
+
+</div></div></div></div>
+
+
+</section> <!-- /.block -->
+  </div>
+        </section>
+
+        
+      </div>
+    </div>
+    <div class="separator"></div>
+  </div>
+  
+  <footer>
+    <div class="footer-links">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <div class="padding-md-footer">
+                <div class="logo-footer"></div>
+              </div>
+            </div>
+                      <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 padding-section-footer">
+                <div class="region region-footer-menu">
+    <div class="block block-menu" id="block-menu-menu-footer-menu">
+  <div class="block-content zone-select">
+    <ul class="menu nav"><li class="first leaf"><a href="/accelerated-computing" title="">COMPUTEWORKS</a></li>
+<li class="leaf"><a href="/gameworks" title="">GAMEWORKS</a></li>
+<li class="leaf"><a href="/embedded-computing" title="">JETPACK</a></li>
+<li class="last leaf"><a href="/designworks" title="">DESIGNWORKS</a></li>
+</ul>  </div>
+</div>
+  </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                            <div class="region region-footer">
+    <div class="block block-menu col-xs-12 col-sm-4 col-md-4 col-lg-4" id="block-menu-menu-cuda-zone-category-1">
+<div class="padding-sub-footer">
+      <h5>
+      Get Started    </h5>
+      <div class="block-content">
+      <ul class="menu nav"><li class="first leaf"><a href="/about-cuda">About CUDA</a></li>
+<li class="leaf"><a href="/accelerated-computing-training">Parallel Computing</a></li>
+<li class="leaf"><a href="/cuda-toolkit">CUDA Toolkit</a></li>
+<li class="last leaf"><a href="http://www.youtube.com/playlist?list=PL5B692fm6--vScfBaxgY89IRWFzDt0Khm">CUDACasts</a></li>
+</ul>    </div>
+  </div>
+</div>
+<div class="block block-menu col-xs-12 col-sm-4 col-md-4 col-lg-4" id="block-menu-menu-cuda-zone-category-2">
+<div class="padding-sub-footer">
+      <h5>
+      Learn More    </h5>
+      <div class="block-content">
+      <ul class="menu nav"><li class="first leaf"><a href="/cuda-education-training">Training and Courseware</a></li>
+<li class="collapsed"><a href="/tools-ecosystem">Tools and Ecosystem</a></li>
+<li class="leaf"><a href="/academia">Academic Collaboration</a></li>
+<li class="last leaf"><a href="http://docs.nvidia.com/cuda/index.html">Documentation</a></li>
+</ul>    </div>
+  </div>
+</div>
+<div class="block block-menu col-xs-12 col-sm-4 col-md-4 col-lg-4" id="block-menu-menu-cuda-zone-category-3">
+<div class="padding-sub-footer">
+      <h5>
+      Get Involved    </h5>
+      <div class="block-content">
+      <ul class="menu nav"><li class="first leaf"><a href="https://devtalk.nvidia.com/">Forums</a></li>
+<li class="leaf"><a href="http://devblogs.nvidia.com/parallelforall/">Parallel Forall Blog</a></li>
+<li class="last leaf"><a href="/contact">Contact Us</a></li>
+</ul>    </div>
+  </div>
+</div>
+  </div>
+                      </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-boilerplate">
+      <div class="container">
+        <div class="boilerplate">
+                    <div class="col-xs-12 col-sm-12 col-lg-9 padding-sm-bottom">
+            Copyright &copy; 2016 NVIDIA Corporation                          <ul class="legal_links" ><li class="first leaf"><a href="http://www.nvidia.com/object/legal_info.html">Legal Information</a></li>
+<li class="last leaf"><a href="http://www.nvidia.com/object/privacy_policy.html">Privacy Policy</a></li>
+</ul>                      </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+  <script>try
+{ _satellite.pageBottom(); }
+catch(err) {}</script>
+<script src="https://developer.nvidia.com/sites/default/files/js/js_GwCWfYD7BVi62WfAEr1qMBoCTw0JX9dKnZPpgobm_sc.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"9557dbf16c","applicationID":"9052762","transactionName":"ZFADMkRTVxcEARdRWl0aIAVCW1YKSj0RXUNaRggJWFtXAzoUCl1C","queueTime":0,"applicationTime":530,"atts":"SBcARAxJRBk=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

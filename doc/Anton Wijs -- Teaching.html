@@ -1,0 +1,42 @@
+
+<!-- saved from url=(0038)http://www.win.tue.nl/~aserebre/2IS95/ -->
+<HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Anton Wijs -- Teaching</TITLE>
+<style type="text/css">
+<!--
+A:link {text-decoration: underline; color: #000000;}
+A:visited {text-decoration: underline; color: #145088;}
+A:active {text-decoration: underline; color: #1466B2;}
+A:hover {background: #1466B2; text-decoration: underline; color: #FFFFFF;}
+
+td,th {
+	color: #2C7ECA;
+}
+body {
+	font-family: Century Schoolbook, Helvetica, Palatino, Georgia, Arial; color: #0C5EAA;
+}
+body {
+	background-color: #FFFFFF;
+}
+-->
+</style></HEAD><BODY>
+<H1>Instructions for REFINER</H1>
+
+<P>
+REFINER can be run on the command line by either running the <b>refiner</b> script (for command-line usage), or the <b>refiner_gui</b> script (for GUI usage).
+<br><br>
+Regarding the possible arguments for command-line usage, when REFINER is run with the <b>help</b> option (<b>refiner -h</b>), more information on this
+is provided.
+<br><br>
+The GUI can be operated in an intuitive way: In the top-left corner, there are options to load and save rule systems, load a functional property, and load a model. Writing new properties and models is not the purpose of REFINER. Instead, existing explicit-state model checking toolsets such as mCRL2 and CADP can be used for this.
+<br><br>
+REFINER offers the possibility to create and edit rule systems. The lower part of the GUI is used for that. The <b>rule selection</b> buttons offer options to create, edit and clone new transformation and process rules. A process rule is a specific kind of transformation rule, with the purpose of introducing an entirely new process. Therefore, process rules do not consist of two, but only one pattern, describing the potential behaviour of the newly introduced process.
+<br><br>
+The rule editing buttons provide the functionality to add and delete states and processes. A glue-state is, as in graph transformation, a state that is both in the left and right pattern of a rule, and therefore process LTS states matched on by glue-states are not removed when transforming. Exclusive glue-states are glue-states with the added negative application condition that matched on states may not have transitions that are not represented in the left pattern.
+<br><br>
+For a finished rule system, REFINER can verify a number of aspects:
+<ul>
+<li><b>Semantics preservation:</b> Does a rule system preserve the semantics of models in general?</li>
+<li><b>Property preservation for general models:</b> Given a specific property, does the rule system preserve it? If the <b>fairness</b> option is selected, this check will check for safety properties</li>
+<li><b>Property preservation for a particular model:</b> Given a specific property and a specific model, does the rule system preserve the property when applied on the model? If the <b>fairness</b> option is selected, this check will check for safety properties. If the <b>divergency</b> option is selected, then divergency information of the model is used, i.e. the possibility for the model to diverge in particular states into infinite sequences of internal actions is taken into account during the analysis.
+</P></BODY></HTML>

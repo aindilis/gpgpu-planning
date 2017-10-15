@@ -1,0 +1,672 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>GPUs for Model Checking and AI Planning – University of Copenhagen</title>
+  <meta http-equiv="content-Type" content="text/html; charset=UTF-8">
+
+
+  <link href="GPUs%20for%20Model%20Checking%20and%20AI%20Planning%20%E2%80%93%20University%20of%20Copenhagen_files/style.css" rel="stylesheet" type="text/css" media="screen, print">
+  <link href="GPUs%20for%20Model%20Checking%20and%20AI%20Planning%20%E2%80%93%20University%20of%20Copenhagen_files/science.css" rel="stylesheet" type="text/css" media="screen, print">
+
+<script type="text/javascript">//<!--
+var textsize_cookie_domain = '.ku.dk';
+var vdoc_lang = 'en';
+//--></script>
+<script src="GPUs%20for%20Model%20Checking%20and%20AI%20Planning%20%E2%80%93%20University%20of%20Copenhagen_files/functions.js" type="text/javascript"></script>
+<script type="text/javascript" src="GPUs%20for%20Model%20Checking%20and%20AI%20Planning%20%E2%80%93%20University%20of%20Copenhagen_files/cookies.js"></script>
+
+
+  <link href="GPUs%20for%20Model%20Checking%20and%20AI%20Planning%20%E2%80%93%20University%20of%20Copenhagen_files/print.css" rel="stylesheet" type="text/css" media="print">
+
+    <meta name="Author" content="Inge Hviid Jensen">
+    <meta name="Creator" content="Inge Hviid Jensen">
+    <meta name="DC.Creator" content="Inge Hviid Jensen">
+    <meta name="DC.Description" content="Talk by Stefan Edelkamp, at 12.15 ">
+    <meta name="DC.Format" content="text/xhtml">
+    <meta name="DC.Title" content="GPUs for Model Checking and AI Planning">
+    <meta name="DC.Title.Release" content="2010-12-13 10:55:44">
+    <meta name="Description" content="Talk by Stefan Edelkamp, at 12.15 ">
+    <meta name="Keywords" content="University of Copenhagen, Datalogisk Institut">
+    <meta name="Title" content="GPUs for Model Checking and AI Planning">
+    <meta name="DC.Subject" content="University of Copenhagen">
+    <meta name="DC.Subject" content="Datalogisk Institut">
+    <meta name="DC.Date" scheme="ISO8601" content="2010-12-14">
+    <meta name="DC.Date.Created" scheme="ISO8601" content="2010-12-14">
+    <meta name="DC.Date.Modified" scheme="ISO8601" content="2010-12-13">
+    <meta name="DC.Language" scheme="ISO639-1" content="en">
+    <meta name="DC.Publisher" content="University of Copenhagen">
+    <meta name="DC.Publisher" content="Datalogisk Institut">
+    <meta name="robots" content="index,follow">
+
+
+
+
+
+  <script type="text/javascript" src="GPUs%20for%20Model%20Checking%20and%20AI%20Planning%20%E2%80%93%20University%20of%20Copenhagen_files/jquery-1.js"></script>
+  <script type="text/javascript" src="GPUs%20for%20Model%20Checking%20and%20AI%20Planning%20%E2%80%93%20University%20of%20Copenhagen_files/jquery-ku-faelles.js"></script>
+  <script type="text/javascript">
+    if(jQuery) {
+      jQuery(document).ready(function(){
+        jQuery('ul.sf-menu').superfish({ pathClass:  'current'});
+      });
+    }
+  </script>
+
+<style>
+.sectionhdr { position: relative; height:174px;margin-bottom:22px; }
+.sectionhdr h1 {position:absolute;bottom:0;left:0;z-index: 2; !important; padding:4px 8px !important; background-color: rgba(255,255,255,.7) !important;); text-transform: uppercase; border-bottom: 1px solid #901a1e;margin-bottom:0 !important;width:489px;}
+</style>
+<!--[if lte IE 8]>
+<style type="text/css">
+.sectionhdr h1 {background-color:none !important; background:none !important;-ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#b2ffffff,endColorstr=#b2ffffff);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#b2ffffff,endColorstr=#b2ffffff);
+zoom: 1;}
+#content {position:relative !important;}
+</style>
+<![endif]-->
+
+
+
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['mainTracker._setAccount', 'UA-28098356-1']);
+_gaq.push(['mainTracker._setDomainName','ku.dk']);
+_gaq.push(['mainTracker._setAllowHash',false]);
+_gaq.push(['mainTracker._setAllowAnchor',true]);
+_gaq.push(['mainTracker._setAllowLinker',true]);
+_gaq.push(['mainTracker._trackPageview']);
+
+
+    _gaq.push(['legacyTracker._setAccount', 'UA-13174378-1']);
+    _gaq.push(['legacyTracker._setDomainName','ku.dk']);
+    _gaq.push(['legacyTracker._setAllowHash',false]);
+    _gaq.push(['legacyTracker._setAllowAnchor',true]);
+    _gaq.push(['legacyTracker._setAllowLinker',true]);
+    _gaq.push(['legacyTracker._trackPageview']);
+
+
+
+(function() {
+var ga = document.createElement('script');
+ga.type = 'text/javascript';
+ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(ga, s); })();
+
+(function() {
+var kuga = document.createElement('script');
+kuga.type = 'text/javascript';
+kuga.async = true;
+kuga.src = ('https:' == document.location.protocol ? 'https://cms.secure.ku.dk' : 'http://cms.ku.dk') + '/scripts_js/ga.extended.js';
+var s = document.getElementsByTagName('script')[1];
+s.parentNode.insertBefore(kuga, s);
+})();
+</script>
+
+<!--[if lte IE 5]>
+  <link href="/css/ie/ie5.css" rel="stylesheet" type="text/css" media="screen, print" />
+  <noscript>
+    <style type="text/css">
+    .nav .dropdown, .nav .dropdown div {width: 189px;}
+    .nav .button .dropdown ul {margin: 0px;}
+    .nav .dropdown, .nav .dropdown div {position: static;}
+    .nav .dropdown ul {border: 0;}
+    .mini-zone {display: none;}
+    </style>
+  </noscript>
+<![endif]-->
+<!--[if IE 6]>
+  <link href="/css/ie/ie6.css" rel="stylesheet" type="text/css" media="screen, print" />
+  <link rel="stylesheet" type="text/css" href="/css/ie/print_ie6.css" media="print" />
+  <noscript>
+    <style type="text/css">
+    .nav .dropdown, .nav .dropdown div {width: 189px;}
+    .nav .button .dropdown ul {margin: 0px;}
+    .nav .dropdown, .nav .dropdown div {position: static;}
+    .nav .dropdown ul {border: 0;}
+    .mini-zone {display: none;}
+    </style>
+  </noscript>
+<![endif]-->
+<!--[if IE 7]>
+  <link href="/css/ie/ie7.css" rel="stylesheet" type="text/css" media="screen, print" />
+  <link rel="stylesheet" type="text/css" href="/css/ie/print_ie7.css" media="print" />
+<![endif]-->
+<!--[if IE 8]>
+  <link href="/css/ie/ie8.css" rel="stylesheet" type="text/css" media="screen, print" />
+  <link rel="stylesheet" type="text/css" href="/css/ie/print_ie8.css" media="print" />
+<![endif]-->
+<!--[if IE 9]>
+  <link href="/css/ie/ie9.css" rel="stylesheet" type="text/css" media="screen, print" />
+<![endif]-->
+<!--[if IE]>
+  <style> div#nav-wrapper {font-size:11px;} .sf-menu ul {margin-top: 11px;} </style>
+<![endif]-->
+
+<!-- Responsive html_head START -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="GPUs%20for%20Model%20Checking%20and%20AI%20Planning%20%E2%80%93%20University%20of%20Copenhagen_files/responsive.js"></script>
+<link href="GPUs%20for%20Model%20Checking%20and%20AI%20Planning%20%E2%80%93%20University%20of%20Copenhagen_files/responsive.css" rel="stylesheet" type="text/css" media="screen">
+<style type="text/css" media="print">
+.sidr,.sidr.right {display:none;}
+</style>
+<!--[if lte IE 8]>
+<style>
+ div#nav-sub ul li {background-position: 9px 0.2em;}
+</style>
+<![endif]-->
+<!-- Responsive html_head SLUT -->
+
+<link rel="shortcut icon" href="http://cms.ku.dk/grafik/images/favicons/favicon_science.ico">
+
+</head>
+
+
+<body class="CalendarEvent ">
+<div><a name="top"></a></div>
+<script type="text/javascript" src="GPUs%20for%20Model%20Checking%20and%20AI%20Planning%20%E2%80%93%20University%20of%20Copenhagen_files/jquery.js"></script>
+<link rel="stylesheet" href="GPUs%20for%20Model%20Checking%20and%20AI%20Planning%20%E2%80%93%20University%20of%20Copenhagen_files/selectric.css">
+
+<script type="text/javascript" src="GPUs%20for%20Model%20Checking%20and%20AI%20Planning%20%E2%80%93%20University%20of%20Copenhagen_files/valid_search_engines.js"></script>
+<script type="text/javascript" src="GPUs%20for%20Model%20Checking%20and%20AI%20Planning%20%E2%80%93%20University%20of%20Copenhagen_files/search.js"></script>
+<script type="text/javascript">
+window.searchCallbacks.push(function(engine, form){
+	if (form.id === "global_search_query" && window._gaq) {
+		_gaq.push(['mainTracker._trackEvent', 'Globalmenu-EN', 'soeg', engine.id]);
+	}
+});
+$(function(){
+	$("#global_search_filter").selectric({
+		inheritOriginalWidth: false,
+		expandToItemText: true
+	});
+});
+</script>
+
+
+<div id="nav-wrapper">
+  
+  <div id="nav-inner-wrapper">
+    <div id="branding-global">
+      <a href="http://www.ku.dk/english/" title="University of Copenhagen"><img src="GPUs%20for%20Model%20Checking%20and%20AI%20Planning%20%E2%80%93%20University%20of%20Copenhagen_files/navnetraek_UK.svg" alt="University of Copenhagen"></a>
+    </div><!-- end branding-global -->
+    <div id="global-search">
+			<a name="a_search" id="a_search"></a>
+			<h1><span lang="da">Søg</span> / <span lang="en">Search</span></h1>
+      <form id="global_search_form" class="search_form search_reset">
+        <p>
+          <input id="global_search_query" class="search_query" tabindex="1" size="15" type="text">
+
+            <input id="localdomain" name="localdomain" value="+window.location.hostname+" type="hidden">
+            <script type="text/javascript"><!--
+              el = document.getElementById("localdomain");
+              el.value = window.location.hostname;
+            //--></script>
+
+          <select id="global_search_filter" class="search_filter"></select>
+
+        <input name="sa" value="Search" tabindex="2" id="submit-button" type="submit">
+      </p>
+    </form>
+
+  </div><!-- end search -->
+    <div id="nav-globalmenu"> <a name="a_nav-global" id="a_nav-global"></a>
+    <h1>Global navigation</h1>
+<ul class="sf-menu">
+ <li><a href="http://studies.ku.dk/" onclick="_gaq.push(['mainTracker._trackEvent', 'Globalmenu-UK', 'klik', 'Study-at-UCPH']);">Study at UCPH</a>
+  <ul>
+   <li><a href="http://studies.ku.dk/bachelor/" onclick="_gaq.push(['mainTracker._trackEvent', 'Globalmenu-UK', 'klik', 'Bachelors-Programmes']);">Bachelor's Programmes</a></li>
+   <li><a href="http://studies.ku.dk/masters/" onclick="_gaq.push(['mainTracker._trackEvent', 'Globalmenu-UK', 'klik', 'Masters-Programmes']);">Master's Programmes</a></li>
+   <li><a href="http://phd.ku.dk/english/" onclick="_gaq.push(['mainTracker._trackEvent', 'Globalmenu-UK', 'klik', 'PhD-Programmes-Study']);">PhD Programmes</a></li>
+   <li><a href="http://evu.ku.dk/english/" onclick="_gaq.push(['mainTracker._trackEvent', 'Globalmenu-UK', 'klik', 'Continuing-Education']);">Continuing Education</a></li>
+<li><a href="http://moocs.ku.dk/" onclick="_gaq.push(['mainTracker._trackEvent', 'Globalmenu-UK', 'klik', 'MOOCs']);">MOOCs</a></li>
+  </ul>
+ </li>
+ <li><a href="http://research.ku.dk/" onclick="_gaq.push(['mainTracker._trackEvent', 'Globalmenu-UK', 'klik', 'Research']);">Research</a>
+  <ul>
+   <li><a href="http://research.ku.dk/strengths/" onclick="_gaq.push(['mainTracker._trackEvent', 'Globalmenu-UK', 'klik', 'Research-Strenghts']);">Research Strengths</a></li>
+   <li><a href="http://research.ku.dk/collaboration/" onclick="_gaq.push(['mainTracker._trackEvent', 'Globalmenu-UK', 'klik', 'Research-Collaboration']);">Collaboration</a>
+
+</li>
+   <li><a href="http://phd.ku.dk/english/" onclick="_gaq.push(['mainTracker._trackEvent', 'Globalmenu-UK', 'klik', 'PhD-Programmes']);">PhD Programmes</a></li>
+   <li><a href="http://research.ku.dk/research_centres/" onclick="_gaq.push(['mainTracker._trackEvent', 'Globalmenu-UK', 'klik', 'Research-Centres']);">Research Centres</a></li>
+  </ul>
+ </li>
+ <li><a href="http://news.ku.dk/" onclick="_gaq.push(['mainTracker._trackEvent', 'Globalmenu-UK', 'klik', 'News']);">News</a></li>
+ <li><a href="http://erhverv.ku.dk/english/" onclick="_gaq.push(['mainTracker._trackEvent', 'Globalmenu-UK', 'klik', 'Collaboration']);">Collaboration</a>
+  <ul>
+    <li><a href="http://introduction.ku.dk/international-collaboration/" onclick="_gaq.push(['mainTracker._trackEvent', 'Globalmenu-UK', 'klik', 'International']);">International</a></li>
+<li><a href="http://erhverv.ku.dk/english/" onclick="_gaq.push(['mainTracker._trackEvent', 'Globalmenu-UK', 'klik', 'Business']);">Business</a></li>
+<li><a href="http://fi.ku.dk/english/" onclick="_gaq.push(['mainTracker._trackEvent', 'Globalmenu-UK', 'klik', 'Research-and-Innovation']);">Research &amp; Innovation</a></li>
+    <li><a href="http://alumni.ku.dk/english/" onclick="_gaq.push(['mainTracker._trackEvent', 'Globalmenu-UK', 'klik', 'Alumni']);">Alumni</a></li>
+</ul>
+
+
+</li>
+ <li><a href="http://employment.ku.dk/" onclick="_gaq.push(['mainTracker._trackEvent', 'Globalmenu-UK', 'klik', 'Employment']);">Employment</a>
+  <ul>
+   <li><a href="http://employment.ku.dk/" onclick="_gaq.push(['mainTracker._trackEvent', 'Globalmenu-UK', 'klik', 'Job-Portal']);">Job Portal</a></li>
+   <li><a href="http://ism.ku.dk/" onclick="_gaq.push(['mainTracker._trackEvent', 'Globalmenu-UK', 'klik', 'International-Employees']);">International Employees</a></li>
+  </ul>
+ </li>
+ <li><a href="http://introduction.ku.dk/" onclick="_gaq.push(['mainTracker._trackEvent', 'Globalmenu-UK', 'klik', 'About']);">About</a>
+  <ul>
+   <li><a href="http://introduction.ku.dk/" onclick="_gaq.push(['mainTracker._trackEvent', 'Globalmenu-UK', 'klik', 'Introduction']);">Introduction</a></li>
+   <li><a href="http://introduction.ku.dk/organisation/" onclick="_gaq.push(['mainTracker._trackEvent', 'Globalmenu-UK', 'klik', 'Organisation-UK']);">Organisation</a></li>
+   <li><a href="http://introduction.ku.dk/organisation/management/" onclick="_gaq.push(['mainTracker._trackEvent', 'Globalmenu-UK', 'klik', 'Management']);">Management</a></li>
+   <li><a href="http://introduction.ku.dk/organisation/faculties/" onclick="_gaq.push(['mainTracker._trackEvent', 'Globalmenu-UK', 'klik', 'Faculties']);">Faculties</a></li>
+   <li><a href="http://introduction.ku.dk/organisation/departments/" onclick="_gaq.push(['mainTracker._trackEvent', 'Globalmenu-UK', 'klik', 'Departments']);">Departments</a></li>
+   <li><a href="http://introduction.ku.dk/contact/" onclick="_gaq.push(['mainTracker._trackEvent', 'Globalmenu-UK', 'klik', 'Contact']);">Contact</a></li>
+  </ul>
+ </li>
+</ul>
+    </div><!-- end nav-global -->
+  </div><!-- end nav-inner-wrapper -->
+  <div id="global-tools">
+    <div id="global-tools-inner">
+      <div id="global-tools-navnetraek"><a href="http://www.ku.dk/english/" title="University of Copenhagen"><img src="GPUs%20for%20Model%20Checking%20and%20AI%20Planning%20%E2%80%93%20University%20of%20Copenhagen_files/navnetraek_UK_neg.svg" alt="University of Copenhagen"></a></div>
+      <ul>
+	<li><a href="http://findvej.ku.dk/english/" onclick="_gaq.push(['mainTracker._trackEvent', 'Globaltools-UK', 'klik', 'Map']);">Map</a></li>
+<li><a href="http://www.ku.dk/vejviser/phone.html" onclick="_gaq.push(['mainTracker._trackEvent', 'Globaltools-UK', 'klik', 'Phone-Book']);">Phone Book</a></li>
+<li><a href="https://intranet.ku.dk/en" onclick="_gaq.push(['mainTracker._trackEvent', 'Globaltools-UK', 'klik', 'KUnet-UK']);">KUnet</a></li>
+<li class="global-sprog"><a href="http://diku.dk/" class="dansk" onclick="_gaq.push(['mainTracker._trackEvent', 'Globaltools-UK', 'klik', 'Dansk']);">Dansk</a></li>
+      </ul>
+    </div><!-- end global-tools-inner -->
+  </div><!-- end global-tools -->
+</div><!-- end nav-wrapper -->
+<div id="globalmenu">
+  <a id="responsive-globalmenu-button" href="#sidr-right">☰</a>
+</div>
+
+<div id="wrapper">
+        <div id="branding">
+          <h1>GPUs for Model Checking and AI Planning – University of Copenhagen</h1>
+        </div>
+          <div id="branding-images">
+    <!-- End branding-global -->
+    <div id="branding-unit">
+      <a href="http://diku.dk/english/" title="Department of Computer Science">
+          <h2>
+          Department of Computer Science
+          </h2>
+      </a>
+    </div>
+    <!-- End branding-unit -->
+    <div id="branding-logo">
+      <a href="http://diku.dk/english/" title="Københavns Universitet">
+        <img src="GPUs%20for%20Model%20Checking%20and%20AI%20Planning%20%E2%80%93%20University%20of%20Copenhagen_files/science.svg" alt="Københavns Universitet">
+      </a>
+    </div>
+    <!-- End branding-logo -->
+  </div>
+  <!-- End branding-images -->
+
+        <!-- End branding -->
+        <div id="skip-to">
+          <h1><span lang="da">Hop til</span> / <span lang="en">Skip to</span>:</h1>
+          <ul>
+            <li><a href="#a_content"><span lang="da">Indhold</span> /<span lang="en"> Content</span></a></li>
+            <li><a href="#a_nav-global">Global navigation</a></li>
+            <li><a href="#a_nav-sub"><span lang="da">Oversigt</span> / <span lang="en">Site navigation</span></a></li>
+            <li><a href="#a_search"><span lang="da">Søg</span> / <span lang="en">Search</span></a></li>
+            <li><a href="#a_sidebar"><span lang="da">Ekstra information</span> / <span lang="en">Sidebar</span></a></li>
+            <li><a href="#a_footer"><span lang="da">Kolofon</span> / <span lang="en">Footer</span></a></li>
+          </ul>
+          <hr>
+        </div>
+
+        <div id="branding-decoration" style="background-image: url(http://cms.ku.dk/science-sites/topkollage.jpg/)">
+          
+        </div>
+        <!-- End branding-decoration -->
+
+
+    <div id="content-wrapper"><a name="a_content" id="a_content"></a>
+        <div id="content" class="subpage">
+          <div id="mobile-header">
+            <a id="responsive-menu-button" href="#sidr-main">☰ Menu</a>
+          </div>
+          	    <div id="wrapper-crumb-trail">
+
+		<div id="wrapper-icons">
+<!-- print_og_skriftstoerrelse -->
+<a id="videresendlink" href="http://diku.dk/english/eventcalendar2010/performance_engineering_kopi/?videresend=1" title="Forward this page to a friend" onclick="return open_videresend();">
+  <img src="GPUs%20for%20Model%20Checking%20and%20AI%20Planning%20%E2%80%93%20University%20of%20Copenhagen_files/tip_ven.gif" alt="Forward this page to a friend" height="9" width="17">
+</a>
+<a id="resizetextlink" href="http://cms.ku.dk/" onclick="resizeText(); return false;" title="Resize text">
+  <img src="GPUs%20for%20Model%20Checking%20and%20AI%20Planning%20%E2%80%93%20University%20of%20Copenhagen_files/size.gif" alt="Resize" height="12" width="17">
+</a>
+<a id="printlink" href="http://cms.ku.dk/" onclick="window.print(); return false;" title="Print">
+  <img src="GPUs%20for%20Model%20Checking%20and%20AI%20Planning%20%E2%80%93%20University%20of%20Copenhagen_files/print.gif" alt="Print" height="12" width="11">
+</a>
+
+<a href="http://diku.dk/english/eventcalendar2010/performance_engineering_kopi/?get_ical=1" title="Gem som ICal">
+  <img src="GPUs%20for%20Model%20Checking%20and%20AI%20Planning%20%E2%80%93%20University%20of%20Copenhagen_files/kalender-ikon-red.gif" alt="kalender-ikon">
+</a>
+
+<!--AddThis Button BEGIN -->
+<script type="text/javascript">
+  <!--
+  var addthis_config = { ui_click: 'true', services_compact: 'facebook,twitter,blogger,digg,reddit,gmail,google,linkedin,myspace,delicious,favorites', services_exclude: 'email,print', ui_header_color: '#ffffff', ui_header_background: '#666666', ui_cobrand: 'www.ku.dk' }
+  // -->
+</script>
+<a href="http://www.addthis.com/bookmark.php?v=250&amp;pub=copenhagenuni" class="addthis_button_compact">
+  <img src="GPUs%20for%20Model%20Checking%20and%20AI%20Planning%20%E2%80%93%20University%20of%20Copenhagen_files/shareknap_dk.gif" alt="Bookmark and Share" style="border:0" height="12" width="28">
+</a>
+<script type="text/javascript" src="GPUs%20for%20Model%20Checking%20and%20AI%20Planning%20%E2%80%93%20University%20of%20Copenhagen_files/addthis_widget.js"></script>
+<!-- AddThis Button END -->
+
+
+		</div>
+    		<p>
+<a href="http://diku.dk/english/">Department of Computer Science DIKU</a> &gt;
+     <a href="http://diku.dk/english/EventCalendar2010/" title="Event Calendar 2010">Event Calendar 2010</a> &gt;
+     GPUs for Model Checkin...
+		</p>
+	    </div>
+	    <!-- End crumb-trail -->
+
+
+<!-- Arrangement start -->
+
+<h1 class="title">GPUs for Model Checking and AI Planning</h1>
+
+
+&nbsp; 
+<h2>Talk by Stefan Edelkamp </h2>
+<h3>Abstract:</h3>
+<p>
+There is no doubt that the success of state-space exploration is 
+sensitive to the amount of computational resources available. It is not 
+hard to predict that - due to economic pressure - parallel computing on 
+an increased number of cores both in central processing units (CPUs) and
+ in graphics processing units (GPUs) will be essential to solve 
+challenging problems in the future.&nbsp; The currently fastest computer
+ (Tianhe-Ia) has more than 14000 (Intel Xeon X5670 6-core) CPUs and more
+ than 7000 (Nvidia Tesla M2050) GPUs, while a combination of powerful 
+multi-core CPUs and many-core GPUs is becoming standard technology also 
+for the consumer market. 
+</p>
+<p>
+&nbsp;
+</p>
+<p>
+In this talk we show how model checking and AI planning can be 
+parallelized by exploiting the processing power on the graphics card. 
+The two exploration steps, namely selecting the actions to be applied 
+and generating the successors, are performed on the GPU. Duplicate 
+detection, however, is delayed to be executed on the central processing 
+unit (CPU) or even further deferred to disk operations.&nbsp; Multiple 
+cores are employed to bypass main-memory latency, and - to increase 
+processing speed for duplicate detection - hash tables are either 
+approximate or lock-free. 
+</p>
+<p>
+&nbsp;
+</p>
+<p>
+The GPU model checker and the planner are able to deal with a 
+considerable fraction of their respective benchmark input languages 
+(DVE/PDDL), including numerical state variables, complex objective 
+functions, and preferences. Experimental findings show visible 
+performance gains especially for larger benchmark problems. 
+</p>
+<p>
+&nbsp;
+</p>
+<p>
+Stefan's home page: <a href="http://www.tzi.de/%7Eedelkamp">http://www.tzi.de/~edelkamp</a> PE-lab's home page: <a href="http://www.diku.dk/forskning/performance-engineering/">http://www.diku.dk/forskning/performance-engineering/</a> 
+</p>
+
+
+
+
+<!-- /Arrangement slut -->
+
+
+
+
+<!--</div>-->
+<br style="clear: both">
+<!--</div>-->
+
+
+
+
+
+<br style="clear: both;">
+</div> <!-- end content -->
+</div> <!-- end content-wrapper -->
+
+<div id="nav-sub">
+    <a name="a_nav-sub" id="a_nav-sub"></a>
+    <h1><span lang="da">Oversigt</span> / <span lang="en">Site navigation</span></h1>
+    <div id="nav_head">
+    <h1><a href="http://diku.dk/english/">Department of Computer Science</a></h1>
+    </div>
+    <ul class="first">
+        <li>
+<a href="http://diku.dk/english/home/">Home</a>
+
+    </li>
+        <li>
+<a href="http://diku.dk/english/about/">About DIKU</a>
+
+    </li>
+        <li>
+<a href="http://diku.dk/english/Studyprogrammes/">Study Programmes</a>
+
+    </li>
+        <li>
+<a href="http://diku.dk/english/research/">Research</a>
+
+    </li>
+        <li>
+<a href="http://diku.dk/english/diku_business_club/">DIKU Business Club</a>
+
+    </li>
+        <li>
+<a href="http://diku.dk/english/press_dissemination/">Press and Dissemination</a>
+
+    </li>
+        <li>
+<a href="http://diku.dk/english/staff/">Staff</a>
+
+    </li>
+        <li>
+<a href="http://diku.dk/english/contact/">Contact us</a>
+
+    </li>
+    </ul>
+    <ul>
+    <li><a href="http://diku.dk/english/about/vacancies/">Vacant positions</a></li>
+    </ul>
+
+</div> <!-- end nav-sub -->
+
+	<div id="sidebar">
+		<a name="a_sidebar" id="a_sidebar"></a>
+		<h1 class="hide"><span lang="da">Ekstra information</span> / <span lang="en">Sidebar</span></h1>
+<div class="right">
+    <div class="container-right">
+        
+    
+    
+        <div class="rightbox-normal banner print-me">
+  <h1>Details </h1>
+  <p class="kalenderdato">
+    Time: 
+          14 December 2010,
+      12:15
+
+  </p>
+  <p class="kalenderdato">
+    Place: DIKU, Meeting Room A/B 2, Universitetsparken 1, 
+  </p>
+  <p class="kalenderdato">
+    Organizer: DIKU
+  </p>
+</div>
+
+
+    </div>
+</div> <!-- end right div -->
+
+	</div>
+	<!-- End sidebar -->
+
+
+<!-- Sidefod start -->
+<div id="footer">
+	<a name="a_footer" id="a_footer"></a>
+	<h1><span lang="da">Kolofon</span> / <span lang="en">Footer</span></h1>
+    <div id="footer-col-left">
+	<address>
+            <a href="http://www.diku.dk/">Datalogisk Institut</a><br>
+            <a href="http://www.ku.dk/english/">University of Copenhagen</a><br>
+            Universitetsparken 1<br>2100 København Ø
+        <br>
+	</address>
+    </div>
+    <!-- End footer-col-left -->
+    <br style="display: none;">
+    <div id="footer-col-right">
+            Contact:
+	<address>
+            DIKU<br>
+            
+<a href="#" onclick="this.href= 'mai' + 'lto:' + 'info' + '@' + 'di.ku.dk' ; return true;">info<!-- @@@ -->@<!-- @@@ -->di<!-- nospam -->.<!-- nomorespam -->ku<!-- nospam -->.<!-- nomorespam -->dk</a><br>
+        </address>
+    </div>
+    <!-- End footer-col-right -->
+	<br style="clear: both">
+</div>
+<!-- Sidefod slut -->
+
+
+
+
+
+
+<div id="perm_cookie_box" class="english">
+    <a href="http://introduction.ku.dk/cookies-and-privacy-policy/"><span>Cookies and privacy policy</span><img src="GPUs%20for%20Model%20Checking%20and%20AI%20Planning%20%E2%80%93%20University%20of%20Copenhagen_files/cookies_link_top_en.png" alt=""></a>
+</div>
+
+</div>
+<script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0011/3222.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>
+
+
+
+<!-- Responsive html_end START -->
+<script type="text/javascript">
+jQuery(document).ready(function() {
+jQuery('#responsive-menu-button').sidr({
+      name: 'sidr-main',
+      source: '#nav-sub',
+      coverScreen: true
+    });
+jQuery('#responsive-globalmenu-button').sidr({
+      name: 'sidr-right',
+      source: '#nav-wrapper',
+      side: 'right',
+      coverScreen: true
+      });
+ });
+</script>
+<!-- Responsive html_end SLUT -->
+
+
+<div id="globalfooter" class="clearfix">
+<div class="footercontent clearfix">
+            <div class="footercolumn">
+                <h3 data-heading="toggle" class="footer-heading visible-desktop">University of Copenhagen</h3>
+                <h3 data-heading="toggle" class="footer-heading visible-mobile">Organization</h3>
+                <ul class="footerlinks">
+                    <li><a href="http://introduction.ku.dk/organisation/management" onclick="_gaq.push(['mainTracker._trackEvent', 'Footer-uk', 'klik', 'Management']);">Management</a></li>
+                    <li><a href="http://introduction.ku.dk/organisation/administration" onclick="_gaq.push(['mainTracker._trackEvent', 'Footer-uk', 'klik', 'Administration']);">Administration</a></li>
+                    <li><a href="http://introduction.ku.dk/organisation/faculties" onclick="_gaq.push(['mainTracker._trackEvent', 'Footer-uk', 'klik', 'Faculties']);">Faculties</a></li>
+                    <li><a href="http://introduction.ku.dk/organisation/departments" onclick="_gaq.push(['mainTracker._trackEvent', 'Footer-uk', 'klik', 'Departments']);">Departments</a></li>
+                    <li><a href="http://research.ku.dk/research_centres" onclick="_gaq.push(['mainTracker._trackEvent', 'Footer-uk', 'klik', 'Research']);">Research Centres</a></li>
+                    <li><a href="http://vetschool.ku.dk/english/about/animal-hospitals" onclick="_gaq.push(['mainTracker._trackEvent', 'Footer-uk', 'klik', 'Hospitals']);">Animal hospitals</a></li>
+                    <li><a href="http://odontology.ku.dk/patient-info" onclick="_gaq.push(['mainTracker._trackEvent', 'Footer-uk', 'klik', 'Dentristry']);">School of Dentistry</a></li>
+                    <li><a href="http://culis.ku.dk/" onclick="_gaq.push(['mainTracker._trackEvent', 'Footer-uk', 'klik', 'Libraries']);">Libraries</a></li>
+                    <li><a href="http://introduction.ku.dk/campus/museums" onclick="_gaq.push(['mainTracker._trackEvent', 'Footer-uk', 'klik', 'Museums']);">Museums</a></li>
+                </ul>
+            </div>
+            <div class="footercolumn">
+                <h3 data-heading="toggle" class="footer-heading">Contact</h3>
+                <ul class="footerlinks">
+                    <li><a href="http://findvej.ku.dk/english" onclick="_gaq.push(['mainTracker._trackEvent', 'Footer-uk', 'klik', 'Map']);">Map</a></li>
+                    <li><a href="http://ku.dk/vejviser/phone.html" onclick="_gaq.push(['mainTracker._trackEvent', 'Footer-uk', 'klik', 'Employee']);">Find an employee</a></li>
+<li><a href="http://introduction.ku.dk/contact" onclick="_gaq.push(['mainTracker._trackEvent', 'Footer-uk', 'klik', 'Contact']);">Contact UCPH</a></li>
+                </ul>
+                <h3 data-heading="toggle" class="footer-heading">Services</h3>
+                <ul class="footerlinks">
+                    <li><a href="http://introduction.ku.dk/contact/press_service" onclick="_gaq.push(['mainTracker._trackEvent', 'Footer-uk', 'klik', 'Press']);">Press and media service</a></li>
+                    <li><a href="http://ku-shop.dk/en" onclick="_gaq.push(['mainTracker._trackEvent', 'Footer-uk', 'klik', 'Merchandise']);">Merchandise</a></li>
+                    <li><a href="http://introduction.ku.dk/apps" onclick="_gaq.push(['mainTracker._trackEvent', 'Footer-uk', 'klik', 'Apps']);">UCPH apps</a></li>
+                    <li><a href="http://it.ku.dk/english/contact" onclick="_gaq.push(['mainTracker._trackEvent', 'Footer-uk', 'klik', 'IT']);">IT-support</a></li>
+                </ul>
+            </div>
+            <div class="footercolumn">
+                <h3 data-heading="toggle" class="footer-heading">For students and employees</h3>
+                <ul class="footerlinks">
+                    <li><a class="padlock" href="http://intranet.ku.dk/en" onclick="_gaq.push(['mainTracker._trackEvent', 'Footer-uk', 'klik', 'KUnet']);">KUnet</a></li>
+                </ul>
+                <h3 data-heading="toggle" class="footer-heading">Job and career</h3>
+                <ul class="footerlinks">
+                    <li><a href="http://employment.ku.dk/" onclick="_gaq.push(['mainTracker._trackEvent', 'Footer-uk', 'klik', 'Jobs']);">Job portal</a></li>
+                    <!--<li><a href="http://mangfoldighed.ku.dk/english" onClick="_gaq.push(['mainTracker._trackEvent', 'Footer-uk', 'klik', 'Diversity']);">Diversity and Equality</a></li>-->
+                    <li><a href="http://alumni.ku.dk/english" onclick="_gaq.push(['mainTracker._trackEvent', 'Footer-uk', 'klik', 'Alumni']);">Alumni</a></li>
+                </ul>
+                <h3 data-heading="toggle" class="footer-heading">Emergencies</h3>
+                <ul class="footerlinks">
+                    <li><a href="http://akut.ku.dk/english" onclick="_gaq.push(['mainTracker._trackEvent', 'Footer-uk', 'klik', 'Emergency']);">Emergency response</a></li>
+                </ul>
+            </div>
+            <div class="footercolumn">
+                <h3 data-heading="toggle" class="footer-heading">Web</h3>
+                <ul class="footerlinks">
+                    <!--<li><a href="http://introduction.ku.dk/about-the-website" onClick="_gaq.push(['mainTracker._trackEvent', 'Footer-uk', 'klik', 'About']);">About the website</a></li>-->
+                    <li><a href="http://introduction.ku.dk/cookies-and-privacy-policy" onclick="_gaq.push(['mainTracker._trackEvent', 'Footer-uk', 'klik', 'Cookies']);">Cookies and privacy policy</a></li>
+                    <li><a href="http://informationssikkerhed.ku.dk/english" onclick="_gaq.push(['mainTracker._trackEvent', 'Footer-uk', 'klik', 'Security']);">Information Security</a></li>
+                </ul>
+                <div class="social-items">
+                    <h3 data-heading="open" class="footer-heading">Connect with UCPH</h3>
+                    <div class="social-item">
+                        <a target="_blank" href="https://www.facebook.com/universitet" class="social-icon facebook" title="Facebook" onclick="_gaq.push(['mainTracker._trackEvent', 'Footer-uk', 'klik', 'Facebook']);"></a>
+                    </div>
+                    <div class="social-item">
+                        <a target="_blank" href="https://www.linkedin.com/edu/k%C3%B8benhavns-universitet-12012" class="social-icon linkedin" title="LinkedIn" onclick="_gaq.push(['mainTracker._trackEvent', 'Footer-uk', 'klik', 'LinkedIn']);"></a>
+                    </div>
+                    <div class="social-item">
+                        <a target="_blank" href="http://introduction.ku.dk/apps" class="social-icon app" title="KU apps" onclick="_gaq.push(['mainTracker._trackEvent', 'Footer-uk', 'klik', 'KUapps']);"></a>
+                    </div>
+                    <div class="social-item">
+                        <a target="_blank" href="http://news.ku.dk/rss" class="social-icon rss" title="RSS" onclick="_gaq.push(['mainTracker._trackEvent', 'Footer-uk', 'klik', 'RSS']);"></a>
+                    </div>
+                    <div class="social-item">
+                        <a target="_blank" href="https://twitter.com/uni_copenhagen" class="social-icon twitter" title="Twitter" onclick="_gaq.push(['mainTracker._trackEvent', 'Footer-uk', 'klik', 'Twitter']);"></a>
+                    </div>
+                    <div class="social-item">
+                        <a target="_blank" href="https://www.youtube.com/user/CopenhagenUniversity" class="social-icon youtube" title="YouTube" onclick="_gaq.push(['mainTracker._trackEvent', 'Footer-uk', 'klik', 'Youtube']);"></a>
+                    </div>
+                    <div class="social-item">
+                        <a target="_blank" href="http://www.futurity.org/university/university-of-copenhagen" class="social-icon futurity" title="Futurity" onclick="_gaq.push(['mainTracker._trackEvent', 'Footer-uk', 'klik', 'Futurity']);"></a>
+                    </div>
+                    <div class="social-item">
+                        <a target="_blank" href="http://theconversation.com/institutions/university-of-copenhagen" class="social-icon the_conversation" title="The Conversation" onclick="_gaq.push(['mainTracker._trackEvent', 'Footer-uk', 'klik', 'Conversation']);"></a>
+                    </div>
+                    <div class="social-item">
+                        <a target="_blank" href="https://www.coursera.org/ucph" class="social-icon coursera" title="Coursera" onclick="_gaq.push(['mainTracker._trackEvent', 'Footer-uk', 'klik', 'Coursera']);"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+</body></html>

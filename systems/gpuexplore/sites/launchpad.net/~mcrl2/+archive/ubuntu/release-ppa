@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en" dir="ltr">
+  <head>
+<base href="https://launchpad.net/%7Emcrl2/+archive/ubuntu/release-ppa/+index" />
+
+    <meta charset="UTF-8" />
+    <title>Release PPA : “mCRL2” team</title>
+    <link rel="shortcut icon" href="/@@/launchpad.png" />
+    
+    
+    
+
+    
+  
+  <link type="text/css" rel="stylesheet"
+        media="screen, print"
+        href="/+icing/rev18169/combo.css" />
+
+
+    
+
+    
+      <meta name="description"
+            content="PPA Containing packages of the latest mCRL2 release. These are exactly the packages that will become part of future Debian and Ubuntu releases." />
+    
+
+    
+  
+
+  
+  
+  <script type="text/javascript">
+    var LP = {
+        cache: {},
+        links: {}
+    };
+  </script>
+
+  
+
+  <script type="text/javascript">var cookie_scope = '; Path=/; Secure; Domain=.launchpad.net';</script>
+
+   <script type="text/javascript"
+           src="/+combo/rev18169/?yui/yui/yui-min.js&amp;lp/meta.js&amp;yui/loader/loader-min.js"></script>
+   <script type="text/javascript">
+        var raw = null;
+        if (LP.devmode) {
+           raw = 'raw';
+        }
+        YUI.GlobalConfig = {
+            combine: true,
+            comboBase: '/+combo/rev18169/?',
+            root: 'yui/',
+            filter: raw,
+            debug: false,
+            fetchCSS: false,
+            maxURLLength: 2000,
+            groups: {
+                lp: {
+                    combine: true,
+                    base: '/+combo/rev18169/?lp/',
+                    comboBase: '/+combo/rev18169/?',
+                    root: 'lp/',
+                    // comes from including lp/meta.js
+                    modules: LP_MODULES,
+                    fetchCSS: false
+                }
+            }
+        }</script>
+
+  <script type="text/javascript">
+      // we need this to create a single YUI instance all events and code
+      // talks across. All instances of YUI().use should be based off of
+      // LPJS instead.
+      LPJS = new YUI();
+  </script>
+
+
+
+    <script id="base-layout-load-scripts" type="text/javascript">
+        //<![CDATA[
+        LPJS.use('base', 'node', 'console', 'event',
+            'oop', 'lp', 'lp.app.foldables','lp.app.sorttable',
+            'lp.app.inlinehelp', 'lp.app.links', 'lp.app.longpoll',
+            'lp.bugs.bugtask_index', 'lp.bugs.subscribers',
+            'lp.app.ellipsis', 'lp.code.branchmergeproposal.diff',
+            'lp.views.global',
+             function(Y) {
+
+            Y.on("domready", function () {
+                var global_view = new Y.lp.views.Global();
+                global_view.render();
+
+                Y.lp.app.sorttable.SortTable.init();
+                Y.lp.app.inlinehelp.init_help();
+                Y.lp.activate_collapsibles();
+                Y.lp.app.foldables.activate();
+                Y.lp.app.links.check_valid_lp_links();
+                // Longpolling will only start if
+                // LP.cache.longpoll is populated.
+                // We use Y.later to work around a Safari/Chrome 'feature':
+                // The mouse cursor stays 'busy' until all the requests started during
+                // page load are finished.  Hence we want the long poll request to start
+                // right *after* the page has loaded.
+                Y.later(0, Y.lp.app.longpoll, Y.lp.app.longpoll.setupLongPollManager);
+
+            });
+
+            Y.on('lp:context:web_link:changed', function(e) {
+                  window.location = e.new_value;
+            });
+        });
+        //]]>
+    </script>
+    <script id="base-helper-functions" type="text/javascript">
+         //<![CDATA[
+        // This code is pulled from lp.js that needs to be available on every
+        // request. Pulling here to get it outside the scope of the YUI block.
+        function setFocusByName(name) {
+            // Focus the first element matching the given name which can be focused.
+            var nodes = document.getElementsByName(name);
+            var i, node;
+            for (i = 0; i < nodes.length; i++) {
+                node = nodes[i];
+                if (node.focus) {
+                    try {
+                        // Trying to focus a hidden element throws an error in IE8.
+                        if (node.offsetHeight !== 0) {
+                            node.focus();
+                        }
+                    } catch (e) {
+                        LPJS.use('console', function(Y) {
+                            Y.log('In setFocusByName(<' +
+                                node.tagName + ' type=' + node.type + '>): ' + e);
+                        });
+                    }
+                    break;
+                }
+            }
+        }
+
+        function selectWidget(widget_name, event) {
+          if (event && (event.keyCode === 9 || event.keyCode === 13)) {
+              // Avoid firing if user is tabbing through or simply pressing
+              // enter to submit the form.
+              return;
+          }
+          document.getElementById(widget_name).checked = true;
+        }
+        //]]>
+    </script>
+
+    
+      
+    
+  </head>
+
+  <body id="document" itemscope=""
+        itemtype="http://schema.org/WebPage"
+        class="tab-overview
+      main_side
+      public
+      yui3-skin-sam">
+          
+          
+    <div class="yui-d0">
+      <div id="locationbar" class="login-logout">
+        
+
+<div id="logincontrol"><a href="https://launchpad.net/~mcrl2/+archive/ubuntu/release-ppa/+login">Log in / Register</a></div>
+
+
+
+      </div><!--id="locationbar"-->
+
+      <div id="watermark" class="watermark-apps-portlet">
+        <div>
+          <a href="https://launchpad.net/~mcrl2"><img alt="" width="64" height="64" src="/@@/team-logo" /></a>
+        </div>
+        <div class="wide">
+          <h2 id="watermark-heading"><a href="https://launchpad.net/~mcrl2">“mCRL2” team</a></h2>
+        </div>
+        
+  <!-- Application Menu -->
+  <ul class="facetmenu">
+    
+      <li class="overview active"><a
+    href="https://launchpad.net/~mcrl2">Overview</a></li>
+      
+      
+    
+    
+      
+      <li class="branches"><a
+    href="https://code.launchpad.net/~mcrl2">Code</a></li>
+      
+    
+    
+      
+      <li class="bugs"><a href="https://bugs.launchpad.net/~mcrl2">Bugs</a></li>
+      
+    
+    
+      
+      <li class="specifications"><a
+    href="https://blueprints.launchpad.net/~mcrl2">Blueprints</a></li>
+      
+    
+    
+      
+      <li class="translations"><a
+    href="https://translations.launchpad.net/~mcrl2">Translations</a></li>
+      
+    
+    
+      
+      <li class="answers"><a href="https://answers.launchpad.net/~mcrl2">Answers</a></li>
+      
+    
+  </ul>
+
+      </div>
+
+      <div class="yui-t4">
+        <div id="maincontent" class="yui-main">
+          <div class="yui-b" dir="ltr">
+            <div class="context-publication">
+              
+    <meta itemprop="name" content="Release PPA" />
+    <h1 id="edit-displayname">
+<span style="max-width: 95%;"
+      class="yui3-editable_text-text ellipsis single-line">
+    Release PPA
+</span>
+  
+</h1>
+
+
+
+    
+  
+              
+
+              <div id="registration" class="registering">
+                
+              </div>
+            </div>
+
+            
+            <div id="request-notifications">
+              
+            </div>
+
+            
+              
+
+    <div class="top-portlet" style="padding-top:0.5em;">
+      
+
+      <div>
+  <div id="edit-description" class="lazr-multiline-edit">
+  <div class="clearfix">
+    
+
+    <h3>PPA description</h3>
+  </div>
+
+  <div class="yui3-editable_text-text"><p>PPA Containing packages of the latest mCRL2 release. These are exactly the packages that will become part of future Debian and Ubuntu releases.</p></div>
+  </div>
+
+  
+</div>
+
+    </div>
+
+    
+      
+    
+    
+  
+    
+
+    <div class="yui-gc">
+
+      <div class="yui-u first">
+        
+          
+    
+
+    <div id="ppa-install" class="portlet">
+      <h2>Adding this PPA to your system</h2>
+
+      
+
+        <p>You can update your system with unsupported packages from
+          this untrusted PPA by adding <strong
+    class="ppa-reference">ppa:mcrl2/release-ppa</strong>
+          to your system's Software Sources.
+          (<a href="/+help-soyuz/ppa-sources-list.html" target="help">Read about installing</a>)
+        </p>
+
+        <pre class="command subordinate">
+sudo add-apt-repository ppa:mcrl2/release-ppa
+sudo apt-get update
+        </pre>
+
+        <div class="widget-header">
+          Technical details about this PPA
+        </div>
+
+        <div class="widget-body">
+          <p>This PPA can be added to your system manually by copying
+             the lines below and adding them to your system's software
+             sources. </p>
+          
+
+  <script>
+  <!--
+      function updateSeries(select) {
+          var deb = document.getElementById('series-deb');
+          deb.innerHTML = select.value;
+          var deb_src = document.getElementById('series-deb-src');
+          deb_src.innerHTML = select.value;
+      }
+  //-->
+  </script>
+
+  <div id="series-widget-div">
+    <form style="display: inline">
+    Display sources.list entries for: <select id="field.series" name="field.series" size="1" onChange='updateSeries(this);'>
+<option selected="selected" value="YOUR_UBUNTU_VERSION_HERE">Choose your Ubuntu version</option>
+<option value="utopic">Utopic (14.10)</option>
+<option value="trusty">Trusty (14.04)</option>
+<option value="saucy">Saucy (13.10)</option>
+<option value="raring">Raring (13.04)</option>
+<option value="quantal">Quantal (12.10)</option>
+<option value="precise">Precise (12.04)</option>
+<option value="oneiric">Oneiric (11.10)</option>
+<option value="natty">Natty (11.04)</option>
+<option value="maverick">Maverick (10.10)</option>
+<option value="lucid">Lucid (10.04)</option>
+</select>
+    </form>
+  </div>
+
+  
+
+  <pre id="sources-list-entries" class="wrap">
+deb <a href="http://ppa.launchpad.net/mcrl2/release-ppa/ubuntu">http://ppa.launchpad.net/mcrl2/release-ppa/ubuntu</a> <span
+    id="series-deb">YOUR_UBUNTU_VERSION_HERE</span> main 
+deb-src <a href="http://ppa.launchpad.net/mcrl2/release-ppa/ubuntu">http://ppa.launchpad.net/mcrl2/release-ppa/ubuntu</a> <span
+    id="series-deb-src">YOUR_UBUNTU_VERSION_HERE</span> main </pre>
+
+
+
+          <dl id="signing-key">
+            <dt>Signing key:</dt>
+            <dd>
+              <a href="http://keyserver.ubuntu.com:11371/pks/lookup?fingerprint=on&amp;op=index&amp;search=0x29041F9ED2CF118D127511E27D8CE122F62EC79B">
+                <code>1024R/F62EC79B</code>
+              </a>
+              (<a href="/+help-soyuz/ppa-sources-list.html" target="help">What is this?</a>)
+            </dd>
+            <dt>Fingerprint:</dt>
+            <dd>29041F9ED2CF118D127511E27D8CE122F62EC79B</dd>
+          </dl>
+           <!--archive-dependencies -->
+        </div> <!-- widget-body -->
+
+        <p>For questions and bugs with software in this PPA please contact
+          <a href="/~mcrl2" class="sprite team">mCRL2</a>.</p>
+
+        <script type="text/javascript">
+          LPJS.use('lp.app.widgets.expander', function(Y) {
+              var widget_header = Y.one('#ppa-install .widget-header');
+              var content = Y.one('.widget-body');
+              var expander = new Y.lp.app.widgets.expander.Expander(
+                  widget_header, content);
+              expander.setUp(true);
+          });
+        </script>
+      
+
+      
+
+    </div> <!-- ppa-install -->
+  
+        
+        
+      </div>
+
+      <div class="yui-u">
+        
+    
+    <div class="portlet">
+      <h2>PPA statistics</h2>
+      <dl>
+        <dt>Activity</dt>
+        <dd>0
+          updates
+          added during the past month.</dd>
+        
+      </dl>
+    </div>
+  
+      </div>
+    </div><!-- yui-gc -->
+
+    
+    
+    <div class="portlet" id="packages">
+      <span class="see-all"><a href="https://launchpad.net/~mcrl2/+archive/ubuntu/release-ppa/+packages"
+        class="menu-link-packages sprite info">View package details</a></span>
+      <h2>Overview of published packages</h2>
+
+      <form class="package-search-filter" action="" method="GET">
+        <label for="field.series_filter">Published in:</label>
+        <select id="field.series_filter" name="field.series_filter" size="1" >
+<option value="">Any series</option>
+<option value="utopic">Utopic</option>
+<option value="trusty">Trusty</option>
+<option value="saucy">Saucy</option>
+<option value="raring">Raring</option>
+<option value="quantal">Quantal</option>
+<option value="precise">Precise</option>
+<option value="oneiric">Oneiric</option>
+<option value="natty">Natty</option>
+<option value="maverick">Maverick</option>
+<option value="lucid">Lucid</option>
+</select>
+        <input type="submit" value="Filter" />
+      </form>
+
+      <div>
+
+        <table style="width: 100%;" class="upper-batch-nav">
+  <tbody>
+    <tr>
+      <td style="white-space: nowrap" class="batch-navigation-index">
+        
+            <strong>1</strong>
+            
+              &rarr;
+              <strong>10</strong>
+            
+            of
+            10
+            results
+        
+      </td>
+      <td style="text-align: right; white-space: nowrap" class="batch-navigation-links">
+        
+        <span class="first inactive">First</span>
+        &bull;
+        
+        <span class="previous inactive">Previous</span>
+        &bull;
+        
+        <span class="next inactive"><strong>Next</strong></span>
+        
+          &bull;
+          
+          <span class="last inactive">Last</span>
+        
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+        <table class="listing sortable" id="packages_list">
+          <thead>
+            <tr>
+              <th>Package</th>
+              <th>Version</th>
+              <th>Uploaded by</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr class="">
+              <td>
+                <img src="/@@/package-source" />
+                mcrl2
+              </td>
+              <td>
+                201409.1-1ubuntu1ppa2~utopic
+                
+              </td>
+              <td>
+                  <a href="/~j-w-wesselink" class="sprite person">Wieger Wesselink</a>
+                  
+                  (2014-12-16)
+                  
+              </td>
+            </tr>
+            
+            
+            <tr class="">
+              <td>
+                <img src="/@@/package-source" />
+                mcrl2
+              </td>
+              <td>
+                201409.1-1ubuntu1ppa2~trusty
+                
+              </td>
+              <td>
+                  <a href="/~j-w-wesselink" class="sprite person">Wieger Wesselink</a>
+                  
+                  (2014-12-16)
+                  
+              </td>
+            </tr>
+            
+            
+            <tr class="">
+              <td>
+                <img src="/@@/package-source" />
+                mcrl2
+              </td>
+              <td>
+                201409.1-1ubuntu1ppa2~precise
+                
+              </td>
+              <td>
+                  <a href="/~j-w-wesselink" class="sprite person">Wieger Wesselink</a>
+                  
+                  (2014-12-16)
+                  
+              </td>
+            </tr>
+            
+            
+            <tr class="">
+              <td>
+                <img src="/@@/package-source" />
+                mcrl2
+              </td>
+              <td>
+                201409.0-1ubuntu1ppa1~lucid
+                
+              </td>
+              <td>
+                  <a href="/~scranen" class="sprite person">Sjoerd Cranen</a>
+                  
+                  (2014-09-05)
+                  
+              </td>
+            </tr>
+            
+            
+            <tr class="">
+              <td>
+                <img src="/@@/package-source" />
+                mcrl2
+              </td>
+              <td>
+                201310.0-1ubuntu1ppa1~saucy1
+                
+              </td>
+              <td>
+                  <a href="/~scranen" class="sprite person">Sjoerd Cranen</a>
+                  
+                  (2013-11-15)
+                  
+              </td>
+            </tr>
+            
+            
+            <tr class="">
+              <td>
+                <img src="/@@/package-source" />
+                mcrl2
+              </td>
+              <td>
+                201310.0-1ubuntu1ppa1~raring1
+                
+              </td>
+              <td>
+                  <a href="/~scranen" class="sprite person">Sjoerd Cranen</a>
+                  
+                  (2013-10-02)
+                  
+              </td>
+            </tr>
+            
+            
+            <tr class="">
+              <td>
+                <img src="/@@/package-source" />
+                mcrl2
+              </td>
+              <td>
+                201310.0-1ubuntu1ppa1~quantal1
+                
+              </td>
+              <td>
+                  <a href="/~scranen" class="sprite person">Sjoerd Cranen</a>
+                  
+                  (2013-10-02)
+                  
+              </td>
+            </tr>
+            
+            
+            <tr class="">
+              <td>
+                <img src="/@@/package-source" />
+                mcrl2
+              </td>
+              <td>
+                201210.1-1ubuntu1~oneiric1~ppa1
+                
+              </td>
+              <td>
+                  <a href="/~jkeiren" class="sprite person">Jeroen Keiren</a>
+                  
+                  (2013-01-30)
+                  
+              </td>
+            </tr>
+            
+            
+            <tr class="">
+              <td>
+                <img src="/@@/package-source" />
+                mcrl2
+              </td>
+              <td>
+                201210.1-1ubuntu1~natty1~ppa1
+                
+              </td>
+              <td>
+                  <a href="/~jkeiren" class="sprite person">Jeroen Keiren</a>
+                  
+                  (2013-01-30)
+                  
+              </td>
+            </tr>
+            
+            
+            <tr class="">
+              <td>
+                <img src="/@@/package-source" />
+                mcrl2
+              </td>
+              <td>
+                201210.1-1ubuntu1~maverick1~ppa1
+                
+              </td>
+              <td>
+                  <a href="/~jkeiren" class="sprite person">Jeroen Keiren</a>
+                  
+                  (2013-01-31)
+                  
+              </td>
+            </tr>
+            
+          </tbody>
+        </table>
+
+        <table style="width: 100%;" class="lower-batch-nav">
+  <tbody>
+    <tr>
+      <td style="white-space: nowrap" class="batch-navigation-index">
+        
+            <strong>1</strong>
+            
+              &rarr;
+              <strong>10</strong>
+            
+            of
+            10
+            results
+        
+      </td>
+      <td style="text-align: right; white-space: nowrap" class="batch-navigation-links">
+        
+        <span class="first inactive">First</span>
+        &bull;
+        
+        <span class="previous inactive">Previous</span>
+        &bull;
+        
+        <span class="next inactive"><strong>Next</strong></span>
+        
+          &bull;
+          
+          <span class="last inactive">Last</span>
+        
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+        
+
+      </div>
+    </div>
+  
+ 
+            
+            
+          </div><!-- yui-b -->
+        </div><!-- yui-main -->
+
+        
+          <div id="side-portlets" class="yui-b side">
+            
+    <div id="global-actions" class="portlet vertical">
+  <ul>
+    <li>
+      <a href="https://launchpad.net/~mcrl2/+archive/ubuntu/release-ppa/+packages"
+        class="menu-link-packages sprite info">View package details</a>
+    </li>
+  </ul>
+</div>
+
+    
+  
+
+  
+  <div id="portlet-latest-updates" class="portlet">
+    <h2>Latest updates</h2>
+
+    
+    
+      <ul class="latest-ppa-updates">
+        <li class="FULLYBUILT">
+          <strong>mcrl2</strong>
+          <span class="duration">
+            85 weeks
+            ago
+          </span><br />
+          Successfully built
+          
+        </li>
+        <li class="FULLYBUILT">
+          <strong>mcrl2</strong>
+          <span class="duration">
+            85 weeks
+            ago
+          </span><br />
+          Successfully built
+          
+        </li>
+        <li class="FULLYBUILT">
+          <strong>mcrl2</strong>
+          <span class="duration">
+            85 weeks
+            ago
+          </span><br />
+          Successfully built
+          
+        </li>
+        <li class="FAILEDTOBUILD">
+          <strong>mcrl2</strong>
+          <span class="duration">
+            100 weeks
+            ago
+          </span><br />
+          Failed to build:
+          <span class="build-details">
+            <a href="/~mcrl2/+archive/ubuntu/release-ppa/+build/6325472">amd64</a>
+            <a href="/~mcrl2/+archive/ubuntu/release-ppa/+build/6325473">i386</a>
+          </span>
+        </li>
+        <li class="FULLYBUILT">
+          <strong>mcrl2</strong>
+          <span class="duration">
+            142 weeks
+            ago
+          </span><br />
+          Successfully built
+          
+        </li>
+      </ul>
+    
+    </div>
+  
+
+  
+          </div><!-- yui-b side -->
+        
+      </div><!-- yui-t4 -->
+
+      
+  <div id="footer" class="footer">
+    <div class="lp-arcana">
+        <div class="lp-branding">
+          <a href="https://launchpad.net/"><img src="/@@/launchpad-logo-and-name-hierarchy.png" alt="Launchpad" /></a>
+          &nbsp;&bull;&nbsp;
+          <a href="https://launchpad.net/+tour">Take the tour</a>
+          &nbsp;&bull;&nbsp;
+          <a href="https://help.launchpad.net/">Read the guide</a>
+          &nbsp;
+          <form id="globalsearch" method="get"
+                accept-charset="UTF-8"
+                action="https://launchpad.net/+search">
+            <input type="search" id="search-text" name="field.text" />
+            <input type="image" src="/@@/search" style="vertical-align:5%" alt="Search Launchpad" />
+          </form>
+        </div>
+        
+  
+
+    </div>
+
+    <div class="colophon">
+      &copy; 2004-2016
+      <a href="http://canonical.com/">Canonical&nbsp;Ltd.</a>
+      &nbsp;&bull;&nbsp;
+      <a href="https://launchpad.net/legal">Terms of use</a>
+      &nbsp;&bull;&nbsp;
+      <a href="/feedback">Contact Launchpad Support</a>
+      
+      &nbsp;&bull;&nbsp;
+      <a href="http://blog.launchpad.net/">Blog</a>
+      
+	&nbsp;&bull;&nbsp;
+	<a href="http://www.canonical.com/about-canonical/careers">Careers</a>
+      
+      &nbsp;&bull;&nbsp;
+      <a href="https://twitter.com/launchpadstatus">System status</a>
+      <span id="lp-version">
+      &nbsp;&bull;&nbsp;
+        r18169
+        
+        
+        (<a href="https://dev.launchpad.net/">Get the code!</a>)
+      </span>
+    </div>
+  </div>
+
+    </div><!-- yui-d0-->
+
+    
+  
+  
+  <script id="json-cache-script">LP.cache = {"related_features": {}, "context": {"external_dependencies": null, "reference": "~mcrl2/ubuntu/release-ppa", "build_debug_symbols": false, "private": false, "processors_collection_link": "https://launchpad.net/api/devel/~mcrl2/+archive/ubuntu/release-ppa/processors", "require_virtualized": true, "suppress_subscription_notifications": false, "enabled_restricted_processors_collection_link": "https://launchpad.net/api/devel/~mcrl2/+archive/ubuntu/release-ppa/enabled_restricted_processors", "publish_debug_symbols": false, "http_etag": "\"2930628a1ca4f823d98ac0a88949c291ff4c1d12-96026c5065b4ef66bf09d4cb6ecc75bba12fc224\"", "self_link": "https://launchpad.net/api/devel/~mcrl2/+archive/ubuntu/release-ppa", "resource_type_link": "https://launchpad.net/api/devel/#archive", "status": "Active", "dependencies_collection_link": "https://launchpad.net/api/devel/~mcrl2/+archive/ubuntu/release-ppa/dependencies", "authorized_size": 2048, "displayname": "Release PPA", "description": "PPA Containing packages of the latest mCRL2 release. These are exactly the packages that will become part of future Debian and Ubuntu releases.", "permit_obsolete_series_uploads": false, "relative_build_score": 0, "name": "release-ppa", "distribution_link": "https://launchpad.net/api/devel/ubuntu", "web_link": "https://launchpad.net/~mcrl2/+archive/ubuntu/release-ppa", "owner_link": "https://launchpad.net/api/devel/~mcrl2", "signing_key_fingerprint": "29041F9ED2CF118D127511E27D8CE122F62EC79B"}};</script>
+
+    
+  
+
+    
+  </body>
+
+
+  <!--
+    Facet name: overview
+    Page type: main_side
+    Has global search: True
+    Has application tabs: True
+    Has side portlets: True
+
+    At least 48 queries/external actions issued in 0.78 seconds
+
+    Features: {'app.mainsite_only.canonical_url': None, 'baselayout.careers_link.disabled': None, 'hard_timeout': u'5000', 'profiling.enabled': None, 'js.yui_version': None, 'visible_render_time': None, u'gpg.read_from_gpgservice': u'true'}
+
+    r18169
+
+    -->
+
+</html>
+

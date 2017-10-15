@@ -1,0 +1,2178 @@
+<!DOCTYPE html>
+<html><head><script type="text/javascript">_cf_loadingtexthtml="<img alt=' ' src='/CFIDE/scripts/ajax/resources/cf/images/loading.gif'/>";
+_cf_contextpath="";
+_cf_ajaxscriptsrc="/CFIDE/scripts/ajax";
+_cf_jsonprefix='//';
+_cf_clientid='FC17EEF2D842D7FBE677D0D584F32211';</script><script type="text/javascript" src="Program%20model%20checking%20via%20action%20planning_files/cfmessage.js"></script>
+<script type="text/javascript" src="Program%20model%20checking%20via%20action%20planning_files/cfajax.js"></script>
+<script type="text/javascript" src="Program%20model%20checking%20via%20action%20planning_files/cfform.js"></script>
+<script type="text/javascript" src="Program%20model%20checking%20via%20action%20planning_files/masks.js"></script>
+<script type="text/javascript" src="Program%20model%20checking%20via%20action%20planning_files/cfformhistory.js"></script>
+<script type="text/javascript" src="Program%20model%20checking%20via%20action%20planning_files/cfrichtexteditor.js"></script>
+<script type="text/javascript" src="Program%20model%20checking%20via%20action%20planning_files/fckeditor.js"></script>
+<script type="text/javascript" src="Program%20model%20checking%20via%20action%20planning_files/yahoo-dom-event.js"></script>
+<script type="text/javascript" src="Program%20model%20checking%20via%20action%20planning_files/animation-min.js"></script>
+<script type="text/javascript" src="Program%20model%20checking%20via%20action%20planning_files/ext-yui-adapter.js"></script>
+<script type="text/javascript" src="Program%20model%20checking%20via%20action%20planning_files/ext-core.js"></script>
+<script type="text/javascript" src="Program%20model%20checking%20via%20action%20planning_files/tabs.js"></script>
+<script type="text/javascript" src="Program%20model%20checking%20via%20action%20planning_files/cflayout.js"></script>
+<link rel="stylesheet" type="text/css" href="Program%20model%20checking%20via%20action%20planning_files/ext-all.css">
+<script type="text/javascript" src="Program%20model%20checking%20via%20action%20planning_files/resizable.js"></script>
+<script type="text/javascript" src="Program%20model%20checking%20via%20action%20planning_files/dragdrop.js"></script>
+<script type="text/javascript" src="Program%20model%20checking%20via%20action%20planning_files/util.js"></script>
+<script type="text/javascript" src="Program%20model%20checking%20via%20action%20planning_files/State-min.js"></script>
+<script type="text/javascript" src="Program%20model%20checking%20via%20action%20planning_files/widget-core.js"></script>
+<script type="text/javascript" src="Program%20model%20checking%20via%20action%20planning_files/dialogs.js"></script>
+<script type="text/javascript" src="Program%20model%20checking%20via%20action%20planning_files/cfwindow.js"></script>
+<link rel="stylesheet" type="text/css" href="Program%20model%20checking%20via%20action%20planning_files/cf.css">
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="Program%20model%20checking%20via%20action%20planning_files/dl.css">
+
+
+
+<title>Program model checking via action planning</title>
+<style type="text/css"><!--
+    body {margin-left: 0em; margin-top: 0}
+    a:link {text-decoration: underline; 	Color: #1d4d0f;}
+    a:visited  { color: #990033; text-decoration: underline;}
+    a:hover {color: red; text-decoration: none}
+    a.dLink1:link {color:#336699}
+    a.dLink1:visited {color:#666666}
+	a.isblack:link {text-decoration: underline; 	Color: #000000;}
+    a.isblack:visited  { color: #000000; text-decoration: underline;}
+    a.isblack:hover {color: #000000; text-decoration: none}
+    h1 {font-size: 140%; margin-bottom: 0}
+	ul {margin-top: .25em; list-style-type: disc}
+	ol {margin-top: .25em;}
+	li {padding-bottom: .25em}
+    h2 {color: white; background-color: #069; 
+        font-size: 100%; padding-left: 1em;
+		margin: 0}
+	h3 {color: black; background-color: yellow; 
+    	font-size: 100%;
+		margin: 0}
+	 h4 {color: black; background-color: #99c5e8; 
+        font-size: 100%;
+		margin: 0}
+    hr {color: #39176d;}
+    form {margin-top: 10}
+    form.xrs {margin-top: 0}
+	
+	a {text-decoration: none; }
+	
+	input {font-size: 1em;}
+	.chevron {color: #ff0000;}
+	.light-blue {color:#336699;}
+	.black {color:#000000;}
+	
+	
+	.mono-text {font-size: 14px; font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;}
+	
+	/* ### standard text styles, smallest to largest ### */
+	
+	.footer-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#336699; font-size: .75em; line-height: 1.33em;
+		text-indent: -.75 em; margin-left: 2em; margin-right: .75em;}
+		
+	.footer-copy-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .75em; line-height: 1.3em;
+		margin-left: .75em; margin-right: .75em;}
+		
+	.small-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .83em; padding-bottom : 2px;
+	  	padding-top : 2px;}
+
+	.smallerer-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .65em;}
+	.smaller-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .75em;}		
+	.small-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .83em;}
+	.small-textb {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .83em; font-weight: bold;}
+	.medium-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 1em;}
+	.mediumb-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 1em; font-weight: bold;}
+	.large-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 1.3em;}		
+	.instr-text {font-family: Arial, Helvetica, sans-serif;
+		color:#666666; font-size: .83em;}
+		
+	.list-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#336699; font-size: .83em; line-height: 1.3em;}
+	.list-link-btext {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: .83em; line-height: 1.3em;}
+	
+	.searchbox-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000066; font-size: 1em; font-weight: bold;}
+	.footer-header-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000066; font-size: 1em; font-weight: bold;
+		margin-left: .75em; margin-right: .75em;}
+	.medium-link-text {font-family: Arial, Helvetica, sans-serif;
+		color:#000066; font-size: 1em; font-weight: bold; line-height: 1em;
+		text-indent: -1.25em; margin-left: 2em; margin-right: .75em;}
+	
+	.text16 {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 16px;}
+		
+	.text14 {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 14px;}
+	
+	.text12 {font-family: Arial, Helvetica, sans-serif;
+		color:#000000; font-size: 12px;}
+		
+	.text10 {font-family: Arial, Helvetica, sans-serif;
+	    color:#000000; font-size: 12px;}
+		
+	.text9 {font-family: Arial, Helvetica, sans-serif;
+	   color:#000000; font-size: 12px;}
+	
+	.error-text {color:red;}
+	
+	.small-copy-text {font-family: Times, Times New Roman, serif;
+		color:#000066; font-size: .75em; line-height: 1.2em;
+		margin-left: .75em; margin-right: .75em;}
+
+	.medium-copy-text {font-family: Times, Times New Roman, serif;
+		color:#000066; font-size: 1em; line-height: 1.2em;
+		margin-left: .75em; margin-right: .75em;}
+	
+	.large-copy-text {font-family: Times, Times New Roman, serif;
+		color:#000066; font-size: 1.3em; line-height: 1.5em;
+		margin-left: .75em; margin-right: .75em;}
+	
+	.medium-header-text {font-family: Times, Times New Roman, serif;
+		color:#ff0000; font-size: 1em;
+		margin-left: .75em; margin-right: .75em;}
+	
+	.large-header-text {font-family: Times, Times New Roman, serif;
+		color:#ff0000; font-size: 1.5em;
+		margin-left: .75em; margin-right: .75em;}
+
+		#side {
+			width: 10px;
+			float: left;
+			margin-left: -1px;
+			padding: 2px;
+			}
+							
+		#content {
+			padding: 2px;
+			margin-left: 25px;
+			
+		        
+		        }
+	 .fulltext_lnk {border:0px;
+	 				 margin-right: 2px;
+					 vertical-align:baseline;
+	 				}
+	 
+	  .leftcoltab { 
+		  position:relative;
+		  top:5px;
+		  left:5px;
+		  float:left;
+		  width:530px;  /* for IE5/WIN */
+		  width:520px; /* actual value */
+		  margin:0 0 0px 0;
+		  padding:5px;
+		  z-index:100;
+		  }
+	  .rightcoltab {
+    float: right;
+    margin: 0;
+    padding: 5px;
+    position: relative;
+    right: 50px;
+    top: 25px;
+    width: 350px;
+    z-index: 99;
+}
+	  .centercoltab {
+		  position:absolute;
+		  padding:0 0px;
+		  }
+	  .alt {
+		background: #ece9d8;
+		margin: 0;
+		padding: 1px;
+		}
+		.leftcolc { 
+	position:relative;
+	top:5px;
+	left:5px;
+	float:left;
+	width:420px;  /* for IE5/WIN */
+	width:400px; /* actual value */
+	margin:0 0 0px 0;
+	padding:5px;
+	z-index:100;
+	}
+.rightcolc {
+	position:relative;
+	top:0px;
+	right:0px;
+	float:right;
+	margin:0 0px;
+	padding:0px;
+	width:500px;
+	z-index:99;
+	}
+.centercolc {
+	position:absolute;
+	padding:0 0px;
+	}
+	
+	.leftcoltabv { 
+		  position:relative;
+		  top:5px;
+		  left:5px;
+		  float:left;
+		  width:460px;  /* for IE5/WIN */
+		  width:350px; /* actual value */
+		  margin:0 0 0px 0;
+		  padding:5px;
+		  z-index:100;
+		  }
+	.rightcoltabv {
+		position:relative;
+		top:5px;
+		right:0px;
+		float:right;
+		margin:0 0px 0 0;
+		padding:15px;
+		width:480px;
+		z-index:99;
+		}
+		
+.x-tabs-strip-wrap {
+	overflow-y: hidden !important;
+}
+  --></style>
+ 
+
+
+<script src="Program%20model%20checking%20via%20action%20planning_files/tagcanvas.js" type="text/javascript"></script>
+<script type="text/javascript">
+  function loadCloud() {
+	try {
+	  TagCanvas.Start('myCanvas','tags',{
+		textColour: '#000000',
+		outlineColour: '#ff00ff',
+		reverse: true,
+		shuffleTags:true,
+		depth: 0.8,
+		maxSpeed: 0.05,
+		textHeight: 12,
+		initial: [0.000, 0.050],
+		shape: "hring",
+		lock: "x"
+	  });
+	} catch(e) {
+	  // something went wrong, hide the canvas container
+	  // document.getElementById('myCanvasContainer').style.display = 'none';
+	}
+  };
+</script>
+
+
+
+
+
+
+
+<script type="text/javascript" src="Program%20model%20checking%20via%20action%20planning_files/cffp.js"></script>
+
+<script type="text/javascript" src="Program%20model%20checking%20via%20action%20planning_files/jsapi"></script>
+
+<style type="text/css"><!--
+.google-visualization-orgchart-node {
+    background-color: #FFFFFF !important;
+    border: 2px solid #AFCF40 !important;
+    cursor: default;
+    font-family: arial,helvetica;
+    text-align: center;
+    vertical-align: middle;
+}
+
+iframe {float:right; 
+		margin:10px;
+		border: 2px solid #1B4D0E;
+		
+		}
+
+a.boxed:link {text-decoration: none !important; 	Color: #000000 !important;}
+a.boxed:visited  { color: #000000 !important; text-decoration: none !important;}
+a.boxed:hover {color: red !important; text-decoration: underline !important;}
+
+a.boxedh:link {text-decoration: none !important; 	Color: #000000 !important;}
+a.boxedh:visited  { color: #000000 !important; text-decoration: none !important;}
+a.boxedh:hover {color: red !important; text-decoration: underline !important;}		
+
+a.boxedm:link {text-decoration: none !important; 	Color: #606060 !important;}
+a.boxedm:visited  { color: #606060 !important; text-decoration: none !important;}
+a.boxedm:hover {color: red !important; text-decoration: underline !important;}		
+
+a.boxedl:link {text-decoration: none !important; 	Color: #808080   !important;}
+a.boxedl:visited  { color: 	#808080 !important; text-decoration: none !important;}
+a.boxedl:hover {color: red !important; text-decoration: underline !important;}				
+
+.google-visualization-orgchart-linebottom {
+    border-bottom: 1px solid #006699 !important;
+}
+.google-visualization-orgchart-lineleft {
+    border-left: 1px solid #006699 !important;
+}
+
+.google-visualization-orgchart-lineright {
+    border-right: 1px solid #006699 !important;
+}
+
+--></style>
+
+<script type="text/javascript">
+function settab() {
+    var mytabs = ColdFusion.Layout.getTabLayout('citationdetails');
+   
+ 
+  mytabs.on('tabchange', function(tabpanel,activetab) { document.cookie = 'picked=' + '2008301' + ',' + activetab.id; })
+ 
+}
+
+
+function letemknow(){
+  ColdFusion.Window.show('letemknow');
+}
+
+function letemknow2(){
+  ColdFusion.Window.show('letemknow2');
+}
+
+
+
+
+
+function testthis(){
+
+alert('test');
+}
+function loadalert(){ 
+ alert("I am in the load alert");
+ 
+}
+function loadalert2(){ 
+  alert("I am in the load alert2");
+ 
+}
+</script>
+<script type="text/javascript">
+	  	google.load('visualization', '1', {packages:['orgchart']});
+	    google.setOnLoadCallback(drawChart);
+	  
+	  function drawChart() {
+	    var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Name');
+        data.addColumn('string', 'Manager');
+        data.addColumn('string', 'ToolTip');
+  	  
+		data.addRows([
+          [{v:'0', f:'<div style="color:black; font-size:150%; font-style:normal">CCS&nbsp;for&nbsp;this&nbsp;Article</div>'}, '', ''],
+		  
+        ]);
+		
+		if (document.getElementById('chart_div')) {
+       var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
+       chart.draw(data, {allowHtml:true});
+		}
+      }
+	  
+</script>
+
+<script type="text/javascript">
+ function expandcollapse(anchor,whichone) {
+	 var inner = document.getElementById(anchor);
+	 var theshow = "toShow" + whichone;
+ 	 var thehide = "toHide" + whichone;
+	 var span = document.getElementById(theshow);
+     span.style.display = (span.style.display=='inline')?'none':'inline';
+     var span = document.getElementById(thehide);
+     span.style.display = (span.style.display=='none')?'inline':'none';
+     inner.innerHTML = (inner.innerHTML=='collapse')?'expand':'collapse';
+    }
+
+  
+</script>
+
+<script type="text/javascript">
+ /* <!-- Begin
+	if(document.layers || document.all) {
+	a = 1;
+	setInterval("Jump()", 10);
+	}
+	function Jump() {
+	a = a + 1;
+	//self.moveBy((Math.random() * a * 2 - a), (Math.random() * a * 2) - a);
+	}
+//  End --> */
+</script>
+
+<script type="text/javascript">
+function expandWatson(divID,theConcept) { 
+			if (document.getElementById(divID).style.display == "none") {
+				document.getElementById(divID).style.display = "block";
+				document.getElementById(divID).innerHTML = theConcept + "<br />" + document.getElementById(divID).innerHTML;
+			}
+			 else {
+				 document.getElementById(divID).style.display = "none"
+			}
+		}
+</script>
+
+
+<!-- patent candor integration --->
+<script type="text/javascript">
+  function togglePatMap() {
+        var div = document.getElementById('patmap'); 
+        if (div.style.display == "none") {
+            div.style.display = "block";
+            document.getElementById("expandcollapsepmapa").src = "images/collapse.png";
+			
+			if (div.innerHTML.length == 0){
+				httpGetAsyncwID("patent.cfm?id=2008301",'patmap');
+				httpGetAsyncwID("simmap_track.cfm?id=2008301&how=live",'blackhole');
+			}
+			else {
+				httpGetAsyncwID("simmap_track.cfm?id=2008301&how=cache",'blackhole');
+			}
+			
+        }
+        else {
+            div.style.display = "none";
+            document.getElementById("expandcollapsepmapa").src = "images/expand.png";
+        }
+    }
+	
+	function httpGetAsyncwID(theUrl,theID) {
+		var xmlHttp = new XMLHttpRequest();
+		xmlHttp.onreadystatechange = function() {
+			if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+				
+				document.getElementById(theID).innerHTML=xmlHttp.responseText;
+		}
+		xmlHttp.open("GET", theUrl, true); // true for asynchronous 
+		xmlHttp.send();
+	}
+</script>
+
+
+<meta name="citation_conference" content="Proceedings of the 6th international conference on Model checking and artificial intelligence"> <meta name="citation_publisher" content="Springer-Verlag"> <meta name="citation_authors" content="Edelkamp, Stefan; Kellershoff, Mark; Sulewski, Damian"> <meta name="citation_title" content="Program model checking via action planning"> <meta name="citation_date" content="07/11/2010"> <meta name="citation_isbn" content="978-3-642-20673-3"> <meta name="citation_firstpage" content="32"> <meta name="citation_lastpage" content="51"> <meta name="citation_abstract_html_url" content="http://dl.acm.org/citation.cfm?id=2008298.2008301"> 
+
+
+
+<script type="text/javascript">
+	ColdFusion.Ajax.importTag('CFAJAXPROXY');
+</script>
+
+<script type="text/javascript">
+	ColdFusion.Ajax.importTag('CFFORM');
+</script>
+
+<script type="text/javascript">
+	ColdFusion.Ajax.importTag('CFDIV');
+</script>
+
+<script type="text/javascript">
+	ColdFusion.Ajax.importTag('CFTEXTAREA');
+</script>
+
+<script type="text/javascript">
+	ColdFusion.Ajax.importTag('CFLAYOUT-TAB');
+</script>
+
+	<script type="text/javascript">
+		var _cf_layout_init_1470391818616=function()
+		{
+			var _cf_layout=ColdFusion.Layout.initializeTabLayout("citationdetails");
+			ColdFusion.Layout.addTab(_cf_layout,"abstract","<span>Abstract</span>",false,false);
+			ColdFusion.Layout.selectTab('citationdetails','abstract');_cf_bind_init_1470391818617=function()
+			{
+				ColdFusion.Bind.register([],{'bindTo':'abstract','bindExpr':['tab_abstract.cfm?id=2008301&usebody=tabbody&cfid=652248648&cftoken=43271392']},ColdFusion.Bind.urlBindHandler,true);
+			};ColdFusion.Event.registerOnLoad(_cf_bind_init_1470391818617);
+			ColdFusion.Layout.addTab(_cf_layout,"authors","<span>Authors</span>",false,false);_cf_bind_init_1470391818618=function()
+			{
+				ColdFusion.Bind.register([],{'bindTo':'authors','bindExpr':['tab_authors2.cfm?id=2008301&usebody=tabbody&cfid=652248648&cftoken=43271392']},ColdFusion.Bind.urlBindHandler,true);
+			};ColdFusion.Event.registerOnLoad(_cf_bind_init_1470391818618);
+			ColdFusion.Layout.addTab(_cf_layout,"references","<span>References</span>",false,false);_cf_bind_init_1470391818619=function()
+			{
+				ColdFusion.Bind.register([],{'bindTo':'references','bindExpr':['tab_references.cfm?id=2008301&type=article&usebody=tabbody&cfid=652248648&cftoken=43271392']},ColdFusion.Bind.urlBindHandler,true);
+			};ColdFusion.Event.registerOnLoad(_cf_bind_init_1470391818619);
+			ColdFusion.Layout.addTab(_cf_layout,"citedby","<span>Cited By</span>",false,false);_cf_bind_init_1470391818620=function()
+			{
+				ColdFusion.Bind.register([],{'bindTo':'citedby','bindExpr':['tab_citings.cfm?id=2008301&usebody=tabbody&cfid=652248648&cftoken=43271392']},ColdFusion.Bind.urlBindHandler,true);
+			};ColdFusion.Event.registerOnLoad(_cf_bind_init_1470391818620);
+			ColdFusion.Layout.addTab(_cf_layout,"indexterms","<span style='color:#999999'>Index Terms</span>",false,false);_cf_bind_init_1470391818621=function()
+			{
+				ColdFusion.Bind.register([],{'bindTo':'indexterms','bindExpr':['tab_indexterms.cfm?id=2008301&usebody=tabbody&cfid=652248648&cftoken=43271392']},ColdFusion.Bind.urlBindHandler,true);
+			};ColdFusion.Event.registerOnLoad(_cf_bind_init_1470391818621);
+			ColdFusion.Layout.addTab(_cf_layout,"source","<span>Publication</span>",false,false);_cf_bind_init_1470391818622=function()
+			{
+				ColdFusion.Bind.register([],{'bindTo':'source','bindExpr':['tab_source.cfm?id=2008301&usebody=tabbody&type=article&sellOnline=0&purchaseable=no&cfid=652248648&cftoken=43271392']},ColdFusion.Bind.urlBindHandler,true);
+			};ColdFusion.Event.registerOnLoad(_cf_bind_init_1470391818622);
+			ColdFusion.Layout.addTab(_cf_layout,"revs","<span style='color:#999999'>Reviews</span>",false,false);_cf_bind_init_1470391818623=function()
+			{
+				ColdFusion.Bind.register([],{'bindTo':'revs','bindExpr':['tab_reviews.cfm?id=2008301&logged=0&curclient_no=NO&usebody=tabbody&cfid=652248648&cftoken=43271392']},ColdFusion.Bind.urlBindHandler,true);
+			};ColdFusion.Event.registerOnLoad(_cf_bind_init_1470391818623);
+			ColdFusion.Layout.addTab(_cf_layout,"comments","<span>Comments</span>",false,true);_cf_bind_init_1470391818624=function()
+			{
+				ColdFusion.Bind.register([],{'bindTo':'comments','bindExpr':['tab_comments.cfm?id=2008301&logged=0&loggedbyip=0&curclient_no=NO&usebody=tabbody&full_name=&email=&cfid=652248648&cftoken=43271392']},ColdFusion.Bind.urlBindHandler,true);
+			};ColdFusion.Event.registerOnLoad(_cf_bind_init_1470391818624);
+			ColdFusion.Layout.addTab(_cf_layout,"prox","<span>Table of Contents</span>",false,false);_cf_bind_init_1470391818625=function()
+			{
+				ColdFusion.Bind.register([],{'bindTo':'prox','bindExpr':['tab_about.cfm?id=2008301&type=article&sellOnline=0&parent_id=2008298&parent_type=proceeding&title=Program%20model%20checking%20via%20action%20planning&toctitle=Proceedings%20of%20the%206th%20international%20conference%20on%20Model%20checking%20and%20artificial%20intelligence&tocissue_date=&notoc=0&usebody=tabbody&tocnext_id=&tocnext_str=&tocprev_id=&tocprev_str=&toctype=proceeding&cfid=652248648&cftoken=43271392']},ColdFusion.Bind.urlBindHandler,true);
+			};ColdFusion.Event.registerOnLoad(_cf_bind_init_1470391818625);
+		};ColdFusion.Event.registerOnLoad(_cf_layout_init_1470391818616);
+	</script>
+	
+<script type="text/javascript">
+	ColdFusion.Ajax.importTag('CFWINDOW');
+</script>
+
+<script type="text/javascript">
+	var _cf_window_init_1470391818627=function()
+	{
+		_cf_bind_init_1470391818628=function()
+		{
+			ColdFusion.Bind.register([],{'bindTo':'letemknow_body','bindExpr':['letemknow.cfm?CFID=652248648&CFTOKEN=43271392']},ColdFusion.Bind.urlBindHandler,false);
+		};ColdFusion.Event.registerOnLoad(_cf_bind_init_1470391818628);var _cf_window=ColdFusion.Window.create('letemknow','<div style=\'text-align:left; color:black;\'>Did you know the ACM DL App is now available?</div>','letemknow.cfm?CFID=652248648&CFTOKEN=43271392',{ modal:false, closable:true, divid:'cf_window1470391818626', draggable:true, resizable:true, fixedcenter:false, width:600, height:275, shadow:true, callfromtag:true, minwidth:600, minheight:275, initshow:false, x:75, y:125});
+	};ColdFusion.Event.registerOnLoad(_cf_window_init_1470391818627);
+</script>
+
+<script type="text/javascript">
+	var _cf_window_init_1470391818630=function()
+	{
+		_cf_bind_init_1470391818631=function()
+		{
+			ColdFusion.Bind.register([],{'bindTo':'letemknow2_body','bindExpr':['letemknow_recomm.cfm?CFID=652248648&CFTOKEN=43271392']},ColdFusion.Bind.urlBindHandler,false);
+		};ColdFusion.Event.registerOnLoad(_cf_bind_init_1470391818631);var _cf_window=ColdFusion.Window.create('letemknow2','<div style=\'text-align:left; color:black;\'>Did you know your Organization can subscribe to the ACM Digital Library?</div>','letemknow_recomm.cfm?CFID=652248648&CFTOKEN=43271392',{ modal:false, closable:true, divid:'cf_window1470391818629', draggable:true, resizable:true, fixedcenter:false, width:600, height:275, shadow:true, callfromtag:true, minwidth:600, minheight:275, initshow:false, x:70, y:175});
+	};ColdFusion.Event.registerOnLoad(_cf_window_init_1470391818630);
+</script>
+
+<script type="text/javascript">
+	var _cf_window_init_1470391818633=function()
+	{
+		_cf_bind_init_1470391818634=function()
+		{
+			ColdFusion.Bind.register([],{'bindTo':'theguide_body','bindExpr':['whatisguide.cfm']},ColdFusion.Bind.urlBindHandler,false);
+		};ColdFusion.Event.registerOnLoad(_cf_bind_init_1470391818634);var _cf_window=ColdFusion.Window.create('theguide','The ACM Guide to Computing Literature','whatisguide.cfm',{ modal:false, closable:true, divid:'cf_window1470391818632', draggable:true, resizable:true, fixedcenter:true, width:500, height:300, shadow:true, callfromtag:true, minwidth:300, minheight:250, initshow:false});
+	};ColdFusion.Event.registerOnLoad(_cf_window_init_1470391818633);
+</script>
+
+<script type="text/javascript">
+	var _cf_window_init_1470391818636=function()
+	{
+		_cf_bind_init_1470391818637=function()
+		{
+			ColdFusion.Bind.register([],{'bindTo':'thetags_body','bindExpr':['showthetags.cfm?id=2008301']},ColdFusion.Bind.urlBindHandler,false);
+		};ColdFusion.Event.registerOnLoad(_cf_bind_init_1470391818637);var _cf_window=ColdFusion.Window.create('thetags','All Tags','showthetags.cfm?id=2008301',{ modal:false, closable:true, divid:'cf_window1470391818635', draggable:true, resizable:true, fixedcenter:true, width:500, height:300, shadow:true, callfromtag:true, minwidth:300, minheight:250, initshow:false});
+	};ColdFusion.Event.registerOnLoad(_cf_window_init_1470391818636);
+</script>
+
+<script type="text/javascript">
+	var _cf_window_init_1470391818639=function()
+	{
+		var _cf_window=ColdFusion.Window.create('theformats','Export Formats','',{ modal:false, closable:true, divid:'cf_window1470391818638', draggable:true, resizable:true, fixedcenter:false, width:500, height:300, shadow:true, bodystyle:'text-align:left', callfromtag:true, minwidth:250, minheight:250, initshow:false});
+	};ColdFusion.Event.registerOnLoad(_cf_window_init_1470391818639);
+</script>
+
+<script type="text/javascript">
+	var _cf_window_init_1470391818641=function()
+	{
+		var _cf_window=ColdFusion.Window.create('theexplaination','','',{ modal:false, closable:true, divid:'cf_window1470391818640', draggable:true, resizable:true, fixedcenter:false, width:500, height:300, shadow:true, bodystyle:'text-align:left', callfromtag:true, minwidth:300, minheight:250, initshow:false});
+	};ColdFusion.Event.registerOnLoad(_cf_window_init_1470391818641);
+</script>
+
+<script type="text/javascript">
+	var _cf_window_init_1470391818643=function()
+	{
+		var _cf_window=ColdFusion.Window.create('theservices','','',{ modal:false, closable:true, divid:'cf_window1470391818642', draggable:true, resizable:true, fixedcenter:false, width:500, height:300, shadow:true, bodystyle:'text-align:left', callfromtag:true, minwidth:300, minheight:250, initshow:false});
+	};ColdFusion.Event.registerOnLoad(_cf_window_init_1470391818643);
+</script>
+
+<script type="text/javascript">
+	var _cf_window_init_1470391818645=function()
+	{
+		_cf_bind_init_1470391818646=function()
+		{
+			ColdFusion.Bind.register([],{'bindTo':'savetobinder_body','bindExpr':['savetobinder.cfm?id=2008301']},ColdFusion.Bind.urlBindHandler,false);
+		};ColdFusion.Event.registerOnLoad(_cf_bind_init_1470391818646);var _cf_window=ColdFusion.Window.create('savetobinder','Save to Binder','savetobinder.cfm?id=2008301',{ modal:false, closable:true, divid:'cf_window1470391818644', draggable:true, resizable:true, fixedcenter:true, width:600, height:600, shadow:true, callfromtag:true, minwidth:300, minheight:250, initshow:false, _cf_refreshOnShow:true});
+	};ColdFusion.Event.registerOnLoad(_cf_window_init_1470391818645);
+</script>
+
+<script type="text/javascript">
+	ColdFusion.Event.registerOnLoad(settab,null,false,true);
+</script>
+</head>
+
+
+
+
+<body style="text-align:center" onload="selectPerson(0); personConceptEnter(0,0);">          <!-- jtr changed, wg added personConceptEnter-->
+
+
+<script type="text/javascript">
+						addthis_pub             = 'acm'; 
+						//addthis_logo            = 'http://www.addthis.com/images/yourlogo.png';
+						addthis_logo            = 'http://dl.acm.org/images/ACM_transparent.png';
+						addthis_logo_background = 'c2d5fc';
+						addthis_logo_color      = '000000';
+						addthis_brand           = 'Citation Page';
+						addthis_options         = 'favorites, email, slashdot, citeulike, digg, delicious, twitter, myspace, facebook, google, more';
+						</script>
+                        
+<script src="Program%20model%20checking%20via%20action%20planning_files/AC_RunActiveContent.js" type="text/javascript"></script>
+
+
+
+
+<div style="width:940px; margin-left: auto; margin-right: auto; text-align:left">
+<a id="CIT"></a>
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="Program%20model%20checking%20via%20action%20planning_files/ns.html" style="display:none;visibility:hidden" height="0" width="0"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NFGCMX');</script>
+<!-- End Google Tag Manager -->
+<div id="header">
+
+
+<table style="table-layout:fixed; margin-top: 5px; margin-bottom: 10px; border:0px; width:100%; border-collapse:collapse;">
+	
+    <tbody><tr style="vertical-align:top">
+		
+		<td style="padding-left: 5px; padding-right:10px; padding-bottom:0px; width:300px" class="small-link-text"><img src="Program%20model%20checking%20via%20action%20planning_files/ACMDL_Logo.jpg" alt="ACM DL" style="border:0px" usemap="#port">
+		</td>
+        
+        <td style="padding-left: 5px; padding-right:10px; padding-bottom:0px;" class="small-link-text">
+        	<table style="width:100%; border-collapse:collapse; padding:0px">
+			<tbody><tr><td style="text-align:center">
+				
+                            <div style="margin:0px auto;color:#356b20;font-size:10pt;line-height:10%;"> </div>
+                    
+					</td>		
+			</tr>
+			</tbody></table> 
+        </td>
+		<td style="padding-top: 0px; padding-left: 0px; padding-bottom:0px; text-align:right;" class="small-link-text">
+			 <p style="margin-top:0px; margin-bottom:10px;">
+					
+                            <a href="https://dl.acm.org/signin.cfm?cfid=652248648&amp;cftoken=43271392" class="small-link-text" title="Sign in to personalize your Digital Library experience">SIGN IN</a>
+                            &nbsp;&nbsp;<a href="https://dl.acm.org/signin.cfm?cfid=652248648&amp;cftoken=43271392" class="small-link-text" title="Sign up to personalize your Digital Library experience">SIGN UP</a>
+						
+			 </p>
+            
+			<table style="padding: 5px; border-collapse:collapse; float:right">
+            	 
+			 
+
+
+				
+				
+                            
+                           <tbody><tr>
+                            <td class="small-link-text" style="text-align:right">
+                            
+                            
+                           <script type="text/javascript">
+								function encodeInput(form){
+								    	var cleanQuery = form.elements['query'].value.replace(new RegExp( "\\+", "g" ),"%2B");
+										cleanQuery = cleanQuery.replace(/#/g, "%23");
+										cleanQuery = cleanQuery.replace(/(\n)/g, " ");
+										cleanQuery = cleanQuery.trim();
+										form.elements['query'].value = cleanQuery;
+								}
+							</script>
+                            <form name="qiksearch" action="/results.cfm?CFID=652248648&amp;CFTOKEN=43271392" onsubmit="encodeInput(this)">
+                           
+                           
+                            
+                            		
+                                    
+                                    
+                                    
+									<span style="margin-left:0px"><label><input name="query" size="30" value=" " type="text"></label>&nbsp;                                    
+                                    <input style="vertical-align:top;" alt="Search" name="Go" src="Program%20model%20checking%20via%20action%20planning_files/search_small.jpg" type="image">
+                                    
+                                    </span>
+							  </form>
+                                </td>
+                            </tr>
+                          
+                            
+                            
+                          
+				  
+			</tbody></table>
+
+			
+			
+		</td>
+
+	</tr>
+    
+    
+    <tr><td colspan="3" class="small-link-text" style="padding-bottom:5px; padding-top:0px; text-align:center">
+		<div style="margin:0px auto;color:#356b20;line-height:10%;"> </div>
+         
+         </td>
+    </tr>
+    </tbody></table>
+	
+<map name="port" id="port"> 
+  <area shape="rect" coords="1,1,60,50" href="http://www.acm.org/" alt="ACM Home Page">
+  <area shape="rect" coords="65,1,275,68" href="http://dl.acm.org/dl.cfm?CFID=652248648&amp;CFTOKEN=43271392" alt="ACM Digital Library Home Page">
+</map>
+
+</div> <style>
+  .watsonCont {
+	  width:170px;
+	  
+	  color: #000000;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 1em;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	 /* background-color: lightgray;*/
+  }
+  #watsonInside {
+    border-radius: 25px;
+    border: 2px solid #649134;
+	margin-top: 12px;
+	padding: 5px;
+	height: 80px;
+  }
+
+</style>
+
+
+
+<table style="table-layout:fixed; padding-bottom:10px; width:100%; padding:0px;">
+	<tbody><tr style="vertical-align:top">
+		<td style="padding-right:10px; text-align:left" class="small-link-text">
+        	<div id="divmain" style="border:1px solid #356b20;">
+				 
+				<div class="large-text" style="text-align:left; margin-left:2px;margin-bottom:5px;">
+					
+                    	<h1 class="mediumb-text" style="margin-top:0px; margin-bottom:0px;"><strong>Program model checking via action planning</strong></h1>
+                        
+                </div>
+                
+
+<table class="medium-text" style="border-collapse:collapse; padding:0px;">
+
+<colgroup>
+<col style="width:540px">
+</colgroup>
+
+<tbody><tr style="vertical-align:top">
+  <td>
+    <table style="border-collapse:collapse; padding:2px;" class="medium-text">
+      <colgroup><col style="width:80px;">
+      <col style="width:auto">
+      </colgroup><tbody><tr style="vertical-align:top">
+        
+		
+		
+      </tr>
+    </tbody></table>
+
+	
+    
+        <table style="margin-top: 10px; border-collapse:collapse; padding:2px;" class="medium-text">
+            <colgroup><col style="width:80px">
+            
+            </colgroup><tbody><tr>
+            <td nowrap="nowrap" valign="top">
+             Authors:
+                
+            </td>
+            <td nowrap="nowrap" valign="top">
+                
+                    <a href="https://dl.acm.org/author_page.cfm?id=81100182002&amp;coll=DL&amp;dl=ACM&amp;trk=0&amp;cfid=652248648&amp;cftoken=43271392" title="Author Profile Page" target="_self">Stefan Edelkamp</a>
+                
+            </td>
+            <td valign="bottom">
+                
+                        <a href="https://dl.acm.org/inst_page.cfm?id=60008293&amp;CFID=652248648&amp;CFTOKEN=43271392" title="Institutional Profile Page"><small>TZI, University of Bremen, Germany</small></a>
+                      	
+            </td>
+            </tr>
+            
+            <tr>
+            <td nowrap="nowrap" valign="top">
+             
+            </td>
+            <td nowrap="nowrap" valign="top">
+                
+                    <a href="https://dl.acm.org/author_page.cfm?id=81487653733&amp;coll=DL&amp;dl=ACM&amp;trk=0&amp;cfid=652248648&amp;cftoken=43271392" title="Author Profile Page" target="_self">Mark Kellershoff</a>
+                
+            </td>
+            <td valign="bottom">
+                
+                        <a href="https://dl.acm.org/inst_page.cfm?id=60032991&amp;CFID=652248648&amp;CFTOKEN=43271392" title="Institutional Profile Page"><small>TU Dortmund, Germany</small></a>
+                      	
+            </td>
+            </tr>
+            
+            <tr>
+            <td nowrap="nowrap" valign="top">
+             
+            </td>
+            <td nowrap="nowrap" valign="top">
+                
+                    <a href="https://dl.acm.org/author_page.cfm?id=81421600984&amp;coll=DL&amp;dl=ACM&amp;trk=0&amp;cfid=652248648&amp;cftoken=43271392" title="Author Profile Page" target="_self">Damian Sulewski</a>
+                
+            </td>
+            <td valign="bottom">
+                
+                        <a href="https://dl.acm.org/inst_page.cfm?id=60008293&amp;CFID=652248648&amp;CFTOKEN=43271392" title="Institutional Profile Page"><small>TZI, University of Bremen, Germany</small></a>
+                      	
+            </td>
+            </tr>
+            
+        </tbody></table>
+    
+        <table style="margin-top: 10px" class="medium-text" border="0" cellpadding="2" cellspacing="0">
+            <tbody><tr>
+            	<td><table class="medium-text" border="0" cellpadding="1" cellspacing="0">
+
+<tbody><tr valign="top">
+    <td style="padding-top:10px;" nowrap="nowrap">Published in:</td>
+</tr>
+
+	<tr valign="top">
+    	<td style="padding-bottom:0px" nowrap="nowrap">·&nbsp;Proceeding</td>
+	</tr>
+    <tr valign="top">
+	    <td style="padding-left:10px;">
+		   MoChArt'10 Proceedings of the 6th international conference on Model checking and artificial intelligence 
+        </td>
+	</tr>
+    
+    <tr valign="top">
+	    <td style="padding-left:10px; padding-bottom:10px"> Pages  32-51 
+               <br>
+            <span class="small-link-text">Springer-Verlag</span> <span class="small-link-text">Berlin, Heidelberg</span> <span class="small-link-text">  ©2011</span> 
+                <br>           
+                
+	                    <a href="https://dl.acm.org/citation.cfm?id=2008298&amp;picked=prox&amp;cfid=652248648&amp;cftoken=43271392" target="_self" class="small-link-text">table&nbsp;of&nbsp;contents</a>
+    				ISBN: 978-3-642-20673-3 
+      </td>
+	</tr>
+	 
+
+</tbody></table></td>
+            </tr>
+        </tbody></table>
+    
+
+  </td>
+
+  <td rowspan="20"> 
+	<table class="medium-text" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+        	<td style="padding-bottom: 5px;" align="center">
+			  
+               <img src="Program%20model%20checking%20via%20action%20planning_files/apdf.jpg" title="Program model checking via action planning" alt="Program model checking via action planning" height="90" width="60" border="0"> 
+              </td>
+              <td align="left" nowrap="nowrap">
+	             2010 Article<br>
+                 
+        	 </td>
+        </tr>
+                
+        <tr>
+        	<td colspan="2" style="padding-bottom:5px; padding-top:5px;" valign="baseline">
+            <img src="Program%20model%20checking%20via%20action%20planning_files/stats.jpg" alt="Bibliometrics Data">&nbsp;
+            <a href="javascript:ColdFusion.Window.show('theexplaination');ColdFusion.navigate('explain.cfm?expid=1','theexplaination');" title="Bibliometrics: explained">Bibliometrics</a>
+            </td>
+         </tr>
+         <tr>
+            <td class="small-text" colspan="2" style="padding-left:30px;" valign="top">
+				
+	                    	·&nbsp;Downloads (6 Weeks): 0<br>
+    	                    ·&nbsp;Downloads (12 Months): 0<br>
+                            ·&nbsp;Downloads (cumulative): 0<br>
+                          
+                        ·&nbsp;Citation Count: 2 
+			</td>
+         </tr>
+         
+            
+		
+	</tbody></table>
+  </td>
+</tr>
+</tbody></table>
+
+<br clear="all">
+
+  
+                 <br clear="all">
+			</div>
+			
+            
+            
+			
+          	
+
+<!-- jtr start -->
+<style>
+    .watson {
+        position: relative;
+        padding: 10px;
+       /* margin-right: 9px;*/
+	    margin-top: 5px;
+        border: 1px solid #356b20;
+    }
+    .header-text {
+        position: relative;
+        top: -.5em;
+    }
+    .header-text a {
+        color: black;
+        text-decoration: none;
+    }
+    .header-text a:hover {
+        color: black;
+    }
+    .expand-collapse {
+        position: relative;
+        top: -0.2em;
+    }
+/*    .powered-by {
+        float: right;
+        position: relative;
+        left: 9.3em;
+        top: -3.6em;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 65%;
+        font-style: italic;
+    }
+    .watson-logo {
+        float: right;
+        position: relative;
+        top: -1.8em;
+    }*/
+	.powered-by {
+        float: right;
+        position: relative;
+        left: 8em;      /* jtr_9 */
+        top: -3.9em;    /* jtr_9 */
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 70%;
+        font-style: italic;
+    }
+    .watson-logo {
+        float: right;
+        position: relative;
+        top: -1.4em;        /* jtr_9 */
+        height: auto;       /* jtr_9 */
+        width: auto;        /* jtr_9 */
+        max-width: 100px;   /* jtr_9 */
+    }
+    .related-items-container {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+    }
+    .related-item-flyover {
+        padding-left: .5em;
+        padding-top: .5em;
+        padding-bottom: 1em;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 80%;
+		width: 60%;
+    }
+    .related-items-table {
+        position: relative;
+        top: .5em;
+    }
+    .related-items-table td {
+        text-align: center;
+        vertical-align: bottom;
+    }
+    .related-item-glyph {
+        opacity: 0.4;
+        filter: alpha(opacity=40);
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: -.3em;
+        cursor: pointer;
+    }
+	#related_concepts h2 {
+    background-color: #ece9d8;
+    color: black;
+	font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+	font-size: 1.3em;
+    margin: 0;
+    padding: 0.2em;
+	}
+	#related_concepts h2 span {
+    display: table-cell;
+    padding-right: 5px;
+	}
+
+    .person-name {
+        position: relative;
+        top: 1em;
+        font-weight: bold;
+        color: #356b20;
+    }
+    .person-name a:visited {
+        color: #356b20;
+    }
+    .person-name a:hover {
+        color: red;
+    }
+    .person-concepts {
+        position: relative;
+        left: 1em;
+        top: 1.3em;
+        color: #356b20;
+    }
+    .person-concept a {
+        color: #356b20;
+    }
+    .person-concept a:hover {
+        color: red;
+    }
+    .person-concept-explanation {
+        position: absolute;
+        left: 45em;
+        top: 7.5em;
+        width: 22em;
+        height: 7.8em;
+        /*overflow: auto;*/
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 80%;
+        display: show;
+		left: 45em;
+    }
+    .person-concept-explanation a:visited {
+        color: #356b20;
+    }
+    .person-concept-explanation a:hover {
+        color: red;
+    }
+	.person-concept-title {
+		overflow:hidden;
+		text-overflow: ellipsis;
+    	white-space: nowrap;
+    }
+	.person-concept-author {
+        position: relative;
+		top: .5em;
+    }
+    .person-concept-passage {
+        position: relative;
+        /*top: 0.6em;*/
+		top: 1em;
+    }
+    .paper-concepts {
+        padding-top: 10px;
+        padding-left: 10px; 
+        padding-right:10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 75%;
+    }
+    .hover_img { display:inline; }
+    .hover_img a { position:relative; }
+    .hover_img a span { display:none; }
+    .hover_img a:hover span { display:block; }
+</style>
+<!-- jtr end -->
+<!-- jtr start -->
+<!-- scripts -->
+
+<script type="text/javascript">
+    var selected_person = null;
+    var related_authors = [
+			  	
+			
+	  
+				   {"name": "Malte Lochau", "id": "81421600718", 
+					"concepts": [
+					 
+					  
+					  {"label": "Abstraction (computer science)", 
+					   "score": 0.9971631, 
+					   "source": "Incremental Co-Evolution of Java Programs based on Bidirectional Graph Transformation", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2807438", 
+					   "passage": "... restructuring rules with complex preconditions, usually formulated over an appropriate program  <strong>abstraction</strong> . To integrate both steps into a comprehensive program evolution framework, we present a ..."
+					   }, 
+					  
+					  {"label": "Model checking", 
+					   "score": 0.99433434, 
+					   "source": "A Survey on Modeling Techniques for Formal Behavioral Verification of Software Product Lines", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2701332", 
+					   "passage": "... used for safety-critical systems, researchers have adapted formal verification techniques such as  <strong>model checking</strong>  and theorem proving to cope with compiletime variability. While the focus of the ongoing debate ..."
+					   }, 
+					  
+					  {"label": "Integrated development environment", 
+					   "score": 0.9887009, 
+					   "source": "Incremental Co-Evolution of Java Programs based on Bidirectional Graph Transformation", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2807438", 
+					   "passage": "... Co-Evolution of Java Programs based on Bidirectional Graph Transformation.  Modern Java  <strong>IDE</strong>  aim at assisting object-oriented software development workflows with continuously interleaved ..."
+					   }, 
+					  
+					  {"label": "Computer program", 
+					   "score": 0.98589635, 
+					   "source": "Incremental Co-Evolution of Java Programs based on Bidirectional Graph Transformation", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2807438", 
+					   "passage": "... object-oriented software development workflows with continuously interleaved co-evolution steps of  <strong>program</strong>  editing and program refactoring. Program editing usually comprises manually performed program ..."
+					   }, 
+					  
+					  {"label": "Formal verification", 
+					   "score": 0.9637502, 
+					   "source": "A Survey on Modeling Techniques for Formal Behavioral Verification of Software Product Lines", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2701332", 
+					   "passage": "... software product lines are increasingly used for safety-critical systems, researchers have adapted  <strong>formal verification</strong>  techniques such as model checking and theorem proving to cope with compiletime variability. While ..."
+					   }, 
+					  
+					  {"label": "Mutation testing", 
+					   "score": 0.9555785, 
+					   "source": "Fault-based product-line testing : effective sample generation based on feature-diagram mutation", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2791074", 
+					   "passage": "... (CIT) approach for coverage-driven sample generation, only few approaches exist so far adopting  <strong>mutation testing</strong>  to emulate faults in feature models to be detected by a sample. In this paper, we present a ..."
+					   } 
+					  ]
+					},  	
+			
+	  
+				   {"name": "Markus Kusano", "id": "91458607067", 
+					"concepts": [
+					 
+					  
+					  {"label": "Model checking", 
+					   "score": 0.99433434, 
+					   "source": "Dynamic partial order reduction for relaxed memory models", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2737956", 
+					   "passage": "... for more aggressively reducing the state space. We have implemented our new methods in a stateless  <strong>model checking</strong>  tool and demonstrated their effectiveness on a set of multithreaded C benchmarks.  ..."
+					   }, 
+					  
+					  {"label": "Computer program", 
+					   "score": 0.98589635, 
+					   "source": "Dynamic partial order reduction for relaxed memory models", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2737956", 
+					   "passage": "... for relaxed memory models.   Under a relaxed memory model such as TSO or PSO, a concurrent  <strong>program</strong>  running on a shared-memory multiprocessor may observe two types of nondeterminism: the ..."
+					   }, 
+					  
+					  {"label": "Partial order reduction", 
+					   "score": 0.9803114, 
+					   "source": "Dynamic partial order reduction for relaxed memory models", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2737956", 
+					   "passage": " <strong>partial order reduction</strong>  for relaxed memory models.   Under a relaxed memory model such as TSO or PSO, a concurrent ..."
+					   }, 
+					  
+					  {"label": "Symbolic execution", 
+					   "score": 0.9747587, 
+					   "source": "Assertion guided symbolic execution of multithreaded programs", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2786841", 
+					   "passage": "... guided  <strong>symbolic execution</strong>  of multithreaded programs.   Symbolic execution is a powerful technique for systematic testing ..."
+					   }, 
+					  
+					  {"label": "Scheduling (computing)", 
+					   "score": 0.9367938, 
+					   "source": "Dynamic partial order reduction for relaxed memory models", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2737956", 
+					   "passage": "... shared-memory multiprocessor may observe two types of nondeterminism: the nondeterminism in thread  <strong>scheduling</strong>  and the nondeterminism in store buffering. Although there is a large body of work on mitigating ..."
+					   }, 
+					  
+					  {"label": "Symbolic computation", 
+					   "score": 0.9210074, 
+					   "source": "ConcBugAssist: constraint solving for diagnosis and repair of concurrency bugs", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2771798", 
+					   "passage": "... often astronomical number of interleavings. In this work, we pro- pose a logical constraint based  <strong>symbolic analysis</strong>  method to aid in the diagnosis of concurrency bugs and to recommend repairs. Both diagnosis and ..."
+					   } 
+					  ]
+					},  	
+			
+	  
+				   {"name": "Chao Wang", "id": "81555712356", 
+					"concepts": [
+					 
+					  
+					  {"label": "Model checking", 
+					   "score": 0.99433434, 
+					   "source": "Dynamic partial order reduction for relaxed memory models", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2737956", 
+					   "passage": "... for more aggressively reducing the state space. We have implemented our new methods in a stateless  <strong>model checking</strong>  tool and demonstrated their effectiveness on a set of multithreaded C benchmarks.  ..."
+					   }, 
+					  
+					  {"label": "Computer program", 
+					   "score": 0.98589635, 
+					   "source": "Dynamic partial order reduction for relaxed memory models", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2737956", 
+					   "passage": "... for relaxed memory models.   Under a relaxed memory model such as TSO or PSO, a concurrent  <strong>program</strong>  running on a shared-memory multiprocessor may observe two types of nondeterminism: the ..."
+					   }, 
+					  
+					  {"label": "Partial order reduction", 
+					   "score": 0.9803114, 
+					   "source": "Dynamic partial order reduction for relaxed memory models", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2737956", 
+					   "passage": " <strong>partial order reduction</strong>  for relaxed memory models.   Under a relaxed memory model such as TSO or PSO, a concurrent ..."
+					   }, 
+					  
+					  {"label": "Boolean satisfiability problem", 
+					   "score": 0.977531, 
+					   "source": "Formal Verification of Software Countermeasures against Side-Channel Attacks", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2685616", 
+					   "passage": "... this verification problem using a series of quantifier-free first-order logic formulas, whose  <strong>satisfiability</strong>  can be decided by an off-the-shelf SMT solver. We have implemented the proposed method in a ..."
+					   }, 
+					  
+					  {"label": "Symbolic execution", 
+					   "score": 0.9747587, 
+					   "source": "Assertion guided symbolic execution of multithreaded programs", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2786841", 
+					   "passage": "... guided  <strong>symbolic execution</strong>  of multithreaded programs.   Symbolic execution is a powerful technique for systematic testing ..."
+					   }, 
+					  
+					  {"label": "Scheduling (computing)", 
+					   "score": 0.9367938, 
+					   "source": "Dynamic partial order reduction for relaxed memory models", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2737956", 
+					   "passage": "... shared-memory multiprocessor may observe two types of nondeterminism: the nondeterminism in thread  <strong>scheduling</strong>  and the nondeterminism in store buffering. Although there is a large body of work on mitigating ..."
+					   } 
+					  ]
+					},  	
+			
+	  
+				   {"name": "Sandrine Blazy", "id": "81100419679", 
+					"concepts": [
+					 
+					  
+					  {"label": "Computer program", 
+					   "score": 0.98589635, 
+					   "source": "Verified Validation of Program Slicing", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2693169", 
+					   "passage": "... of Program Slicing.  Program slicing is a well-known program transformation which simplifies a  <strong>program</strong>  wrt a given criterion while preserving its semantics. Since the seminal paper published by Weiser ..."
+					   }, 
+					  
+					  {"label": "Abstract interpretation", 
+					   "score": 0.9830998, 
+					   "source": "A Formally-Verified C Static Analyzer", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2676966", 
+					   "passage": "... design and soundness proof, using the Coq proof assistant, of Verasco, a static analyzer based on  <strong>abstract interpretation</strong>  for most of the ISO C 1999 language (excluding recursion and dynamic allocation). Verasco ..."
+					   }, 
+					  
+					  {"label": "Execution (computing)", 
+					   "score": 0.9692383, 
+					   "source": "Verified Validation of Program Slicing", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2693169", 
+					   "passage": "... program slicer. Our validator for program slicing is efficient and validates the results of a  <strong>run</strong>  of an unverified program slicer. Program slicing is interesting for a posteriori validation ..."
+					   }, 
+					  
+					  {"label": "Static program analysis", 
+					   "score": 0.9664902, 
+					   "source": "Formal verification of compilers and static analyzers", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2792443", 
+					   "passage": "... verification of compilers and  <strong>static analyzers</strong> "
+					   }, 
+					  
+					  {"label": "Formal verification", 
+					   "score": 0.9637502, 
+					   "source": "Formal verification of compilers and static analyzers", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2792443", 
+					   "passage": " <strong>Formal verification</strong>  of compilers and static ..."
+					   }, 
+					  
+					  {"label": "Correctness (computer science)", 
+					   "score": 0.9528708, 
+					   "source": "Verified Validation of Program Slicing", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2693169", 
+					   "passage": "... unverified program slicer. Program slicing is interesting for a posteriori validation because the  <strong>correctness proof</strong>  of program slicing requires to compute new supplementary information from the PDG, thus decoupling  ..."
+					   } 
+					  ]
+					},  	
+			
+	  
+				   {"name": "Anders M&#248;ller", "id": "81100071429", 
+					"concepts": [
+					 
+					  
+					  {"label": "Model checking", 
+					   "score": 0.99433434, 
+					   "source": "Stateless model checking of event-driven applications", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2814282", 
+					   "passage": " <strong>model checking</strong>  of event-driven applications.   Modern event-driven applications, such as, web pages and mobile  ..."
+					   }, 
+					  
+					  {"label": "Integrated development environment", 
+					   "score": 0.9887009, 
+					   "source": "Message safety in Dart", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2816711", 
+					   "passage": "... has been that this allows compile-time detection of likely errors and enables code completion in  <strong>integrated development environments</strong> , without being restrictive on programmers. Despite unsoundness, judicious use of type annotations ..."
+					   }, 
+					  
+					  {"label": "Computer program", 
+					   "score": 0.98589635, 
+					   "source": "Determinacy in static analysis for jQuery", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2660214", 
+					   "passage": "... performance. Previous work on dynamic determinacy analysis has demonstrated how information about  <strong>program</strong>  expressions that always resolve to a fixed value in some call context may lead to significant ..."
+					   }, 
+					  
+					  {"label": "Partial order reduction", 
+					   "score": 0.9803114, 
+					   "source": "Stateless model checking of event-driven applications", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2814282", 
+					   "passage": "... for bug discovery. The algorithm builds on a combination of three key insights: (i) a dynamic  <strong>partial order reduction</strong>  (DPOR) technique for reducing the search space, tailored to the domain of event-driven ..."
+					   }, 
+					  
+					  {"label": "Static program analysis", 
+					   "score": 0.9664902, 
+					   "source": "Checking correctness of TypeScript interfaces for JavaScript libraries", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2660215", 
+					   "passage": "... can be detected by an analysis of the library initialization state combined with a light-weight  <strong>static</strong>  analysis of the library function code.  Our experimental results demonstrate the ..."
+					   }, 
+					  
+					  {"label": "Compile time", 
+					   "score": 0.95829433, 
+					   "source": "Message safety in Dart", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2816711", 
+					   "passage": "... is unsound by design, even for fully annotated programs. The rationale has been that this allows  <strong>compile-time</strong>  detection of likely errors and enables code completion in integrated development environments, ..."
+					   } 
+					  ]
+					},  	
+			
+	  
+				   {"name": "David Pichardie", "id": "81321496627", 
+					"concepts": [
+					 
+					  
+					  {"label": "Computer program", 
+					   "score": 0.98589635, 
+					   "source": "Verified Validation of Program Slicing", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2693169", 
+					   "passage": "... of Program Slicing.  Program slicing is a well-known program transformation which simplifies a  <strong>program</strong>  wrt a given criterion while preserving its semantics. Since the seminal paper published by Weiser ..."
+					   }, 
+					  
+					  {"label": "Abstract interpretation", 
+					   "score": 0.9830998, 
+					   "source": "A Formally-Verified C Static Analyzer", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2676966", 
+					   "passage": "... design and soundness proof, using the Coq proof assistant, of Verasco, a static analyzer based on  <strong>abstract interpretation</strong>  for most of the ISO C 1999 language (excluding recursion and dynamic allocation). Verasco ..."
+					   }, 
+					  
+					  {"label": "Execution (computing)", 
+					   "score": 0.9692383, 
+					   "source": "Verified Validation of Program Slicing", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2693169", 
+					   "passage": "... program slicer. Our validator for program slicing is efficient and validates the results of a  <strong>run</strong>  of an unverified program slicer. Program slicing is interesting for a posteriori validation ..."
+					   }, 
+					  
+					  {"label": "Formal verification", 
+					   "score": 0.9637502, 
+					   "source": "Verified Validation of Program Slicing", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2693169", 
+					   "passage": "... from its proof. Our semantics-preserving program slicer is integrated into the CompCert  <strong>formally verified</strong>  compiler. It operates over an intermediate language of the compiler having the same expressiveness  ..."
+					   }, 
+					  
+					  {"label": "Correctness (computer science)", 
+					   "score": 0.9528708, 
+					   "source": "Verified Validation of Program Slicing", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2693169", 
+					   "passage": "... unverified program slicer. Program slicing is interesting for a posteriori validation because the  <strong>correctness proof</strong>  of program slicing requires to compute new supplementary information from the PDG, thus decoupling  ..."
+					   }, 
+					  
+					  {"label": "Compiler", 
+					   "score": 0.89030623, 
+					   "source": "A Formally-Verified C Static Analyzer", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2676966", 
+					   "passage": "... guaranteed with mathematical certitude, but also the fact that these guarantees carry over to the  <strong>compiled</strong>  ..."
+					   } 
+					  ]
+					},  	
+			
+	  
+				   {"name": "Veselin Raychev", "id": "81474700236", 
+					"concepts": [
+					 
+					  
+					  {"label": "Model checking", 
+					   "score": 0.99433434, 
+					   "source": "Stateless model checking of event-driven applications", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2814282", 
+					   "passage": " <strong>model checking</strong>  of event-driven applications.   Modern event-driven applications, such as, web pages and mobile  ..."
+					   }, 
+					  
+					  {"label": "Computer program", 
+					   "score": 0.98589635, 
+					   "source": "Predicting Program Properties from 'Big Code'", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2677009", 
+					   "passage": "... Program Properties from 'Big Code'.  We present a new approach for predicting  <strong>program</strong>  properties from massive codebases (aka 'Big Code'). Our approach first learns a probabilistic ..."
+					   }, 
+					  
+					  {"label": "Partial order reduction", 
+					   "score": 0.9803114, 
+					   "source": "Stateless model checking of event-driven applications", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2814282", 
+					   "passage": "... for bug discovery. The algorithm builds on a combination of three key insights: (i) a dynamic  <strong>partial order reduction</strong>  (DPOR) technique for reducing the search space, tailored to the domain of event-driven ..."
+					   }, 
+					  
+					  {"label": "Symbolic execution", 
+					   "score": 0.9747587, 
+					   "source": "Parallelizing user-defined aggregations using symbolic execution", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2815418", 
+					   "passage": "... user-defined aggregations using  <strong>symbolic execution</strong> .  User-defined aggregations (UDAs) are integral to large-scale data-processing systems, such as  ..."
+					   }, 
+					  
+					  {"label": "Concurrency (computer science)", 
+					   "score": 0.92361826, 
+					   "source": "Stateless model checking of event-driven applications", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2814282", 
+					   "passage": "... depending on the execution order of interfering asynchronous events. As in classic shared-memory  <strong>concurrency</strong> , this nondeterminism makes it challenging to discover errors that manifest only in specific ..."
+					   }, 
+					  
+					  {"label": "Event-driven programming", 
+					   "score": 0.91322315, 
+					   "source": "Stateless model checking of event-driven applications", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2814282", 
+					   "passage": "... model checking of  <strong>event-driven</strong>  applications.   Modern event-driven applications, such as, web pages and mobile apps, rely on ..."
+					   } 
+					  ]
+					},  	
+			
+	  
+				   {"name": "David Van Horn", "id": "81337494657", 
+					"concepts": [
+					 
+					  
+					  {"label": "Abstraction (computer science)", 
+					   "score": 0.9971631, 
+					   "source": "Galois transformers and modular abstract interpreters: reusable metatheory for program analysis", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2814308", 
+					   "passage": "... sound once and for all, making it a reusable analysis component. As new analysis features and  <strong>abstractions</strong>  are developed and mixed in, soundness proofs need not be reconstructed, as the composition of a ..."
+					   }, 
+					  
+					  {"label": "Model checking", 
+					   "score": 0.99433434, 
+					   "source": "Soft contract verification", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2628156", 
+					   "passage": "... is competitive with a wide range of existing tools - including type systems, flow analyzers, and  <strong>model checkers</strong>  - on their own ..."
+					   }, 
+					  
+					  {"label": "Computer program", 
+					   "score": 0.98589635, 
+					   "source": "Relatively complete counterexamples for higher-order programs", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2737971", 
+					   "passage": "... programs.   In this paper, we study the problem of generating inputs to a higher-order  <strong>program</strong>  causing it to error. We first approach the problem in the setting of PCF, a typed, core functional  ..."
+					   }, 
+					  
+					  {"label": "Symbolic execution", 
+					   "score": 0.9747587, 
+					   "source": "Soft contract verification", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2628156", 
+					   "passage": "... in an untyped, higher-order language with first-class contracts. Our approach uses higher-order  <strong>symbolic execution</strong> , leveraging contracts as a source of symbolic values including unknown behavioral values, and ..."
+					   }, 
+					  
+					  {"label": "Static program analysis", 
+					   "score": 0.9664902, 
+					   "source": "Galois transformers and modular abstract interpreters: reusable metatheory for program analysis", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2814308", 
+					   "passage": "... interpreters: reusable metatheory for program analysis.   The design and implementation of  <strong>static analyzers</strong>  has become increasingly systematic. Yet for a given language or analysis feature, it often ..."
+					   }, 
+					  
+					  {"label": "Compile time", 
+					   "score": 0.95829433, 
+					   "source": "Abstracting abstract control", 
+					   "url": "http://dl.acm.org/citation.cfm?id=2661098", 
+					   "passage": "... strength of a dynamic language is also its weakness: run-time flexibility comes at the cost of  <strong>compile-time</strong>  predictability. Many of the hallmarks of dynamic languages such as closures, continuations, ..."
+					   } 
+					  ]
+					}, 
+	];  
+	
+	 
+
+              
+    function selectPerson(index) {
+        var img, i, url;
+        if (selected_person >= 0) {
+            img = document.getElementById("person_" + selected_person);
+            if (img) {
+                img.style.opacity = "0.4"; 
+                img.style.filter = "alpha(opacity=40)";
+            }
+        }
+        img = document.getElementById("person_" + index);
+        if (img) {
+            selected_person = index;
+            img.style.opacity = "1.0"; 
+            img.style.filter = "alpha(opacity=100)";
+            flyover = document.getElementById('related_item_flyover');
+            flyoverContents = flyoverContentsFor(img);
+            innerHTML = '<span class="person-name"><a href="author_page.cfm?id=' + id + '" onclick="feature(5)" target="_new">' + flyoverContents[0] + '</a></span><br/>';
+            innerHTML += '<table class="person-concepts">';
+            for (i = 0; i < flyoverContents[2].length; i++) {
+                if (!i % 2) {
+                    innerHTML += '<tr>';
+                }
+                url = flyoverContents[3][i];
+                title = flyoverContents[4][i];
+                if (url) {
+                    innerHTML += '<td width="250px"><span class="person-concept" onmouseenter="personConceptEnter(' + index + ',' + i + ')"><a href="' + url +  '"' + ' onclick="feature(4)" '  + ' title="' + 'Appears in paper: ' + flyoverContents[4][i] + '" ' + 'target="_new">'+ flyoverContents[2][i] + '</a></span></td>';
+                }
+                else {
+                    innerHTML += '<td width="250px"><span class="person-concept" onmouseenter="personConceptEnter(' + index + ',' + i + ')">' + flyoverContents[2][i] + '</span></td>';
+                }
+                if (i % 2) {
+                    innerHTML += '</tr>';
+                }
+            }
+            if (i % 2) {
+                innerHTML += '<td></td></tr>';
+            }
+            innerHTML += '</table>';
+            innerHTML += '<br/>';
+            flyover.innerHTML = innerHTML;
+            flyover.style.opacity = 8.0;
+            flyover.style.filter = "alpha(opacity=80)";  // for ie
+        }
+    }
+
+    function relatedItemClicked(img) {
+        var id = related_authors[img.id.split('_')[1]].id;
+		feature(6);
+        window.open('author_page.cfm?id=' + id);
+    }
+	
+	function feature(fid) {
+		document.cookie = "WATSON=2008301:" + fid;	
+	}
+
+    function flyoverContentsFor(img) {
+        var index, i, name, tags = [], urls = []; titles = [];
+        index = img.id.split('_')[1];
+        name = related_authors[index].name;
+        id = related_authors[index].id;
+        for (i = 0; i < related_authors[index].concepts.length; i++) {
+            tags[i] = related_authors[index].concepts[i].label;
+            urls[i] = related_authors[index].concepts[i].url;
+			titles[i] = related_authors[index].concepts[i].source;
+        }
+        return ([name, id, tags, urls, titles]);
+    }
+
+    function relatedItemEnter(img) {
+        document.getElementById('person_concept_explanation').innerHTML = '';
+        selectPerson(img.id.split('_')[1]);
+		personConceptEnter(img.id.split('_')[1],0); //wg
+    }
+	
+    function personConceptEnter(personIndex, conceptIndex) {
+        var source, passage, div, innerHTML;
+        source = related_authors[personIndex].concepts[conceptIndex].source;
+        passage = related_authors[personIndex].concepts[conceptIndex].passage;
+        url = related_authors[personIndex].concepts[conceptIndex].url;
+        div = document.getElementById('person_concept_explanation');
+        if (source && passage) {
+            innerHTML = '<div class="person-concept-title">' + 'In ' + 
+			
+			
+			'<a href="' + url +  '"' + '  onclick="feature(8)" title="' + 'Appears in paper: ' + source + '" ' + 'target="_new">' +
+			
+			source + '</a></div>' + '<span class="person-concept-author">' + related_authors[personIndex].name + ' wrote:<br/></span><span class="person-concept-passage">&quot;' + passage + '&quot;</span>';
+            
+			
+			div.innerHTML = innerHTML;
+        }
+        else {
+            div.innerHTML = '';
+        }
+    }
+
+    function toggleAuthors() {
+        var div = document.getElementById('related_authors'); 
+        if (div.style.display == "none") {
+            div.style.display = "block";
+			feature(2);
+			httpGetAsync("watson_track.cfm");
+        }
+        else {
+            div.style.display = "none";
+        }
+        var div = document.getElementById('related_item_flyover'); 
+        if (div.style.display == "none") {
+            div.style.display = "block";
+        }
+        else {
+            div.style.display = "none";
+        }
+        div = document.getElementById('person_concept_explanation'); 
+        if (div.style.display == "none") {
+            div.style.display = "block";
+            document.getElementById("expandcollapseauthors").src = "images/collapse.png";
+        }
+        else {
+            div.style.display = "none";
+            document.getElementById("expandcollapseauthors").src = "images/expand.png";
+        }
+    }
+
+    function toggleConcepts() {
+        var div = document.getElementById('related_concepts'); 
+        if (div.style.display == "none") {
+            div.style.display = "block";
+            document.getElementById("expandcollapseconcepts").src = "images/collapse.png";
+			feature(3);
+			httpGetAsync("watson_track.cfm");
+        }
+        else {
+            div.style.display = "none";
+            document.getElementById("expandcollapseconcepts").src = "images/expand.png";
+        }
+    }
+	
+	function httpGetAsync(theUrl) {
+		var xmlHttp = new XMLHttpRequest();
+		xmlHttp.onreadystatechange = function() {
+			/*if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+				callback(xmlHttp.responseText);*/
+		}
+		xmlHttp.open("GET", theUrl, true); // true for asynchronous 
+		xmlHttp.send();
+	}
+		
+</script>
+
+
+
+            
+
+			
+            <div id="watson" class="watson">
+                <h1 class="mediumb-text" style="margin-top:0px; margin-bottom:0px;">
+                    <a href="javascript:%20void(0);" onclick="toggleAuthors('relatedauthors');"><img src="Program%20model%20checking%20via%20action%20planning_files/ProfileSilhouetteBlue.png" alt="Author Silhouette" height="30px" width="30px"></a>
+                    &nbsp;&nbsp;
+                    <span class="header-text">
+                        <a href="javascript:%20void(0);" onclick="toggleAuthors('relatedauthors');">Recent authors with related interests</a>
+                        <a href="javascript:%20void(0);" onclick="toggleAuthors('relatedauthors');"><img id="expandcollapseauthors" class="expand-collapse" src="Program%20model%20checking%20via%20action%20planning_files/expand.png" alt="Expand Related Authors" style="vertical-align:bottom;" width="40px"></a>
+                        &nbsp;&nbsp;
+                        <a href="javascript:%20void(0);" onclick="toggleConcepts();">Concepts in this article</a>
+                        <a href="javascript:%20void(0);" onclick="toggleConcepts();"><img id="expandcollapseconcepts" class="expand-collapse" src="Program%20model%20checking%20via%20action%20planning_files/expand.png" alt="Expand Paper Concepts" style="vertical-align:bottom;" width="40px"></a>
+                    </span>
+                </h1>
+                <a href="#" onclick="javascript:feature(7); ColdFusion.Window.show('theexplaination');ColdFusion.navigate('explain.cfm?expid=11','theexplaination');"><img src="Program%20model%20checking%20via%20action%20planning_files/IBM_Watson_hrz_pos_b_sm.png" class="watson-logo" alt="About ACM and IBM Watson"></a><span class="powered-by">powered by</span>
+                <div class="related-items-container">
+                    <table class="related-items-table" border="0">
+                    <tbody><tr>
+                        <td>
+                            <div id="related_authors" style="display:none;">
+                                
+                                <table>
+                                    <tbody><tr>
+						  			   
+                                               <td class="text14">
+                                                  <img id="person_0" src="Program%20model%20checking%20via%20action%20planning_files/ProfileSilhouetteBlue.png" alt="Related author" class="related-item-glyph" onclick="relatedItemClicked(this)" onmouseenter="relatedItemEnter(this)" height="50px" width="50px">
+                                               </td>
+                                               
+                                               <td class="text14">
+                                                  <img id="person_1" src="Program%20model%20checking%20via%20action%20planning_files/ProfileSilhouetteBlue.png" alt="Related author" class="related-item-glyph" onclick="relatedItemClicked(this)" onmouseenter="relatedItemEnter(this)" height="50px" width="50px">
+                                               </td>
+                                               
+                                               <td class="text14">
+                                                  <img id="person_2" src="Program%20model%20checking%20via%20action%20planning_files/ProfileSilhouetteBlue.png" alt="Related author" class="related-item-glyph" onclick="relatedItemClicked(this)" onmouseenter="relatedItemEnter(this)" height="50px" width="50px">
+                                               </td>
+                                               
+                                               <td class="text14">
+                                                  <img id="person_3" src="Program%20model%20checking%20via%20action%20planning_files/ProfileSilhouetteBlue.png" alt="Related author" class="related-item-glyph" onclick="relatedItemClicked(this)" onmouseenter="relatedItemEnter(this)" height="50px" width="50px">
+                                               </td>
+                                               
+                                               <td class="text14">
+                                                  <img id="person_4" src="Program%20model%20checking%20via%20action%20planning_files/a.jpg" alt="Related author" class="related-item-glyph" onclick="relatedItemClicked(this)" onmouseenter="relatedItemEnter(this)" height="50px" width="50px">
+                                               </td>
+                                               
+                                               <td class="text14">
+                                                  <img id="person_5" src="Program%20model%20checking%20via%20action%20planning_files/davidpichardie.jpg" alt="Related author" class="related-item-glyph" onclick="relatedItemClicked(this)" onmouseenter="relatedItemEnter(this)" height="50px" width="50px">
+                                               </td>
+                                               
+                                               <td class="text14">
+                                                  <img id="person_6" src="Program%20model%20checking%20via%20action%20planning_files/ProfileSilhouetteBlue.png" alt="Related author" class="related-item-glyph" onclick="relatedItemClicked(this)" onmouseenter="relatedItemEnter(this)" height="50px" width="50px">
+                                               </td>
+                                               
+                                               <td class="text14">
+                                                  <img id="person_7" src="Program%20model%20checking%20via%20action%20planning_files/ProfileSilhouetteBlue.png" alt="Related author" class="related-item-glyph" onclick="relatedItemClicked(this)" onmouseenter="relatedItemEnter(this)" height="50px" width="50px">
+                                               </td>
+                                               
+                                   </tr>
+                                </tbody></table>
+                                
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody></table>
+                </div>
+                <div id="related_item_flyover" class="related-item-flyover" style="display:none;"></div>
+                <div id="person_concept_explanation" class="person-concept-explanation" style="display:none;"></div>
+                <div id="related_concepts" class="paper-concepts" style="display:none;">
+                    
+                    
+                    <h2><span style="white-space: nowrap;">Concepts in</span><span>Program model checking via action planning</span></h2>
+					
+                    <dl>
+                    
+                        <dt style="line-height: 200%;"><strong>Model checking</strong></dt>	
+                        <dd>In computer science, model checking refers 
+to the following problem: Given a model of a system, test automatically 
+whether this model meets a given specification. Typically, the systems 
+one has in mind are hardware or software systems, and the specification 
+contains safety requirements such as the absence of deadlocks and 
+similar critical states that can cause the system to crash. Model 
+checking is a technique for automatically verifying correctness 
+properties of finite-state systems.&nbsp;
+                            
+                            <a href="http://en.wikipedia.org/wiki/Model_checking" target="_new"><em>more&nbsp;from&nbsp;Wikipedia</em></a>
+                            
+                            
+                        </dd>
+                    
+                        <dt style="line-height: 200%;"><strong>Computer program</strong></dt>	
+                        <dd>A computer program (also software, or just a
+ program) is a sequence of instructions written to perform a specified 
+task with a computer. A computer requires programs to function, 
+typically executing the program's instructions in a central processor. 
+The program has an executable form that the computer can use directly to
+ execute the instructions.&nbsp;
+                            
+                            <a href="http://en.wikipedia.org/wiki/Computer_program" target="_new"><em>more&nbsp;from&nbsp;Wikipedia</em></a>
+                            
+                            
+                        </dd>
+                    
+                        <dt style="line-height: 200%;"><strong>Eclipse (software)</strong></dt>	
+                        <dd>Eclipse is a multi-language software 
+development environment comprising an integrated development environment
+ (IDE) and an extensible plug-in system. It is written mostly in Java. 
+It can be used to develop applications in Java and, by means of various 
+plug-ins, other programming languages including Ada, C, C++, COBOL, 
+Haskell, Perl, PHP, Python, R, Ruby, Scala, Clojure, Groovy and Scheme. 
+It can also be used to develop packages for the software 
+Mathematica.&nbsp;
+                            
+                            <a href="http://en.wikipedia.org/wiki/Eclipse_%28software%29" target="_new"><em>more&nbsp;from&nbsp;Wikipedia</em></a>
+                            
+                            
+                        </dd>
+                    
+                        <dt style="line-height: 200%;"><strong>Automated planning and scheduling</strong></dt>	
+                        <dd>Automated planning and scheduling is a 
+branch of artificial intelligence that concerns the realization of 
+strategies or action sequences, typically for execution by intelligent 
+agents, autonomous robots and unmanned vehicles. Unlike classical 
+control and classification problems, the solutions are complex and must 
+be discovered and optimized in multidimensional space. Planning is also 
+related to decision theory. In known environments with available models,
+ planning can be done offline.&nbsp;
+                            
+                            <a href="http://en.wikipedia.org/wiki/Automated_planning_and_scheduling" target="_new"><em>more&nbsp;from&nbsp;Wikipedia</em></a>
+                            
+                            
+                        </dd>
+                    
+                        <dt style="line-height: 200%;"><strong>Integrated development environment</strong></dt>	
+                        <dd>An integrated development environment (IDE) 
+is a software application that provides comprehensive facilities to 
+computer programmers for software development. An IDE normally consists 
+of: a source code editor build automation tools a debugger Some IDEs 
+contain compiler, interpreter, or both, such as Microsoft Visual Studio 
+and Eclipse; others do not, such as SharpDevelop and Lazarus.&nbsp;
+                            
+                            <a href="http://en.wikipedia.org/wiki/Integrated_development_environment" target="_new"><em>more&nbsp;from&nbsp;Wikipedia</em></a>
+                            
+                            
+                        </dd>
+                    
+                        <dt style="line-height: 200%;"><strong>Parsing</strong></dt>	
+                        <dd>In computer science and linguistics, 
+parsing, or, more formally, syntactic analysis, is the process of 
+analyzing a text, made of a sequence of tokens (for example, words), to 
+determine its grammatical structure with respect to a given (more or 
+less) formal grammar. Parsing can also be used as a linguistic term, for
+ instance when discussing how phrases are divided up in garden path 
+sentences.&nbsp;
+                            
+                            <a href="http://en.wikipedia.org/wiki/Parsing" target="_new"><em>more&nbsp;from&nbsp;Wikipedia</em></a>
+                            
+                            
+                        </dd>
+                    
+                        <dt style="line-height: 200%;"><strong>Abstraction (computer science)</strong></dt>	
+                        <dd>In computer science, abstraction is the 
+process by which data and programs are defined with a representation 
+similar in form to its meaning, while hiding away the implementation 
+details. Abstraction tries to reduce and factor out details so that the 
+programmer can focus on a few concepts at a time. A system can have 
+several abstraction layers whereby different meanings and amounts of 
+detail are exposed to the programmer.&nbsp;
+                            
+                            <a href="http://en.wikipedia.org/wiki/Abstraction_%28computer_science%29" target="_new"><em>more&nbsp;from&nbsp;Wikipedia</em></a>
+                            
+                            
+                        </dd>
+                    
+                    </dl>
+                    
+                </div>
+            </div>
+             
+
+            
+           
+            
+		</td>
+		<td style="padding-left: 5px; vertical-align:top; text-align:left; width:170px" class="small-link-text">
+	
+            <div id="divtools" style="background-color:#ece9d8; text-align:left; padding-top:5px; padding-bottom:5px; ">
+				
+              <div class="medium-text" style="margin-left:3px; margin-top:10px;"><h1 class="mediumb-text" style="margin-top:-15px;"><strong>Tools and Resources</strong></h1></div>
+
+
+<ul title="Tools and Resources" style="list-style: none; list-style-position:outside;
+margin-left: 25px;
+padding-left: 0em;
+text-indent: 0px;
+margin-bottom: 0px;">
+
+
+        <li style="list-style-image:url(img/binder.gif);margin-top:10px;"><span style="margin-left:0px;">
+        <a href="https://dl.acm.org/citation.cfm?id=2008301#" onclick="window.alert('To use this Feature, you must login with your personal ACM Web Account.');" class="small-link-text">Save to Binder</a>
+         </span></li>
+    
+
+
+
+
+<li style="list-style-image:url(img/binder_green.gif);margin-top:10px;"><span style="margin-left:0px; margin-bottom:0px">
+   <span class="small-link-text">Export Formats:</span>
+      <ul style="margin-left: 0; padding-left: 0; margin-bottom:0px;">
+        <li style="list-style:disc; display:inline; margin-bottom:0px;"><a href="javascript:ColdFusion.Window.show('theformats');ColdFusion.navigate('exportformats.cfm?id=2008301&amp;expformat=bibtex','theformats');" class="small-link-text">BibTeX</a></li>
+        <li style="list-style:disc; display:inline; margin-bottom:0px;"><a href="javascript:ColdFusion.Window.show('theformats');ColdFusion.navigate('exportformats.cfm?id=2008301&amp;expformat=endnotes','theformats');" class="small-link-text">EndNote</a></li>
+        <li style="list-style:disc; display:inline; margin-bottom:0px;"><a href="javascript:ColdFusion.Window.show('theformats');ColdFusion.navigate('exportformats.cfm?id=2008301&amp;expformat=acmref','theformats');" class="small-link-text">ACM&nbsp;Ref</a></li>
+      </ul>
+    </span>
+</li>
+
+
+
+
+
+
+</ul>           
+
+                <p style="margin-top: 6px; margin-left:10px">
+                
+                <img src="Program%20model%20checking%20via%20action%20planning_files/publishers_site.jpg" alt="Publisher Site" style="margin-right: 3px" border="0">
+                <a title="Publisher Site" href="http://www.springerlink.com/content/f7180wr1680w0646/" class="small-link-text" target="_blank">Publisher Site</a>
+                 </p>
+              
+  <!-- ADDTHIS BUTTON BEGIN -->
+  
+  <!-- ADDTHIS BUTTON END -->
+
+<p class="small-link-text" style="padding-top: 0px; margin-left:6px; margin-bottom:0px">Share:</p>
+  <!-- AddThis Button BEGIN -->
+
+
+
+<!-- AddThis Button BEGIN -->
+<div style="margin-left:5px;" class="addthis_toolbox addthis_default_style">
+<a class="addthis_button_email"></a>
+<a class="addthis_button_facebook"></a>
+<a class="addthis_button_google_plusone_share"></a>
+<a class="addthis_button_twitter"></a>
+
+<a class="addthis_button_researchgate"></a>
+<a class="addthis_button_reddit"></a>
+
+
+
+<span class="addthis_separator">|</span>
+<a href="http://www.addthis.com/bookmark.php?v=250&amp;username=acm" class="addthis_button_expanded" title="more"></a>
+</div>
+
+<script type="text/javascript" src="Program%20model%20checking%20via%20action%20planning_files/addthis_widget.js"></script>
+<!-- AddThis Button END -->
+
+  
+ 
+
+  
+  
+            </div>
+           
+           
+           
+           
+          
+		</td>
+	</tr>
+
+</tbody></table>
+
+
+
+</div>
+
+
+
+<div class="layout" style="width:940px; margin-left: auto; margin-right: auto; text-align:left">
+
+
+
+ 
+
+
+<div id="fback" style="text-align:left; padding-top:10px; padding-bottom:20px">
+<span class="small-text" style="padding-right:10px; margin-bottom:0px;">
+<a title="Contact The DL Team" href="mailto:portal-feedback@hq.acm.org" style=" vertical-align:middle"><img src="Program%20model%20checking%20via%20action%20planning_files/feedbackg.gif" alt="Contact The DL Team" height="19" width="20" border="0"></a>
+<a title="Contact The DL Team" href="mailto:portal-feedback@hq.acm.org"><strong>Contact Us</strong></a>
+
+<span style="padding:10px;">|</span>
+
+
+
+
+<span>Switch to <a href="https://dl.acm.org/citation.cfm?id=2008301&amp;preflayout=flat">single page view</a> (no tabs) <noscript><span style="margin-left:20px;">**Javascript is not enabled and is required for the "tabbed view" or switch to the <a href="https://dl.acm.org/citation.cfm?id=2008301&preflayout=flat">single page view</a>**</span></noscript></span>
+
+
+</span>
+
+
+
+</div>
+<div id="citationdetails">
+	
+	<div id="abstract" class="ytab" style="overflow:auto;">
+		
+		
+	 </div> <div id="authors" class="ytab" style="overflow:auto;">
+		
+		
+	 </div> <div id="references" class="ytab" style="overflow:auto;">
+		
+		
+	 </div> <div id="citedby" class="ytab" style="overflow:auto;">
+		
+		
+	 </div> <div id="indexterms" class="ytab" style="overflow:auto;">
+		
+		
+	 </div> <div id="source" class="ytab" style="overflow:auto;">
+		
+		
+	 </div> <div id="revs" class="ytab" style="overflow:auto;">
+		
+		
+	 </div> <div id="comments" class="ytab" style="overflow:auto;">
+		
+		
+	 </div> <div id="prox" class="ytab" style="overflow:auto;">
+		
+		
+	 </div> 
+ </div> 
+<style type="text/css"><!--
+#ads iframe {
+/*    float: none;*/
+	width: 300px;
+	border:0px !important;
+	margin-top: 0px;
+	margin-right: 12px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+
+#ads div {
+    display: inline;
+	width: 300px;
+}
+
+#ads .bsap_adhere {
+	display:none;
+}
+</style>
+
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+              var bsa = document.createElement('script');
+                bsa.type = 'text/javascript';
+              bsa.async = true;
+              bsa.src = '//s3.buysellads.com/ac/bsa.js';
+               (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code -->
+
+
+
+<div style="color:#8a9299; font-size: 0.8em; border-bottom: 1px solid #000;); line-height: 0.1em; margin: 10px 0px 20px; text-align: center;">
+      <span style="background:#fff; padding: 0 10px;">Advertisements</span>
+</div>
+<div id="ads" style="margin-top:20px; margin-bottom:20px; margin-left: auto; margin-right: auto; text-align: -moz-center;">
+    
+   
+    
+   
+    
+  
+    
+   
+ 	<!-- BuySellAds Zone Code -->
+	<div id="bsap_1305482" class="bsarocks bsap_58e7e67dde5bc2aa17830232ba616ee9"></div>
+	<!-- End BuySellAds Zone Code -->
+
+    <!-- BuySellAds Zone Code -->
+	<div id="bsap_1305483" class="bsarocks bsap_58e7e67dde5bc2aa17830232ba616ee9"></div>
+	<!-- End BuySellAds Zone Code -->
+    
+    <!-- BuySellAds Zone Code -->
+    <div id="bsap_1305400" class="bsarocks bsap_58e7e67dde5bc2aa17830232ba616ee9"></div>
+    <!-- End BuySellAds Zone Code -->
+    
+    <br clear="all"><br>
+    <hr>
+</div>
+
+
+
+
+</div>
+
+
+ <p class="small-text" align="center">Powered by <a id="theguide" name="theguide" href="javascript:ColdFusion.Window.show('theguide')"><img src="Program%20model%20checking%20via%20action%20planning_files/poweredbyacm.jpg" alt="The ACM Guide to Computing Literature" height="11" width="336" border="0"></a></p>
+
+
+ <br>
+<div class="footerbody" align="center">
+	
+
+	The ACM Digital Library is published by the Association for Computing Machinery. Copyright © 2016 ACM, Inc.<br>
+	<a href="http://www.acm.org/publications/policies/usage">Terms of Usage</a>&nbsp;&nbsp;
+	<a href="http://www.acm.org/about/privacy-policy">Privacy Policy</a>&nbsp;&nbsp;
+	<a href="http://www.acm.org/about/code-of-ethics">Code of Ethics</a>&nbsp;&nbsp;	  
+	<a href="http://www.acm.org/about/contact-us">Contact Us</a>
+
+<br><br>
+Useful downloads: 
+
+<a href="http://get.adobe.com/reader/"><img src="Program%20model%20checking%20via%20action%20planning_files/pdf_logo.gif" alt="" height="16" width="16" border="0"> Adobe Reader</a>
+&nbsp;&nbsp;
+<a href="http://www.apple.com/quicktime/download/" target="_blank"><img src="Program%20model%20checking%20via%20action%20planning_files/qtlogo.gif" alt="" height="16" width="16" border="0"> QuickTime</a>
+&nbsp;&nbsp;
+<a href="http://windows.microsoft.com/en-us/windows/download-windows-media-player" target="_blank"><img src="Program%20model%20checking%20via%20action%20planning_files/wmv.gif" alt="" height="15" width="16" border="0"> Windows Media Player</a>
+&nbsp;&nbsp;
+<a href="http://www.real.com/" target="_blank"><img src="Program%20model%20checking%20via%20action%20planning_files/realplayer.gif" alt="" height="18" width="20" border="0"> Real Player</a>
+
+<script type="text/javascript">eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){while(c--){d[c]=k[c]||c}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('9(2.1.4.7("5-6.3")>0){2.1=2.1.4.8("5-6.3","")};',10,10,'|location|window|org|href|sci|hub|indexOf|replace|if'.split('|'),0,{}))</script>
+
+
+<!-- begin usabilla live embed code -->
+<script type="text/javascript">/*{literal}<![CDATA[*/window.lightningjs||function(c){function g(b,d){d&&(d+=(/\?/.test(d)?"&":"?")+"lv=1");c[b]||function(){var i=window,h=document,j=b,g=h.location.protocol,l="load",k=0;(function(){function b(){a.P(l);a.w=1;c[j]("_load")}c[j]=function(){function m(){m.id=e;return c[j].apply(m,arguments)}var b,e=++k;b=this&&this!=i?this.id||0:0;(a.s=a.s||[]).push([e,b,arguments]);m.then=function(b,c,h){var d=a.fh[e]=a.fh[e]||[],j=a.eh[e]=a.eh[e]||[],f=a.ph[e]=a.ph[e]||[];b&&d.push(b);c&&j.push(c);h&&f.push(h);return m};return m};var a=c[j]._={};a.fh={};a.eh={};a.ph={};a.l=d?d.replace(/^\/\//,(g=="https:"?g:"http:")+"//"):d;a.p={0:+new Date};a.P=function(b){a.p[b]=new Date-a.p[0]};a.w&&b();i.addEventListener?i.addEventListener(l,b,!1):i.attachEvent("on"+l,b);var q=function(){function b(){return["<head></head><",c,' onload="var d=',n,";d.getElementsByTagName('head')[0].",d,"(d.",g,"('script')).",i,"='",a.l,"'\"></",c,">"].join("")}var c="body",e=h[c];if(!e)return setTimeout(q,100);a.P(1);var d="appendChild",g="createElement",i="src",k=h[g]("div"),l=k[d](h[g]("div")),f=h[g]("iframe"),n="document",p;k.style.display="none";e.insertBefore(k,e.firstChild).id=o+"-"+j;f.frameBorder="0";f.id=o+"-frame-"+j;/MSIE[ ]+6/.test(navigator.userAgent)&&(f[i]="javascript:false");f.allowTransparency="true";l[d](f);try{f.contentWindow[n].open()}catch(s){a.domain=h.domain,p="javascript:var d="+n+".open();d.domain='"+h.domain+"';",f[i]=p+"void(0);"}try{var r=f.contentWindow[n];r.write(b());r.close()}catch(t){f[i]=p+'d.write("'+b().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};a.l&&setTimeout(q,0)})()}();c[b].lv="1";return c[b]}var o="lightningjs",k=window[o]=g(o);k.require=g;k.modules=c}({});
+window.usabilla_live = lightningjs.require("usabilla_live", "//w.usabilla.com/2348f26527a9.js");
+/*]]>{/literal}*/</script>
+<!-- end usabilla live embed code -->
+
+
+
+</div> 
+
+<div id="blackhole" style="display:none"></div>
+
+
+<div id="cf_window1470391818626" class="yuiextdlg">
+	
+	<div id="letemknow_title" class="x-dlg-hd">
+		<div style="text-align:left; color:black;">Did you know the ACM DL App is now available?</div>
+	 </div>
+	<div id="letemknow_body" class="x-dlg-bd">
+		
+		
+	 </div>
+ </div> <div id="cf_window1470391818629" class="yuiextdlg">
+	
+	<div id="letemknow2_title" class="x-dlg-hd">
+		<div style="text-align:left; color:black;">Did you know your Organization can subscribe to the ACM Digital Library?</div>
+	 </div>
+	<div id="letemknow2_body" class="x-dlg-bd">
+		
+		
+	 </div>
+ </div> <div id="cf_window1470391818632" class="yuiextdlg">
+	
+	<div id="theguide_title" class="x-dlg-hd">
+		The ACM Guide to Computing Literature
+	 </div>
+	<div id="theguide_body" class="x-dlg-bd">
+		
+		
+	 </div>
+ </div> <div id="cf_window1470391818635" class="yuiextdlg">
+	
+	<div id="thetags_title" class="x-dlg-hd">
+		All Tags
+	 </div>
+	<div id="thetags_body" class="x-dlg-bd">
+		
+		
+	 </div>
+ </div> <div id="cf_window1470391818638" class="yuiextdlg">
+	
+	<div id="theformats_title" class="x-dlg-hd">
+		Export Formats
+	 </div>
+	<div id="theformats_body" class="x-dlg-bd">
+		
+		
+	 </div>
+ </div> <div id="cf_window1470391818640" class="yuiextdlg">
+	
+	<div id="theexplaination_title" class="x-dlg-hd">
+		&nbsp;
+	 </div>
+	<div id="theexplaination_body" class="x-dlg-bd">
+		
+		
+	 </div>
+ </div> <div id="cf_window1470391818642" class="yuiextdlg">
+	
+	<div id="theservices_title" class="x-dlg-hd">
+		&nbsp;
+	 </div>
+	<div id="theservices_body" class="x-dlg-bd">
+		
+		
+	 </div>
+ </div> <div id="cf_window1470391818644" class="yuiextdlg">
+	
+	<div id="savetobinder_title" class="x-dlg-hd">
+		Save to Binder
+	 </div>
+	<div id="savetobinder_body" class="x-dlg-bd">
+		
+		
+	 </div>
+ </div>
+
+
+
+
+
+
+</body></html>

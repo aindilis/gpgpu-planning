@@ -1,0 +1,67 @@
+
+<!-- saved from url=(0038)http://www.win.tue.nl/~aserebre/2IS95/ -->
+<HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Anton Wijs -- Software - REFINER tool</TITLE>
+<style type="text/css">
+<!--
+A:link {text-decoration: underline; color: #000000;}
+A:visited {text-decoration: underline; color: #145088;}
+A:active {text-decoration: underline; color: #1466B2;}
+A:hover {background: #1466B2; text-decoration: underline; color: #FFFFFF;}
+
+td,th {
+	color: #2C7ECA;
+}
+body {
+	font-family: Century Schoolbook, Helvetica, Palatino, Georgia, Arial; color: #0C5EAA;
+}
+body {
+	background-color: #FFFFFF;
+}
+-->
+</style></HEAD><BODY>
+
+<p align="left">&nbsp;</p>
+<table border="0">
+  <tr>
+  <td width="50"><div align="text"></td>
+<td width="203"><img src="../images/softwareheader.png" width="250" height="92"></td>
+</td>
+</tr>
+</table>
+<table border="0">
+  <td width="50"><div align="text"></td>
+  <td width="800">
+
+<H2>ICC Experiments using REFINER</H2>
+
+The experiment files can be obtained via <a href="https://drive.google.com/file/d/0B4WJfbzXstK3WXU0YkE2aG5aZE0/view?usp=sharing">this link</a> (when using Safari, open in New Window or Tab).<br><br>
+
+The ICC experiments have been conducted by running <b>refiner -icc -n [networkname]</b> from the command-line, where [networkname] is the following, launched from the corresponding folder:
+
+<ul>
+<li>1394: 1394property</li>
+<li>1394: 1394property1</li>
+<li>transit: transitproperty</li>
+<li>waferstepper: waferstepperproperty</li>
+<li>des: desproperty</li>
+<li>cfs: cfsproperty</li>
+<li>lamport: lamportproperty</li>
+<li>lann5: lann5property</li>
+<li>lann6: lann6property</li>
+<li>lann7: lann7property</li>
+<li>havi: haviproperty</li>
+<li>peterson: petersonproperty</li>
+<li>szymanski: szymanskiproperty</li>
+</ul>
+
+<H2>Comparative experiments</H2>
+
+Other experiments that can be conducted with the experiment files above, are partial model checking experiments.
+These can be run using the <a href="http://cadp.inria.fr">CADP</a> toolbox. For this purpose, please install CADP, and launch the <b>svl</b> tool from the command-line, providing the <b>buildsystem.svl</b> file present in each experiment folder as an argument.<br><br>
+
+Besides this, also the multi-core explicit-state model checking tool of the <a href="http://fmt.cs.utwente.nl/tools/ltsmin">LTSmin</a> toolset can be run to on-the-fly check for property violations. However, in order to make this work, the, still experimental, support for EXP files must be added. This is currently not yet part of the publicly available version of LTSmin.
+
+</td>
+</table>
+</P></BODY></HTML>

@@ -1,0 +1,81 @@
+/* ------------------------------------------------------- Vertical lines --- */
+/*div#content,
+div#nav-sub,
+body.pureportal div#sidebar h3 */
+#content .gccolumn .rightbox h1:first-child,
+div#col-left h1,
+div#col-mid h1,
+div#sidebar h1,
+div#minicalendar, div.minicalendar,
+div#content blockquote {
+    border-top: 1px solid #46743c;
+}
+#branding-decoration {
+	border-bottom: 1px solid #46743c;
+}
+
+/* ----------------------------------------------------------- Blockquote --- */
+div#content blockquote .quote-begin {
+	color: #46743c;
+	background-color: #fff;
+}
+
+/* ------------------------------------------------------ Site navigation --- */
+div#nav-sub ul li.valgt a {
+	color: #46743c;
+}
+/*div#nav-sub a:active,*/
+div#nav-sub a:visited,
+div#nav-sub a:link {
+	color: #252525;
+	background-color: transparent;
+}
+div#nav-sub a:hover {
+	color: #46743c;
+	background-color: transparent;
+	text-decoration: none;
+}
+
+
+div#nav-sub ul li {
+	background-image: url(/grafik/images/leftnavigation/science_nav_lev1.gif);
+}
+div#nav-sub ul li:hover {
+	background-image: url(/grafik/images/leftnavigation/science_nav_lev1_select.gif);
+}
+div#nav-sub ul li li:hover {
+	background-image: url(/grafik/images/leftnavigation/4x4/science.gif);
+}
+div#nav-sub ul li.valgt li a {
+	color: #252525;
+}
+div#nav-sub ul li.valgt li a:hover {
+	color: #46743c;
+}
+
+div#nav-sub ul ul li, div#nav-sub ul ul li.valgt, div#nav-sub ul ul li.ikke-valgt {
+background-image:url(/grafik/images/leftnavigation/4x4/science.gif);
+}
+
+div#nav-sub ul ul ul li, div#nav-sub ul ul ul li.valgt, div#nav-sub ul ul ul li.ikke-valgt {
+background-image:url(/grafik/images/bullets/2x2/science.gif);
+}
+
+/*--------------------------navigation head----------------*/
+div#nav_head {
+background:transparent url(/grafik/images/nav_head/science_nav_head.gif) left bottom no-repeat;
+}
+
+/*------------------level 1 nav selected-----------------------------*/
+#nav-sub li.valgt {
+background-image:url(/grafik/images/leftnavigation/science_nav_lev1_select.gif);
+}
+
+#nav-sub li.ikke-valgt {
+background-image:url(/grafik/images/leftnavigation/science_nav_lev1_select.gif);
+}
+
+/* --- Responsive knap -- */
+#sidr-id-nav_head h1  {background-color: #46743c;}
+#responsive-menu-button {background-color: #46743c;}
+#responsive-menu-button:hover {background-color: #2D5B23;}

@@ -1,0 +1,50 @@
+OPTIONS = -g
+#OPTIONS = -O3 
+
+CUDAOPTIONS = -G0
+#CUDAOPTIONS = --ptxas-options=-v -arch=sm_13
+
+#CHECK = -D_CHECK
+#DEBUG = -D_DEBUGING
+
+all: dve-parser gdl-parser
+
+gdl-parser: parser openList.o myModelGDL.o GPUCheck.o StatesContainer.o myState.o
+	nvcc -D_PLANER ${OPTIONS} ${CUDAOPTIONS} ${FAST} ${CHECK} ${DEBUG} -o gdl-parser parser.cc myModelGDL.o GPUCheck.o StatesContainer.o openList.o myState.o
+
+dve-parser: parser openList.o myModelDVE.o GPUCheck.o StatesContainer.o myState.o
+	nvcc ${OPTIONS} ${CUDAOPTIONS} ${FAST} ${CHECK} ${DEBUG} -o dve-parser parser.cc myModelDVE.o GPUCheck.o StatesContainer.o openList.o myState.o
+  
+parser: lex-gdl.l gdl.y lex-dve.l dve.y
+	flex -o lex.gdl.cc lex-gdl.l
+	bison -o gdl.tab.cc gdl.y
+	flex -o lex.dve.cc lex-dve.l
+	bison -o dve.tab.cc dve.y
+  
+openList.o: openList.cc openList.h
+	nvcc ${OPTIONS} ${FAST}  ${DEBUG} -c -o openList.o openList.cc
+
+myState.o: myState.cc myState.h
+	nvcc ${OPTIONS} ${FAST}  ${DEBUG} -c -o myState.o myState.cc
+
+myModelDVE.o: myModel.cc myModel.h kernels.cu
+	g++ ${OPTIONS} ${FAST}  ${DEBUG} -c -o myModelDVE.o myModel.cc
+
+myModelGDL.o: myModel.cc myModel.h kernels.cu
+	g++ -D_PLANER ${OPTIONS} ${FAST}  ${DEBUG} -c -o myModelGDL.o myModel.cc
+
+GPUCheck.o: GPUCheck.cu
+	nvcc ${OPTIONS} ${CUDAOPTIONS} ${FAST} ${CHECK} ${DEBUG} -c -o GPUCheck.o GPUCheck.cu
+  
+StatesContainer.o: StatesContainer.cpp StatesContainer.h
+	g++ ${OPTIONS} ${FAST} ${CHECK} ${DEBUG}  -c -o StatesContainer.o StatesContainer.cpp
+  
+clean:
+	rm myModelDVE.o
+	rm myModelGDL.o
+	rm myState.o
+	rm GPUCheck.o
+	rm StatesContainer.o
+	rm dve-parser
+	rm gdl-parser
+	
