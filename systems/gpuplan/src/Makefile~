@@ -2,7 +2,7 @@
 OPTIONS = -O3 -I/usr/local/cuda-8.0/include
 
 #CUDAOPTIONS = -G0
-CUDAOPTIONS = --ptxas-options=-v -arch=sm_60
+CUDAOPTIONS = --ptxas-options=-v -arch=sm_50
 
 #CHECK = -D_CHECK
 #DEBUG = -D_DEBUGING

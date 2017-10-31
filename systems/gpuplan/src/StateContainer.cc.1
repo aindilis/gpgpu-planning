@@ -10,6 +10,25 @@
 #include <ctime>
 #include <math.h>
 
+extern "C" {
+	typedef struct dbs_ll_s *dbs_ll_t;
+	extern dbs_ll_t     DBSLLcreate (int len);
+	extern int          DBSLLlookup_ret (const dbs_ll_t dbs, const int *v, int *ret);
+	extern int * 				DBSLLget(const dbs_ll_t dbs, const int idx, int *dst);
+}
+
+
+typedef void *DBS_T;
+typedef DBS_T(*dbs_create_f)(int v, int s);
+static dbs_create_f create = (dbs_create_f)DBSLLcreate;
+
+typedef int(*dbs_lookup_f)(const DBS_T dbs, const int *v);
+typedef int(*dbs_lookup_ret_f)(const DBS_T dbs, const int *v, int *ret);
+static dbs_lookup_ret_f lookup_ret = (dbs_lookup_ret_f)DBSLLlookup_ret;
+
+DBS_T dbs;
+
+
 StatesContainer::StatesContainer(myModel * newModel) {
 	model = newModel;
 	srand(time(0));
@@ -52,16 +71,22 @@ StatesContainer::StatesContainer(myModel * newModel) {
 	boolHashtable.reserve(HASHTABLESIZE/8);
 	memset(&boolHashtable[0],0,HASHTABLESIZE/8);
 
+#else 
+#ifdef LLHASHING
+	dbs = DBSLLcreate(model->initial->size);
 #else
 	hashtable.reserve(HASHTABLESIZE);
 	memset(&hashtable[0],0,HASHTABLESIZE);
 #endif
+#endif
 	max_collisions =0;
 }
+
 
 unsigned long long StatesContainer::getHash(unsigned char * state, unsigned long long * randomVec) {
 	if(NUMOFBITS==0) return true;
 
+//#define jenkins
 #ifdef jenkins
 
 	unsigned long long hash;
@@ -121,7 +146,12 @@ unsigned long long StatesContainer::getHash(unsigned char * state, unsigned long
 }
 
 bool StatesContainer::insert(unsigned char * state){
-	insertCounter++;
+#ifdef DEBUGING
+	cout << "inserting ";
+	for (int i = 0;  i < model->initial->size ; i++ ) cout << (int) state[i]  << ";";
+	cout << endl;
+#endif
+
 	if(NUMOFBITS==0) return true;
 
 	unsigned long long hashes[NUMOFBITS];
@@ -133,10 +163,17 @@ bool StatesContainer::insert(unsigned char * state){
 #ifdef BOOLHASH
 	return insertBool(state,hashes);
 #else
+#ifdef LLHASHING
+	int idx;
+	int seen;
+	seen =  lookup_ret(dbs,(const int*) state,&idx);
+	//cout << "idx " << idx << " inserted " << !seen << endl;
+	return !seen;
+#else
 	return insertChain(state,hashes);
 #endif
-
-	}
+#endif
+}
 
 bool StatesContainer::insertBool(unsigned char * state, unsigned long long * longhashes){
 	unsigned char b = 0;
@@ -144,11 +181,11 @@ bool StatesContainer::insertBool(unsigned char * state, unsigned long long * lon
 	while (b < NUMOFBITS && 	(boolHashtable[hashes[b]>>3] & bits[hashes[b]&7] )) b++;
 	if (b == NUMOFBITS) return false;
 
+	insertCounter++;
 	for (b = 0; b < NUMOFBITS; b++) boolHashtable[hashes[b]>>3] |= bits[hashes[b]&7];
 	return true;
 
 }
-
 
 bool StatesContainer::insertChain(unsigned char * state, unsigned long long * hashes){
 	unsigned long long hash = hashes[0];
@@ -177,8 +214,31 @@ bool StatesContainer::insertChain(unsigned char * state, unsigned long long * ha
 	unsigned char * element = (unsigned char * ) malloc(model->initial->size); //generate space for child
 	memcpy(element,state,model->initial->size); //store child in new space
 	hashtable[hash]->push_back(element);
+	insertCounter++;
 	return true;
 
+}
+
+unsigned char * StatesContainer::getByPos(unsigned int pos, int * dst)  {
+	return (unsigned char *) DBSLLget((dbs_ll_s*)dbs,pos,dst);
+}
+
+void StatesContainer::printAll(){
+	int dst;
+	unsigned int size = 1 << 28;
+	unsigned int counter =0;
+	cout << "printing all states, size " << size << endl;
+	unsigned char *state ;
+	for (int i = 0; i < size; i++) {
+		state = getByPos(i,&dst);
+		if(dst) {
+//			cout << "(" << (unsigned int)getHash(state,NULL) << " == " << (unsigned int)dst << ") " ;
+//			for ( int i = 0; i < model->initial->size; i++ ) cout << (unsigned int) state[i] << ";";
+//			cout << "<--" << i << endl;
+			counter++;
+		}
+	}
+	cout << "found " << counter << " pairs " << endl;
 }
 
 bool StatesContainer::clear(){
@@ -194,4 +254,5 @@ StatesContainer::~StatesContainer() {
 
 	// TODO Auto-generated destructor stub
 }
+
 

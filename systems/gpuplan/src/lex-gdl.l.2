@@ -40,12 +40,19 @@ problem return PNAME;
 :effect		return EFFECT_TOK;
 :init return INIT_TOK;
 :goal return GOAL_TOK;
+:metric return METRIC_TOK;
 
 "and"		return AND_TOK;
 "not"		return NOT_TOK;
+"="		return EQ_TOK;
+">="		return GE_TOK;
+"<"			return LE_TOK;
 "increase"	return INC_TOK;
+"decrease"	return DEC_TOK;
+"preference" return PREFERENCE_TOK;
+[+\-*/()=\[\]<>%;]	{return yytext[0];}
 [a-zA-Z_]+[\.0-9a-zA-Z_-]*	{yylval.strings = (char*) malloc(sizeof(char) * (yyleng + 1));sprintf(yylval.strings, "%s\0", yytext); return STRING;}
-[0-9]*	{yylval.number = atoi(yytext);return NUMBER;}
+[0-9\.]*	{yylval.number = atoi(yytext);return NUMBER;}
 [ \n\t\r]
 
 
@@ -54,3 +61,4 @@ problem return PNAME;
 int yywrap(void) {
 	return 1;
 }
+
